@@ -1,0 +1,39 @@
+.carousel-inner .carousel-item img {
+    opacity: 0.5;
+}
+
+.carousel-inner {
+    background-color: #000;
+}
+
+.btn2 {
+    /* font-family: Arial; */
+    /* border-radius: 11px; */
+    color: rgb(255 255 255 / 62%);
+    border: none;
+    font-size: 20px;
+    background: transparent;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+}
+
+.btn2:hover {
+    /* background: #2196f3; */
+    text-decoration: none;
+}
+
+.banner-before-slider{
+    width: 100%;
+    background-image: url('../assets/uploads/files/wisnu.jpg');
+    background-repeat: no-repeat;
+    background-size: cover ;
+    background-position-y: -171px;
+}
+
+.img-banner{
+    z-index: -1;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+}

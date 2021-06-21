@@ -1,5 +1,5 @@
 php_value upload_max_filesize 40M
-php_value post_max_size 42M
+php_value post_max_size 100M
 
 RewriteEngine on
 RewriteCond $1 !^(index\.php|resources|robots\.txt)
