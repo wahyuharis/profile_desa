@@ -38,6 +38,7 @@ CREATE TABLE `__ci_sessions` (
 
 LOCK TABLES `__ci_sessions` WRITE;
 /*!40000 ALTER TABLE `__ci_sessions` DISABLE KEYS */;
+INSERT INTO `__ci_sessions` VALUES ('0hb8netdom9a8f3kdrjjpv07mjo1sce3','::1',1624148915,'__ci_last_regenerate|i:1624148915;id_user|s:1:\"1\";username|s:5:\"admin\";email|s:15:\"admin@admin.com\";password|s:32:\"21232f297a57a5a743894a0e4a801fc3\";fullname|s:13:\"administrator\";whatsapp|s:12:\"085330067932\";id_role|s:1:\"1\";id_desa|s:3:\"130\";lock|s:1:\"Y\";role_name|s:5:\"admin\";'),('111shi1529l6ms0ha3b9dm0voh0gotq2','::1',1624039479,'__ci_last_regenerate|i:1624039479;'),('132iv91vajjgu2lpq5l1q6sulhrh8ej7','::1',1624148411,'__ci_last_regenerate|i:1624148411;id_user|s:1:\"1\";username|s:5:\"admin\";email|s:15:\"admin@admin.com\";password|s:32:\"21232f297a57a5a743894a0e4a801fc3\";fullname|s:13:\"administrator\";whatsapp|s:12:\"085330067932\";id_role|s:1:\"1\";id_desa|s:3:\"130\";lock|s:1:\"Y\";role_name|s:5:\"admin\";'),('1ac5k5um7d93bk1nnoi0hs7dl9j6l5hr','::1',1624036672,'__ci_last_regenerate|i:1624036672;'),('1hcbinhqdas80pjfk8cpn9ec0kn33n45','::1',1624278622,'__ci_last_regenerate|i:1624278578;id_user|s:1:\"1\";username|s:5:\"admin\";email|s:15:\"admin@admin.com\";password|s:32:\"21232f297a57a5a743894a0e4a801fc3\";fullname|s:13:\"administrator\";whatsapp|s:12:\"085330067932\";id_role|s:1:\"1\";id_desa|s:3:\"130\";lock|s:1:\"Y\";role_name|s:5:\"admin\";'),('1lq6m2laai33gnsgte1043332jcgbdiv','::1',1624146484,'__ci_last_regenerate|i:1624146484;id_user|s:1:\"1\";username|s:5:\"admin\";email|s:15:\"admin@admin.com\";password|s:32:\"21232f297a57a5a743894a0e4a801fc3\";fullname|s:13:\"administrator\";whatsapp|s:12:\"085330067932\";id_role|s:1:\"1\";id_desa|s:3:\"130\";lock|s:1:\"Y\";role_name|s:5:\"admin\";'),('1sr0jg1ih8i1jt9f2kojkan37vni8muh','::1',1624259400,'__ci_last_regenerate|i:1624259116;'),('2b3tqa99h1pem27js9a3k85qapb0o5t7','::1',1624150923,'__ci_last_regenerate|i:1624150923;id_user|s:1:\"1\";username|s:5:\"admin\";email|s:15:\"admin@admin.com\";password|s:32:\"21232f297a57a5a743894a0e4a801fc3\";fullname|s:13:\"administrator\";whatsapp|s:12:\"085330067932\";id_role|s:1:\"1\";id_desa|s:3:\"130\";lock|s:1:\"Y\";role_name|s:5:\"admin\";'),('2v1gatu6gsbr3pcmk1ojvsd3qsl6us32','::1',1624037037,'__ci_last_regenerate|i:1624037037;'),('32e5g8hh6rchv741h2d4ckdcstg5jnnk','::1',1625457655,'__ci_last_regenerate|i:1625457653;'),('3b9lk870uj7iq4j1sj1frppp7958eoe0','::1',1624037683,'__ci_last_regenerate|i:1624037683;'),('3d7om0bactc7vi9e8pej9vq260cvpkfs','::1',1624145587,'__ci_last_regenerate|i:1624145587;id_user|s:1:\"1\";username|s:5:\"admin\";email|s:15:\"admin@admin.com\";password|s:32:\"21232f297a57a5a743894a0e4a801fc3\";fullname|s:13:\"administrator\";whatsapp|s:12:\"085330067932\";id_role|s:1:\"1\";id_desa|s:3:\"130\";lock|s:1:\"Y\";role_name|s:5:\"admin\";'),('3juu5r5o94c326o5qavbebcu9je3vp51','::1',1624276789,'__ci_last_regenerate|i:1624276789;'),('3kugb232ihp8iaa2m26gn9rc6oiqg3t1','::1',1624151277,'__ci_last_regenerate|i:1624151277;id_user|s:1:\"1\";username|s:5:\"admin\";email|s:15:\"admin@admin.com\";password|s:32:\"21232f297a57a5a743894a0e4a801fc3\";fullname|s:13:\"administrator\";whatsapp|s:12:\"085330067932\";id_role|s:1:\"1\";id_desa|s:3:\"130\";lock|s:1:\"Y\";role_name|s:5:\"admin\";'),('476f35d8d5elfoivdg5o6nlipst2q9hd','::1',1625536028,'__ci_last_regenerate|i:1625536028;'),('4megr9l8qmrl21pc21chllq6929ska1o','::1',1624040603,'__ci_last_regenerate|i:1624040603;'),('4qdm14f7klqvuoh5o3eqqsghhvkosqo9','::1',1624258790,'__ci_last_regenerate|i:1624258790;'),('5oosvicjup4ohc950jgihsokhfhsvtk6','::1',1624150165,'__ci_last_regenerate|i:1624150165;id_user|s:1:\"1\";username|s:5:\"admin\";email|s:15:\"admin@admin.com\";password|s:32:\"21232f297a57a5a743894a0e4a801fc3\";fullname|s:13:\"administrator\";whatsapp|s:12:\"085330067932\";id_role|s:1:\"1\";id_desa|s:3:\"130\";lock|s:1:\"Y\";role_name|s:5:\"admin\";'),('5u3c7gpq3idt8bislpngi55odb4n5dj1','::1',1624432367,'__ci_last_regenerate|i:1624432367;'),('637i1nea31rbc1h12o43kh0tb463onau','::1',1624149362,'__ci_last_regenerate|i:1624149362;id_user|s:1:\"1\";username|s:5:\"admin\";email|s:15:\"admin@admin.com\";password|s:32:\"21232f297a57a5a743894a0e4a801fc3\";fullname|s:13:\"administrator\";whatsapp|s:12:\"085330067932\";id_role|s:1:\"1\";id_desa|s:3:\"130\";lock|s:1:\"Y\";role_name|s:5:\"admin\";'),('64i4qjg7hqotq0rs4vd47hvd5jnbeg45','::1',1624196093,'error_message|s:21:\"Maaf Anda Belum Login\";__ci_vars|a:1:{s:13:\"error_message\";s:3:\"old\";}'),('6arsvjqd6bp3qgho6iauimk9b7lcsj17','::1',1624286337,'__ci_last_regenerate|i:1624286337;id_user|s:2:\"65\";username|s:14:\"wonosari_puger\";email|s:30:\"wonosari_puger@jemberkab.go.id\";password|s:32:\"d19e0b5e2933194174ab49c2d3db94b2\";fullname|s:14:\"wonosari_puger\";whatsapp|N;id_role|s:1:\"2\";id_desa|s:2:\"62\";lock|s:1:\"N\";role_name|s:12:\"general_user\";'),('6o1tbo4ailjp01se8fn2t384iki9n9m3','::1',1624040152,'__ci_last_regenerate|i:1624040152;'),('6qmv2tsp6a7l1nlmo4r8kor5l1fc9bd0','::1',1624433619,'__ci_last_regenerate|i:1624433619;'),('70fnv86q61gn2pafj1s2jomg2rg3i9rt','::1',1624278578,'__ci_last_regenerate|i:1624278578;'),('75d8d98tumi0776fv3q053hnbg005fii','::1',1624041318,'__ci_last_regenerate|i:1624041318;'),('78mt1qvavr0or8qimau3gggakusa8r4c','::1',1624240879,'__ci_last_regenerate|i:1624240665;'),('7anmk3bob7tvgsd23mf084r52f6nd76j','::1',1624287876,'__ci_last_regenerate|i:1624287876;id_user|s:1:\"1\";username|s:5:\"admin\";email|s:15:\"admin@admin.com\";password|s:32:\"21232f297a57a5a743894a0e4a801fc3\";fullname|s:13:\"administrator\";whatsapp|s:12:\"085330067932\";id_role|s:1:\"1\";id_desa|s:3:\"130\";lock|s:1:\"Y\";role_name|s:5:\"admin\";'),('7ek5nm7p2os5d6qoa7lmgklsaa80sopk','::1',1624151952,'__ci_last_regenerate|i:1624151952;id_user|s:1:\"1\";username|s:5:\"admin\";email|s:15:\"admin@admin.com\";password|s:32:\"21232f297a57a5a743894a0e4a801fc3\";fullname|s:13:\"administrator\";whatsapp|s:12:\"085330067932\";id_role|s:1:\"1\";id_desa|s:3:\"130\";lock|s:1:\"Y\";role_name|s:5:\"admin\";'),('7m7m2l7db879ikvrl3dnvgl3fg8ga1o5','::1',1624034416,'__ci_last_regenerate|i:1624034416;'),('7ubflbvic0ffdgque46d66cjsv9182l5','::1',1624041994,'__ci_last_regenerate|i:1624041994;'),('81bmafm97ojbqilefus6et4b7v72p3th','::1',1624147469,'__ci_last_regenerate|i:1624147469;id_user|s:1:\"1\";username|s:5:\"admin\";email|s:15:\"admin@admin.com\";password|s:32:\"21232f297a57a5a743894a0e4a801fc3\";fullname|s:13:\"administrator\";whatsapp|s:12:\"085330067932\";id_role|s:1:\"1\";id_desa|s:3:\"130\";lock|s:1:\"Y\";role_name|s:5:\"admin\";'),('85pdogv7ds0cteco56ofej084b13fnul','::1',1624333151,'__ci_last_regenerate|i:1624333150;id_user|s:1:\"1\";username|s:5:\"admin\";email|s:15:\"admin@admin.com\";password|s:32:\"21232f297a57a5a743894a0e4a801fc3\";fullname|s:13:\"administrator\";whatsapp|s:12:\"085330067932\";id_role|s:1:\"1\";id_desa|s:3:\"130\";lock|s:1:\"Y\";role_name|s:5:\"admin\";'),('86qg2933bb38s8eqg6c03vmflm6ennr8','::1',1624288326,'__ci_last_regenerate|i:1624288326;id_user|s:1:\"1\";username|s:5:\"admin\";email|s:15:\"admin@admin.com\";password|s:32:\"21232f297a57a5a743894a0e4a801fc3\";fullname|s:13:\"administrator\";whatsapp|s:12:\"085330067932\";id_role|s:1:\"1\";id_desa|s:3:\"130\";lock|s:1:\"Y\";role_name|s:5:\"admin\";'),('8ij1hfajs64jhfn2k0l32da6561a8klf','192.168.50.119',1624259696,'__ci_last_regenerate|i:1624259696;'),('9amjaekc4c7adgqqkv1efbcr5bshsodl','::1',1624277145,'__ci_last_regenerate|i:1624277145;'),('akm9elkh8ps6b4k2tv96vaelc7td7jlu','::1',1624327505,'__ci_last_regenerate|i:1624327505;id_user|s:1:\"1\";username|s:5:\"admin\";email|s:15:\"admin@admin.com\";password|s:32:\"21232f297a57a5a743894a0e4a801fc3\";fullname|s:13:\"administrator\";whatsapp|s:12:\"085330067932\";id_role|s:1:\"1\";id_desa|s:3:\"130\";lock|s:1:\"Y\";role_name|s:5:\"admin\";'),('aou9qr4f6phm5dqd1fc64d213egdpnjs','::1',1624287088,'__ci_last_regenerate|i:1624287088;id_user|s:2:\"65\";username|s:14:\"wonosari_puger\";email|s:30:\"wonosari_puger@jemberkab.go.id\";password|s:32:\"d19e0b5e2933194174ab49c2d3db94b2\";fullname|s:14:\"wonosari_puger\";whatsapp|N;id_role|s:1:\"2\";id_desa|s:2:\"62\";lock|s:1:\"N\";role_name|s:12:\"general_user\";'),('bjb83udasdn6ktmcj6cp7pk8ibkeu3fp','::1',1624153932,'__ci_last_regenerate|i:1624153932;id_user|s:1:\"1\";username|s:5:\"admin\";email|s:15:\"admin@admin.com\";password|s:32:\"21232f297a57a5a743894a0e4a801fc3\";fullname|s:13:\"administrator\";whatsapp|s:12:\"085330067932\";id_role|s:1:\"1\";id_desa|s:3:\"130\";lock|s:1:\"Y\";role_name|s:5:\"admin\";'),('bjeu6l25nhi5a32r3o23i2t51k5j6hpp','::1',1624275711,'__ci_last_regenerate|i:1624275711;'),('buf71f7ovck0d7mthop4ara61d4r4kt6','::1',1624277523,'__ci_last_regenerate|i:1624277523;'),('c8o35n6575417096knkr9bbj2aduf7f5','::1',1624433152,'__ci_last_regenerate|i:1624433152;'),('d277l3jig1epnm92rhjj5h50giofslht','::1',1624043097,'__ci_last_regenerate|i:1624043097;'),('elneq2pit8enl38lsamhk0biusn210ii','::1',1624333151,'__ci_last_regenerate|i:1624333150;id_user|s:1:\"1\";username|s:5:\"admin\";email|s:15:\"admin@admin.com\";password|s:32:\"21232f297a57a5a743894a0e4a801fc3\";fullname|s:13:\"administrator\";whatsapp|s:12:\"085330067932\";id_role|s:1:\"1\";id_desa|s:3:\"130\";lock|s:1:\"Y\";role_name|s:5:\"admin\";'),('eu9bilnp03g9kgr1he72ou1dctrherbg','::1',1624035660,'__ci_last_regenerate|i:1624035660;'),('f95459k691munnk4as91euukourm3rnf','::1',1624043734,'__ci_last_regenerate|i:1624043590;'),('fnkcqjc7pp8ph20ct7g4lvlipphe30sj','::1',1624042795,'__ci_last_regenerate|i:1624042795;'),('g4q0b1k1d56rci83aj0rdt3bq3md7245','::1',1624043590,'__ci_last_regenerate|i:1624043590;'),('g718lvf08b1q34m3r97djimqi5m9thug','::1',1624039787,'__ci_last_regenerate|i:1624039787;'),('g8ergkvmfkur25lcqr6mm9pud6nlipqp','::1',1624240665,'__ci_last_regenerate|i:1624240665;'),('gk8raabaldhtmr0lhl62l8bhq7uesn1t','::1',1624147780,'__ci_last_regenerate|i:1624147780;id_user|s:1:\"1\";username|s:5:\"admin\";email|s:15:\"admin@admin.com\";password|s:32:\"21232f297a57a5a743894a0e4a801fc3\";fullname|s:13:\"administrator\";whatsapp|s:12:\"085330067932\";id_role|s:1:\"1\";id_desa|s:3:\"130\";lock|s:1:\"Y\";role_name|s:5:\"admin\";'),('goun9l6lpsk5t1tg8r0b3gd24hompfhu','::1',1624038666,'__ci_last_regenerate|i:1624038666;'),('h05aj5h0t555gu9ha47roe23tl6o4978','::1',1624288598,'__ci_last_regenerate|i:1624288326;id_user|s:2:\"65\";username|s:14:\"wonosari_puger\";email|s:30:\"wonosari_puger@jemberkab.go.id\";password|s:32:\"d19e0b5e2933194174ab49c2d3db94b2\";fullname|s:14:\"wonosari_puger\";whatsapp|N;id_role|s:1:\"2\";id_desa|s:2:\"62\";lock|s:1:\"N\";role_name|s:12:\"general_user\";'),('h9clngt08kliul4drmk012tcj91s49u5','::1',1624154265,'__ci_last_regenerate|i:1624154265;id_user|s:1:\"1\";username|s:5:\"admin\";email|s:15:\"admin@admin.com\";password|s:32:\"21232f297a57a5a743894a0e4a801fc3\";fullname|s:13:\"administrator\";whatsapp|s:12:\"085330067932\";id_role|s:1:\"1\";id_desa|s:3:\"130\";lock|s:1:\"Y\";role_name|s:5:\"admin\";'),('haq06qmt9p1r0h1s6di7t6rvve0va00h','::1',1624149684,'__ci_last_regenerate|i:1624149684;id_user|s:1:\"1\";username|s:5:\"admin\";email|s:15:\"admin@admin.com\";password|s:32:\"21232f297a57a5a743894a0e4a801fc3\";fullname|s:13:\"administrator\";whatsapp|s:12:\"085330067932\";id_role|s:1:\"1\";id_desa|s:3:\"130\";lock|s:1:\"Y\";role_name|s:5:\"admin\";'),('hebpthrd9bgvlghfchcirr4ov8mii87h','::1',1625535189,'__ci_last_regenerate|i:1625535189;'),('iafhnje38c05lfiea0mig24h600a30kp','::1',1624154572,'__ci_last_regenerate|i:1624154572;id_user|s:1:\"1\";username|s:5:\"admin\";email|s:15:\"admin@admin.com\";password|s:32:\"21232f297a57a5a743894a0e4a801fc3\";fullname|s:13:\"administrator\";whatsapp|s:12:\"085330067932\";id_role|s:1:\"1\";id_desa|s:3:\"130\";lock|s:1:\"Y\";role_name|s:5:\"admin\";'),('ib0go9q33npn05fkhluvvhekn2ee715h','::1',1624036341,'__ci_last_regenerate|i:1624036341;'),('igue0am21roangfpogk50to4q85dijjl','::1',1624041002,'__ci_last_regenerate|i:1624041002;'),('iqevqgac0gg6h72tdr8nefkhobr0hmja','::1',1624033886,'__ci_last_regenerate|i:1624033886;'),('jd9d2fon99c7r9jkmoft2ef8qampko53','::1',1624240193,'__ci_last_regenerate|i:1624240193;'),('jkmqbqt8q8djaq390029eiaklofkjo3s','::1',1624433926,'__ci_last_regenerate|i:1624433926;'),('k3ncktgghdo3r9upqnd9ime1bmffgcqk','::1',1624250879,'__ci_last_regenerate|i:1624250879;'),('kcknheluupb5chvljd7tmap6m2jiijes','::1',1624432673,'__ci_last_regenerate|i:1624432673;'),('kmf2sqrc4vdf56sr2pt45sofoprp3af9','::1',1624276062,'__ci_last_regenerate|i:1624276062;'),('knilh5hdmth246br7rjnnmijgo31qrqo','::1',1624153612,'__ci_last_regenerate|i:1624153612;id_user|s:1:\"1\";username|s:5:\"admin\";email|s:15:\"admin@admin.com\";password|s:32:\"21232f297a57a5a743894a0e4a801fc3\";fullname|s:13:\"administrator\";whatsapp|s:12:\"085330067932\";id_role|s:1:\"1\";id_desa|s:3:\"130\";lock|s:1:\"Y\";role_name|s:5:\"admin\";'),('kpvemh1o4q09p2vvbqtcbec0b7c0p8ch','::1',1624033583,'__ci_last_regenerate|i:1624033583;'),('kqg6fnlh6au3mpu166g5vitp66lvsmee','::1',1624041664,'__ci_last_regenerate|i:1624041664;'),('kr1rokfllfs40g3bm5adtkabk9gnc7af','::1',1624034815,'__ci_last_regenerate|i:1624034815;'),('l3u2dsvglrfubpum4jtjm6h5drav9hf1','::1',1624038362,'__ci_last_regenerate|i:1624038362;'),('ln19h2tog39aagnfn8tuh10igc1kfqk5','::1',1625536086,'__ci_last_regenerate|i:1625536028;'),('makduaq74ulm7b56j7e27aakvn2kkkaa','::1',1624038045,'__ci_last_regenerate|i:1624038045;'),('mhph3nb5abkctqev6kv5c2gan58qh8f7','::1',1624258391,'__ci_last_regenerate|i:1624258391;'),('mugaupshfbakqakitlimkvicufm01oem','::1',1624257496,'__ci_last_regenerate|i:1624257496;'),('n5u6k9e8cjt3hkhj1i4m9en5p733te6f','::1',1624039177,'__ci_last_regenerate|i:1624039177;'),('na6dhls6cop9ds2jbpm9euc9gvkob9hb','::1',1624035993,'__ci_last_regenerate|i:1624035993;'),('nkf4e1n8luvuugtunh3h82a283553g2q','::1',1624434431,'__ci_last_regenerate|i:1624434431;'),('nm1sb7gc7v7sfghqedl7tkc270vhho0e','::1',1624099932,'__ci_last_regenerate|i:1624099930;'),('p9gkp5f2hai73tckqs85brmg4k2up0pa','::1',1624286660,'__ci_last_regenerate|i:1624286660;id_user|s:2:\"65\";username|s:14:\"wonosari_puger\";email|s:30:\"wonosari_puger@jemberkab.go.id\";password|s:32:\"d19e0b5e2933194174ab49c2d3db94b2\";fullname|s:14:\"wonosari_puger\";whatsapp|N;id_role|s:1:\"2\";id_desa|s:2:\"62\";lock|s:1:\"N\";role_name|s:12:\"general_user\";'),('pfo4dm2mfosvv6d2hrg445sqvvod79hb','::1',1624434552,'__ci_last_regenerate|i:1624434431;'),('pgdg456sg1fqu137arbhrfjv3f5ogs54','::1',1624259116,'__ci_last_regenerate|i:1624259116;'),('qaqgbd5lsmi9qj9g8k96g6i2ve2qpq38','::1',1624154660,'__ci_last_regenerate|i:1624154572;id_user|s:1:\"1\";username|s:5:\"admin\";email|s:15:\"admin@admin.com\";password|s:32:\"21232f297a57a5a743894a0e4a801fc3\";fullname|s:13:\"administrator\";whatsapp|s:12:\"085330067932\";id_role|s:1:\"1\";id_desa|s:3:\"130\";lock|s:1:\"Y\";role_name|s:5:\"admin\";'),('qjo2apgiq695lg8jjrrc60pq73mpd02v','::1',1624146850,'__ci_last_regenerate|i:1624146850;id_user|s:1:\"1\";username|s:5:\"admin\";email|s:15:\"admin@admin.com\";password|s:32:\"21232f297a57a5a743894a0e4a801fc3\";fullname|s:13:\"administrator\";whatsapp|s:12:\"085330067932\";id_role|s:1:\"1\";id_desa|s:3:\"130\";lock|s:1:\"Y\";role_name|s:5:\"admin\";'),('r31rnp1duts231optjgq1fq0118vo3jt','::1',1624287396,'__ci_last_regenerate|i:1624287396;id_user|s:2:\"65\";username|s:14:\"wonosari_puger\";email|s:30:\"wonosari_puger@jemberkab.go.id\";password|s:32:\"d19e0b5e2933194174ab49c2d3db94b2\";fullname|s:14:\"wonosari_puger\";whatsapp|N;id_role|s:1:\"2\";id_desa|s:2:\"62\";lock|s:1:\"N\";role_name|s:12:\"general_user\";'),('td747p9ojal9qu4b1i6re8jg8kqnfqv8','::1',1624147153,'__ci_last_regenerate|i:1624147153;id_user|s:1:\"1\";username|s:5:\"admin\";email|s:15:\"admin@admin.com\";password|s:32:\"21232f297a57a5a743894a0e4a801fc3\";fullname|s:13:\"administrator\";whatsapp|s:12:\"085330067932\";id_role|s:1:\"1\";id_desa|s:3:\"130\";lock|s:1:\"Y\";role_name|s:5:\"admin\";'),('tdk41vudh663ql5mk9lojrii5b0cvs75','::1',1624145930,'__ci_last_regenerate|i:1624145930;id_user|s:1:\"1\";username|s:5:\"admin\";email|s:15:\"admin@admin.com\";password|s:32:\"21232f297a57a5a743894a0e4a801fc3\";fullname|s:13:\"administrator\";whatsapp|s:12:\"085330067932\";id_role|s:1:\"1\";id_desa|s:3:\"130\";lock|s:1:\"Y\";role_name|s:5:\"admin\";'),('u3o0ube71lqih4jkltd26j92ll2kv0jn','::1',1624037373,'__ci_last_regenerate|i:1624037373;'),('ubv2hquignm8o9rngk8m3u2mu1g1fqc4','::1',1624330913,'__ci_last_regenerate|i:1624330913;id_user|s:1:\"1\";username|s:5:\"admin\";email|s:15:\"admin@admin.com\";password|s:32:\"21232f297a57a5a743894a0e4a801fc3\";fullname|s:13:\"administrator\";whatsapp|s:12:\"085330067932\";id_role|s:1:\"1\";id_desa|s:3:\"130\";lock|s:1:\"Y\";role_name|s:5:\"admin\";'),('urnibv8uv6kito6ppq6p24r0j3lpu4jr','::1',1625550391,'__ci_last_regenerate|i:1625550354;id_user|s:1:\"1\";username|s:5:\"admin\";email|s:15:\"admin@admin.com\";password|s:32:\"21232f297a57a5a743894a0e4a801fc3\";fullname|s:13:\"administrator\";whatsapp|s:12:\"085330067932\";id_role|s:1:\"1\";id_desa|s:3:\"130\";lock|s:1:\"Y\";role_name|s:5:\"admin\";'),('v82kace919qkd7vltm4eg7k0k85f1gms','::1',1624257829,'__ci_last_regenerate|i:1624257829;'),('vch6dr53al5l9l0354708on332rfars6','::1',1624276439,'__ci_last_regenerate|i:1624276439;'),('vkiipnga411c3htc5lfg8q3lscrn9ijn','::1',1624035320,'__ci_last_regenerate|i:1624035320;'),('vu6j54pkqksi5e929a1loh4mbcruopkl','::1',1624042385,'__ci_last_regenerate|i:1624042385;');
 /*!40000 ALTER TABLE `__ci_sessions` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -148,6 +149,32 @@ INSERT INTO `desa` VALUES (1,'35.9.01','PADOMASAN'),(2,'35.9.01','KETING'),(3,'3
 UNLOCK TABLES;
 
 --
+-- Table structure for table `desa_batik`
+--
+
+DROP TABLE IF EXISTS `desa_batik`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `desa_batik` (
+  `id_batik` int(11) NOT NULL,
+  `id_desa` int(11) DEFAULT NULL,
+  `nama_batik` varchar(50) DEFAULT NULL,
+  `foto` varchar(200) DEFAULT NULL,
+  `content` longtext DEFAULT NULL,
+  PRIMARY KEY (`id_batik`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `desa_batik`
+--
+
+LOCK TABLES `desa_batik` WRITE;
+/*!40000 ALTER TABLE `desa_batik` DISABLE KEYS */;
+/*!40000 ALTER TABLE `desa_batik` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Temporary table structure for view `desa_kecamatan`
 --
 
@@ -162,6 +189,86 @@ SET character_set_client = utf8;
   `nama_kecamatan` tinyint NOT NULL
 ) ENGINE=MyISAM */;
 SET character_set_client = @saved_cs_client;
+
+--
+-- Table structure for table `desa_lagu`
+--
+
+DROP TABLE IF EXISTS `desa_lagu`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `desa_lagu` (
+  `id_lagu` int(11) NOT NULL AUTO_INCREMENT,
+  `id_desa` int(11) DEFAULT NULL,
+  `foto` varchar(200) DEFAULT NULL,
+  `nama_lagu` varchar(200) DEFAULT NULL,
+  `lagu` varchar(200) DEFAULT NULL,
+  `content` longtext DEFAULT NULL,
+  PRIMARY KEY (`id_lagu`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `desa_lagu`
+--
+
+LOCK TABLES `desa_lagu` WRITE;
+/*!40000 ALTER TABLE `desa_lagu` DISABLE KEYS */;
+INSERT INTO `desa_lagu` VALUES (1,158,'e8867-600px-lambang-kabupaten-jember.png','asal','cfdbe-downloadlagu321.net-alan-walker-on-my-way-lyrics-ft.-sabrina-carpenter.mp3','<p>\n	<span style=\"color: rgb(0, 0, 0); font-family: Arial, Helvetica, Tahoma, Verdana, sans-serif;\">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas feugiat consequat diam. Maecenas metus. Vivamus diam purus, cursus a, commodo non, facilisis vitae, nulla. Aenean dictum lacinia tortor. Nunc iaculis, nibh non iaculis aliquam, orci felis euismod neque, sed ornare massa mauris sed velit. Nulla pretium mi et risus. Fusce mi pede, tempor id, cursus ac, ullamcorper nec, enim. Sed tortor. Curabitur molestie. Duis velit augue, condimentum at, ultrices a, luctus ut, orci. Donec pellentesque egestas eros. Integer cursus, augue in cursus faucibus, eros pede bibendum sem, in tempus tellus justo quis ligula. Etiam eget tortor. Vestibulum rutrum, est ut placerat elementum, lectus nisl aliquam velit, tempor aliquam eros nunc nonummy metus. In eros metus, gravida a, gravida sed, lobortis id, turpis. Ut ultrices, ipsum at venenatis fringilla, sem nulla lacinia tellus, eget aliquet turpis mauris non enim. Nam turpis. Suspendisse lacinia. Curabitur ac tortor ut ipsum egestas elementum. Nunc imperdiet gravida mauris.</span></p>\n'),(2,62,'8a471-hqdefault.jpg','lagu dari desa wonosari puger','b494f-alan-walker-spectre-ncs-release-.mp3','<p>\n	<span style=\"color: rgb(0, 0, 0); font-family: Arial, Helvetica, Tahoma, Verdana, sans-serif;\">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas feugiat consequat diam. Maecenas metus. Vivamus diam purus, cursus a, commodo non, facilisis vitae, nulla. Aenean dictum lacinia tortor. Nunc iaculis, nibh non iaculis aliquam, orci felis euismod neque, sed ornare massa mauris sed velit. Nulla pretium mi et risus. Fusce mi pede, tempor id, cursus ac, ullamcorper nec, enim. Sed tortor. Curabitur molestie. Duis velit augue, condimentum at, ultrices a, luctus ut, orci. Donec pellentesque egestas eros. Integer cursus, augue in cursus faucibus, eros pede bibendum sem, in tempus tellus justo quis ligula. Etiam eget tortor. Vestibulum rutrum, est ut placerat elementum, lectus nisl aliquam velit, tempor aliquam eros nunc nonummy metus. In eros metus, gravida a, gravida sed, lobortis id, turpis. Ut ultrices, ipsum at venenatis fringilla, sem nulla lacinia tellus, eget aliquet turpis mauris non enim. Nam turpis. Suspendisse lacinia. Curabitur ac tortor ut ipsum egestas elementum. Nunc imperdiet gravida mauris.</span></p>\n');
+/*!40000 ALTER TABLE `desa_lagu` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `desa_umkm`
+--
+
+DROP TABLE IF EXISTS `desa_umkm`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `desa_umkm` (
+  `id_umkm` int(11) NOT NULL AUTO_INCREMENT,
+  `id_desa` int(11) DEFAULT NULL,
+  `nama_umkm` varchar(50) DEFAULT NULL,
+  `foto` varchar(200) DEFAULT NULL,
+  `content` text DEFAULT NULL,
+  PRIMARY KEY (`id_umkm`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `desa_umkm`
+--
+
+LOCK TABLES `desa_umkm` WRITE;
+/*!40000 ALTER TABLE `desa_umkm` DISABLE KEYS */;
+/*!40000 ALTER TABLE `desa_umkm` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `desa_wisata`
+--
+
+DROP TABLE IF EXISTS `desa_wisata`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `desa_wisata` (
+  `id_wisata` int(11) NOT NULL AUTO_INCREMENT,
+  `id_desa` int(11) DEFAULT NULL,
+  `nama_wisata` varchar(200) DEFAULT NULL,
+  `foto` varchar(200) DEFAULT NULL,
+  `content` text DEFAULT NULL,
+  PRIMARY KEY (`id_wisata`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `desa_wisata`
+--
+
+LOCK TABLES `desa_wisata` WRITE;
+/*!40000 ALTER TABLE `desa_wisata` DISABLE KEYS */;
+/*!40000 ALTER TABLE `desa_wisata` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `kecamatan`
@@ -185,33 +292,6 @@ LOCK TABLES `kecamatan` WRITE;
 /*!40000 ALTER TABLE `kecamatan` DISABLE KEYS */;
 INSERT INTO `kecamatan` VALUES ('35.9.01','JOMBANG'),('35.9.02','KENCONG'),('35.9.03','SUMBER BARU'),('35.9.04','GUMUK MAS'),('35.9.05','UMBULSARI'),('35.9.06','TANGGUL'),('35.9.07','SEMBORO'),('35.9.08','PUGER'),('35.9.09','BANGSALSARI'),('35.9.10','BALUNG'),('35.9.11','WULUHAN'),('35.9.12','AMBULU'),('35.9.13','RAMBIPUJI'),('35.9.14','PANTI'),('35.9.15','SUKORAMBI'),('35.9.16','JENGGAWAH'),('35.9.17','AJUNG'),('35.9.18','TEMPUREJO'),('35.9.19','KALIWATES'),('35.9.20','PATRANG'),('35.9.21','SUMBERSARI'),('35.9.22','ARJASA'),('35.9.23','MUMBULSARI'),('35.9.24','PAKUSARI'),('35.9.25','JELBUK'),('35.9.26','MAYANG'),('35.9.27','KALISAT'),('35.9.28','LEDOKOMBO'),('35.9.29','SUKOWONO'),('35.9.30','SILO'),('35.9.31','SUMBERJAMBE');
 /*!40000 ALTER TABLE `kecamatan` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `lagu`
---
-
-DROP TABLE IF EXISTS `lagu`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `lagu` (
-  `id_lagu` int(11) NOT NULL AUTO_INCREMENT,
-  `id_desa` int(11) DEFAULT NULL,
-  `nama_lagu` varchar(200) DEFAULT NULL,
-  `lagu` varchar(200) DEFAULT NULL,
-  `foto` varchar(200) DEFAULT NULL,
-  `content` longtext DEFAULT NULL,
-  PRIMARY KEY (`id_lagu`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `lagu`
---
-
-LOCK TABLES `lagu` WRITE;
-/*!40000 ALTER TABLE `lagu` DISABLE KEYS */;
-/*!40000 ALTER TABLE `lagu` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -242,4 +322,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-06-11 17:37:11
+-- Dump completed on 2021-07-06 12:52:27
