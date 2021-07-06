@@ -22,6 +22,10 @@ class Lagu extends CI_Controller
 
     public function index()
     {
+        // $auth = new Auth();
+        $sess = $this->session->userdata();
+        // print_r2($sess);
+
         //========== inisiasi =============
         $crud = new grocery_CRUD();
         $crud->unset_bootstrap();
@@ -36,8 +40,19 @@ class Lagu extends CI_Controller
 
         $crud->set_subject($this->title);
 
+
+        $where2 = null;
+        if (intval($sess['id_role']) == 2) {
+            $where = array();
+            $where['desa_lagu.id_desa'] = $sess['id_desa'];
+            $where2['id_desa'] = $sess['id_desa'];
+
+            $crud->where($where);
+        }
+
+
         $crud->set_primary_key('id_desa', 'desa_kecamatan');
-        $crud->set_relation('id_desa', 'desa_kecamatan', '{nama_desa} - Kec. {nama_kecamatan}');
+        $crud->set_relation('id_desa', 'desa_kecamatan', '{nama_desa} - Kec. {nama_kecamatan}', $where2);
 
         $crud->display_as('id_desa', 'Desa');
         $crud->display_as('nama_lagu', 'Judul lagu');
@@ -46,7 +61,7 @@ class Lagu extends CI_Controller
         $crud->set_field_upload('lagu', 'assets/uploads/files');
         $crud->set_field_upload('foto', 'assets/uploads/files');
 
-        $crud->required_fields('id_desa','nama_lagu','foto','lagu');
+        $crud->required_fields('id_desa', 'nama_lagu', 'foto', 'lagu');
 
         $crud->callback_before_upload(array($this, '_callback_before_upload'));
 
@@ -67,13 +82,6 @@ class Lagu extends CI_Controller
     {
         $return = false;
 
-        // echo "<pre>";
-        // print_r($files_to_upload);
-        // print_r($field_info);
-        // die();
-
-
-
         if ($field_info->field_name == 'foto') {
             $file_type_image = array('image/jpeg', 'image/png');
             $type = $files_to_upload[$field_info->encrypted_field_name]['type'];
@@ -82,14 +90,13 @@ class Lagu extends CI_Controller
             } else {
                 $return = "tipe foto hanya boleh png dan jpg";
             }
-            
+
             $size = $files_to_upload[$field_info->encrypted_field_name]['size'];
-            if (intval($size) < 1000000 ) {
+            if (intval($size) < 1000000) {
                 $return = true;
             } else {
-                $return ="ukuran foto tidak boleh lebih dari 1MB";
+                $return = "ukuran foto tidak boleh lebih dari 1MB";
             }
-
         }
 
         if ($field_info->field_name == 'lagu') {

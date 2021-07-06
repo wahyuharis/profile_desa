@@ -32,22 +32,22 @@
     </a>
     <ul class="treeview-menu">
         <li class="<?= is_active(2, 'lagu') ?>">
-            <a href="<?= base_url('admin/desa') ?>">
+            <a href="<?= base_url('admin/lagu') ?>">
                 <i class="fa fa-music"></i> Lagu
             </a>
         </li>
         <li class="<?= is_active(2, 'wisata') ?>">
-            <a href="<?= base_url('admin/desa') ?>">
+            <a href="<?= base_url('admin/wisata') ?>">
                 <i class="fa fa-picture-o"></i> Wisata
             </a>
         </li>
         <li class="<?= is_active(2, 'umkm') ?>">
-            <a href="<?= base_url('admin/desa') ?>">
+            <a href="<?= base_url('admin/umkm') ?>">
                 <i class="fa fa-building"></i> UMKM
             </a>
         </li>
         <li class="<?= is_active(2, 'batik') ?>">
-            <a href="<?= base_url('admin/desa') ?>">
+            <a href="<?= base_url('admin/batik') ?>">
                 <i class="fa fa-gg"></i> Batik
             </a>
         </li>

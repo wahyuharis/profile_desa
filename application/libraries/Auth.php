@@ -25,8 +25,8 @@ class Auth
             //============VALIDASI PASSWORD===========================
             $db = $ci->db
                 ->group_start()
-                     ->where('email', $email)
-                     ->or_where('username', $email)
+                ->where('email', $email)
+                ->or_where('username', $email)
                 ->group_end()
 
                 ->where('password', md5($password))
@@ -39,8 +39,8 @@ class Auth
 
                 $db = $ci->db->select('_user.*,_roles.role_name')
                     ->group_start()
-                         ->where('email', $email)
-                         ->or_where('username', $email)
+                    ->where('email', $email)
+                    ->or_where('username', $email)
                     ->group_end()
 
                     ->where('password', md5($password))
@@ -67,10 +67,10 @@ class Auth
         $email = $ci->session->userdata('email');
         $password = $ci->session->userdata('password');
 
-        $db = $ci->db ->group_start()
-                         ->where('email', $email)
-                         ->or_where('username', $email)
-                    ->group_end()
+        $db = $ci->db->group_start()
+            ->where('email', $email)
+            ->or_where('username', $email)
+            ->group_end()
             ->where('password', $password)
             ->get('_user');
 
@@ -85,6 +85,7 @@ class Auth
     function is_admin()
     {
         //Administrator //user_level
+        $return=false;
 
         $ci = &get_instance();
         $user_level = $ci->session->userdata('role_name');
@@ -93,6 +94,20 @@ class Auth
             //pass
             $ci->session->set_flashdata('error_message', "Maaf Anda Tidak Memiliki Hak Akses Pada Menu Tsb");
             redirect('admin/home');
+        }else{
+            $return=true;
         }
+
+        return $return;
+    }
+
+    function id_desa()
+    {
+        $ci = &get_instance();
+
+        $sess= $ci->session->userdata();
+
+
+        return $sess['id_desa'];
     }
 }

@@ -2,52 +2,53 @@
 <html lang="en">
 
 <head>
-  <title>Bootstrap Example</title>
+  <title>Lagu Desa</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <link rel="stylesheet" href="<?= base_url() ?>node_modules/bootstrap/dist/css/bootstrap-materia.min.css">
   <link rel="stylesheet" href="<?= base_url() ?>fontawesome/css/all.min.css">
   <link rel="stylesheet" href="<?= base_url() ?>assets/custom.css">
+
   <script src="<?= base_url() ?>node_modules/jquery/dist/jquery.min.js"></script>
   <script src="<?= base_url() ?>node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="<?= base_url() ?>node_modules/knockout/build/output/knockout-latest.js"></script>
   <script src="<?= base_url() ?>fontawesome/js/all.min.js"></script>
+
 </head>
 
 <body>
   <header class="bg-dark d-none d-md-block d-lg-block pt-2 pb-1 text-white" style="height: 40px;">
-    <div class="container" >
+    <div class="container">
       <div class="row">
         <div class="col-6">
-          <img src="<?= base_url('lte/dist/img/kosong.png') ?>" style="width:20px;height: 20px;" >
+          <img src="<?= base_url('assets/uploads/files/logo-header.png') ?>" style="width:20px;height: 20px;">
           &nbsp;
           PEMERINTAH KABUPATEN JEMBER
         </div>
         <div class="col-6 text-right" style="font-size: 17px;">
-          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a class="sosmed-header sosmed-header-instagram" href="#"><i class="fab fa-instagram"></i></a>
           &nbsp;
-          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a class="sosmed-header sosmed-header-youtube" href="#"><i class="fab fa-youtube"></i></a>
           &nbsp;
-
-          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a class="sosmed-header sosmed-header-twitter" href="#"><i class="fab fa-twitter"></i></a>
         </div>
       </div>
     </div>
   </header>
-  <div role="banner" class="d-none banner-before-slider d-md-block d-lg-block" >
+  <div role="banner" class="d-none d-md-block d-lg-block banner-before-slider">
     <div class="container">
       <div class="row">
         <div class="col-4 pt-4 pb-4">
           <img src="<?= base_url('assets/uploads/files/e8867-600px-lambang-kabupaten-jember.png') ?>" width="100px" height="100px" class="float-right">
         </div>
-        <div class="col-8 pt-4 text-white">
+        <div class="col-8 pt-4 text-dark banner-text">
           <h1>Website Potensi Lokal Jember</h1>
-          <h5>Bersama Pemuda Jember Untuk Ekonomi Kreatif</h5>
+          <h5>Bersama Pemuda Jember Membangun Ekonomi Kreatif</h5>
         </div>
       </div>
     </div>
   </div>
-
-
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-3">
     <div class="container">
@@ -149,7 +150,7 @@
         </div>
         <div class="row">
 
-          <div class="col-md-3">
+          <div class="col-md-3 mt-2 mb-2">
             <div class="card">
               <img class="card-img-top" src="<?= base_url('lte/dist/img/kosong.png') ?>" style="width: 100%;height: 200px;">
               <div class="card-body">
@@ -160,7 +161,7 @@
           </div>
 
 
-          <div class="col-md-3">
+          <div class="col-md-3 mt-2 mb-2">
             <div class="card">
               <img class="card-img-top" src="<?= base_url('lte/dist/img/kosong.png') ?>" style="width: 100%;height: 200px;">
               <div class="card-body">
@@ -171,7 +172,7 @@
           </div>
 
 
-          <div class="col-md-3">
+          <div class="col-md-3 mt-2 mb-2">
             <div class="card">
               <img class="card-img-top" src="<?= base_url('lte/dist/img/kosong.png') ?>" style="width: 100%;height: 200px;">
               <div class="card-body">
@@ -182,7 +183,7 @@
           </div>
 
 
-          <div class="col-md-3">
+          <div class="col-md-3 mt-2 mb-2">
             <div class="card">
               <img class="card-img-top" src="<?= base_url('lte/dist/img/kosong.png') ?>" style="width: 100%;height: 200px;">
               <div class="card-body">
@@ -213,7 +214,7 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-md-3">
+          <div class="col-md-3  mt-2 mb-2">
             <div class="card">
               <img class="card-img-top" src="<?= base_url('lte/dist/img/kosong.png') ?>" style="width: 100%;height: 200px;">
               <div class="card-body">
@@ -222,17 +223,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-3">
-            <div class="card">
-              <img class="card-img-top" src="<?= base_url('lte/dist/img/kosong.png') ?>" style="width: 100%;height: 200px;">
-              <div class="card-body">
-                <h5 class="card-title">Nama Desa - Kecamatan</h5>
-                <a class="btn btn-primary">Lihat</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-3">
+          <div class="col-md-3  mt-2 mb-2">
             <div class="card">
               <img class="card-img-top" src="<?= base_url('lte/dist/img/kosong.png') ?>" style="width: 100%;height: 200px;">
               <div class="card-body">
@@ -242,7 +233,17 @@
             </div>
           </div>
 
-          <div class="col-md-3">
+          <div class="col-md-3  mt-2 mb-2">
+            <div class="card">
+              <img class="card-img-top" src="<?= base_url('lte/dist/img/kosong.png') ?>" style="width: 100%;height: 200px;">
+              <div class="card-body">
+                <h5 class="card-title">Nama Desa - Kecamatan</h5>
+                <a class="btn btn-primary">Lihat</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3  mt-2 mb-2">
             <div class="card">
               <img class="card-img-top" src="<?= base_url('lte/dist/img/kosong.png') ?>" style="width: 100%;height: 200px;">
               <div class="card-body">
@@ -276,7 +277,7 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-md-3">
+          <div class="col-md-3  mt-2 mb-2">
             <div class="card">
               <img class="card-img-top" src="<?= base_url('lte/dist/img/kosong.png') ?>" style="width: 100%;height: 200px;">
               <div class="card-body">
@@ -285,17 +286,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-3">
-            <div class="card">
-              <img class="card-img-top" src="<?= base_url('lte/dist/img/kosong.png') ?>" style="width: 100%;height: 200px;">
-              <div class="card-body">
-                <h5 class="card-title">Nama Desa - Kecamatan</h5>
-                <a class="btn btn-primary">Lihat</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-3">
+          <div class="col-md-3  mt-2 mb-2">
             <div class="card">
               <img class="card-img-top" src="<?= base_url('lte/dist/img/kosong.png') ?>" style="width: 100%;height: 200px;">
               <div class="card-body">
@@ -305,7 +296,17 @@
             </div>
           </div>
 
-          <div class="col-md-3">
+          <div class="col-md-3  mt-2 mb-2">
+            <div class="card">
+              <img class="card-img-top" src="<?= base_url('lte/dist/img/kosong.png') ?>" style="width: 100%;height: 200px;">
+              <div class="card-body">
+                <h5 class="card-title">Nama Desa - Kecamatan</h5>
+                <a class="btn btn-primary">Lihat</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3  mt-2 mb-2">
             <div class="card">
               <img class="card-img-top" src="<?= base_url('lte/dist/img/kosong.png') ?>" style="width: 100%;height: 200px;">
               <div class="card-body">
@@ -340,7 +341,7 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-md-3">
+          <div class="col-md-3  mt-2 mb-2">
             <div class="card">
               <img class="card-img-top" src="<?= base_url('lte/dist/img/kosong.png') ?>" style="width: 100%;height: 200px;">
               <div class="card-body">
@@ -349,17 +350,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-3">
-            <div class="card">
-              <img class="card-img-top" src="<?= base_url('lte/dist/img/kosong.png') ?>" style="width: 100%;height: 200px;">
-              <div class="card-body">
-                <h5 class="card-title">Nama Desa - Kecamatan</h5>
-                <a class="btn btn-primary">Lihat</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-3">
+          <div class="col-md-3  mt-2 mb-2">
             <div class="card">
               <img class="card-img-top" src="<?= base_url('lte/dist/img/kosong.png') ?>" style="width: 100%;height: 200px;">
               <div class="card-body">
@@ -369,7 +360,17 @@
             </div>
           </div>
 
-          <div class="col-md-3">
+          <div class="col-md-3  mt-2 mb-2">
+            <div class="card">
+              <img class="card-img-top" src="<?= base_url('lte/dist/img/kosong.png') ?>" style="width: 100%;height: 200px;">
+              <div class="card-body">
+                <h5 class="card-title">Nama Desa - Kecamatan</h5>
+                <a class="btn btn-primary">Lihat</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3  mt-2 mb-2">
             <div class="card">
               <img class="card-img-top" src="<?= base_url('lte/dist/img/kosong.png') ?>" style="width: 100%;height: 200px;">
               <div class="card-body">
@@ -386,7 +387,17 @@
     </div>
   </main>
 
-  <footer role="footer" style="width:100%;background-color: #4b6584;margin-top: 200px;">
+  <footer style="width:100%;background-color: #34495e;margin-top: 200px;min-height: 300px;">
+    <div class="container">
+      <div class="row">
+
+      </div>
+    </div>
+  </footer>
+
+
+
+  <footer role="footer" style="width:100%;background-color: #4b6584;margin-top: 0px;">
     <div class="container">
       <div class="row">
         <div class="col-md-12 text-white pt-3 pb-1" style="font-size: 12px;">
