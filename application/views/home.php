@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Lagu Desa</title>
+  <title>J-Kraf</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -43,7 +43,7 @@
           <img src="<?= base_url('assets/uploads/files/e8867-600px-lambang-kabupaten-jember.png') ?>" width="100px" height="100px" class="float-right">
         </div>
         <div class="col-8 pt-4 text-dark banner-text">
-          <h1>Website Potensi Lokal Jember</h1>
+          <h1>Jember Ekonomi Kreatif</h1>
           <h5>Bersama Pemuda Jember Membangun Ekonomi Kreatif</h5>
         </div>
       </div>
@@ -132,7 +132,16 @@
         <p class="lead">Diciptakan Sebagai Wadah Digital Karya Warga Jember. Kota Kecil Dengan Potensi Menakjubkan Seperti Seni Musik Dan Fashion, Wisata Dan UKM Unggulan</p>
       </div>
     </div>
+
     <div class="row">
+      <div class="col-md-12">
+          <?php 
+          
+          ?>
+      </div>
+    </div>
+
+    <div class="row mt-5">
       <div class="col-md-12 mt-5">
         <div class="row mb-3">
           <div class="col-md-8 col-sm-12">
@@ -394,8 +403,6 @@
       </div>
     </div>
   </footer>
-
-
 
   <footer role="footer" style="width:100%;background-color: #4b6584;margin-top: 0px;">
     <div class="container">
