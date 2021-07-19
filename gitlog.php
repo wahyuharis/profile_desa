@@ -1,10 +1,11 @@
 <?php
 $output = null;
 $retval = null;
-$cmd = "git log --pretty=format:%h,%an,%ae,%at,%s";
+// $cmd = "git log --date=local --pretty=format:%h,%an,%ae,%at,%s  ";
+$cmd = 'git log --date=local --pretty=format:"%h,%an,%ae,%ai,%s"';
 exec($cmd, $output, $retval);
 // echo "Returned with status $retval and output:\n";
-date_default_timezone_set('Asia/Jakarta');
+// date_default_timezone_set('Asia/Jakarta');
 
 
 $output2 = array();
@@ -15,7 +16,8 @@ foreach ($output as $row) {
     $buff[0] = $col[0];
     $buff[1] = $col[1];
     $buff[2] = $col[2];
-    $buff[3] = gmdate("Y-m-d H:i:s",  $col[3]);;
+    // $buff[3] = gmdate("Y-m-d H:i:s",  $col[3]);;
+    $buff[3] =$col[3];
     $buff[4] = $col[4];
 
     foreach ($col as $k => $v) {
@@ -32,7 +34,7 @@ foreach ($output as $row) {
 <html lang="en">
 
 <head>
-    <title>Bootstrap Example</title>
+    <title>LAPORAN GIT LAGU DESA</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -47,10 +49,10 @@ foreach ($output as $row) {
         <div class="row">
             <div class="col-md-12">
 
-                <h1>LAPORAN GIT HISTORY LAGU DESA</h1>
+                <h1>LAPORAN REGISTER GIT LAGU DESA</h1>
                 <p>Programmer menggunakan tool untuk menghistori perubahan program menggunakan GIT dan disimpan di server
                     global bernama github. Dengan GIT selain mempermudah programmer melakukan rollback perubahan dan revisi program, git juga dapat
-                    digunakan untuk melaporkan perubuahan dan performa programmer. Laporan dibawah adalah laporan yang dilakukan programmer
+                    digunakan untuk melaporkan perubuahan dan performa programmer. Jadi Laporan dibawah adalah register yang dilakukan programmer
                     dalam melakukan pengerjaan program
                 </p>
                 <table class="table">
@@ -69,7 +71,7 @@ foreach ($output as $row) {
                                 <?php foreach ($row as $idx => $col) { ?>
                                     <?php if ($idx == 0) { ?>
                                         <td>
-                                            <a href="https://github.com/wahyuharis/profile_desa/commit/<?= $col ?>">
+                                            <a target="_blank" href="https://github.com/wahyuharis/profile_desa/commit/<?= $col ?>">
                                                 <?= $col ?>
                                             </a>
                                         </td>
