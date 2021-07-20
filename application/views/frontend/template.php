@@ -66,12 +66,12 @@
       <div class="collapse navbar-collapse" id="navbarColor01">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Home
+            <a class="nav-link" href="<?=base_url()?>">Home
               <span class="sr-only">(current)</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Lagu Desa</a>
+            <a class="nav-link" href="<?= base_url('lagu/') ?>">Lagu Desa</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Wisata Desa</a>
@@ -93,10 +93,19 @@
   </nav>
 
   <main role="main" class="container" style="min-height: 1200px;">
-    
+
 
 
     <div class="row mt-3">
+      <div class="col-md-12">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item"><a href="#">Library</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Data</li>
+          </ol>
+        </nav>
+      </div>
       <div class="col-md-12">
         <?= $content ?>
       </div>
@@ -149,9 +158,11 @@
 
     // When the user clicks on the button, scroll to the top of the document
     function topFunction() {
-      $("html, body").animate({scrollTop: 0}, 500);
+      $("html, body").animate({
+        scrollTop: 0
+      }, 500);
     }
-    $(document).ready(function(){
+    $(document).ready(function() {
       $('[data-toggle="tooltip"]').tooltip();
     });
   </script>
