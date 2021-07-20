@@ -24,11 +24,19 @@ class Lagu extends CI_Controller
         $content_data['lagu_desa'] = $lagu_desa;
         $html = $frontend->load_view('frontend/lagu', $content_data);
 
+
+        $breadcrump = array(
+            'Home' => '',
+            'Lagu Desa' => 'lagu',
+        );
+        $frontend->set_breadcrump($breadcrump);
+
         $frontend->set_content($html);
         $frontend->render();
     }
 
-    public function daftar($id_desa){
+    public function daftar($id_desa)
+    {
         $frontend = new Frontend();
         $html = '';
 
@@ -39,33 +47,54 @@ class Lagu extends CI_Controller
 
         // print_r2($lagu_desa);
 
+        $desa = $this->db->where('id_desa', $id_desa)->get('desa')->row_array();
+        // print_r2($desa);
+
+
         $content_data = array();
         $content_data['lagu_desa'] = $lagu_desa;
-        $html = $frontend->load_view('frontend/lagu_daftar', $content_data);
+        $content_data['desa'] = $desa;
 
+        $html = $frontend->load_view('frontend/lagu_daftar', $content_data);
+        $breadcrump = array(
+            'Home' => '',
+            'Lagu Desa' => 'lagu',
+            'Desa ' . $desa['nama_desa'] => 'daftar/' . $id_desa,
+        );
+        $frontend->set_breadcrump($breadcrump);
         $frontend->set_content($html);
         $frontend->render();
     }
 
-    public function putar($id_lagu){
+    public function putar($id_lagu)
+    {
         $frontend = new Frontend();
         $html = '';
 
-        $this->db->where('id_lagu',$id_lagu);
-        $db=$this->db->get('desa_lagu');
+        $this->db->where('id_lagu', $id_lagu);
+        $db = $this->db->get('desa_lagu');
 
-        $lagu=$db->row_array();
+        $lagu = $db->row_array();
 
         // print_r2($lagu);
 
-        $ext = pathinfo( './assets/uploads/files/' .$lagu['lagu'], PATHINFO_EXTENSION);
+        $desa = $this->db->where('id_desa', $lagu['id_desa'])->get('desa')->row_array();
+        // print_r2($desa);
 
-        // print_r2($ext);
+        $ext = pathinfo('./assets/uploads/files/' . $lagu['lagu'], PATHINFO_EXTENSION);
 
         $content_data = array();
         $content_data['lagu'] = $lagu;
         $content_data['ext'] = $ext;
         $html = $frontend->load_view('frontend/lagu_putar', $content_data);
+
+        $breadcrump = array(
+            'Home' => '',
+            'Lagu Desa' => 'lagu',
+            'Desa ' . $desa['nama_desa'] => 'lagu/daftar/' . $lagu['id_desa'],
+            $lagu['nama_lagu'] => 'lagu/putar',
+        );
+        $frontend->set_breadcrump($breadcrump);
 
         $frontend->set_content($html);
         $frontend->render();

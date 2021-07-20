@@ -7,10 +7,19 @@ class Frontend
     private $meta_img = "assets/kominfo.png";
     private $content = "";
     private $favicon = "assets/logo_admin.ico";
+    private $breadcrump = array(
+        'Home'=> ''
+    );
 
     function __construct()
     {
         $ci = &get_instance();
+    }
+
+    function set_breadcrump($breadcrump)
+    {
+        $this->breadcrump = $breadcrump;
+        return $this;
     }
     function set_title($title)
     {
@@ -54,6 +63,7 @@ class Frontend
         $data['title'] = $this->title;
         $data['meta_img'] = $this->meta_img;
         $data['favicon'] = $this->favicon;
+        $data['breadcrump'] = $this->breadcrump;
 
         $ci->load->view('frontend/template', $data);
     }

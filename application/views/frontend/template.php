@@ -66,7 +66,7 @@
       <div class="collapse navbar-collapse" id="navbarColor01">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="<?=base_url()?>">Home
+            <a class="nav-link" href="<?= base_url() ?>">Home
               <span class="sr-only">(current)</span>
             </a>
           </li>
@@ -92,7 +92,7 @@
 
   </nav>
 
-  <main role="main" class="container" style="min-height: 1200px;">
+  <main role="main" class="container" style="">
 
 
 
@@ -100,9 +100,26 @@
       <div class="col-md-12">
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="#">Home</a></li>
-            <li class="breadcrumb-item"><a href="#">Library</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Data</li>
+
+            <?php
+            $blength = count($breadcrump);
+            $bincr = 1;
+            ?>
+            <?php foreach ($breadcrump as $btitle => $burl) { ?>
+              <?php
+              $bactive = '';
+              if ($bincr == $blength) {
+              ?>
+                <li class="breadcrumb-item <?= $bactive ?>" aria-current="page"><?= $btitle ?></li>
+              <?php
+              } else {
+              ?>
+                <li class="breadcrumb-item" ><a href="<?=base_url($burl)?>"><?= $btitle ?></a></li>
+              <?php
+              }
+              ?>
+              <?php $bincr++; ?>
+            <?php } ?>
           </ol>
         </nav>
       </div>
