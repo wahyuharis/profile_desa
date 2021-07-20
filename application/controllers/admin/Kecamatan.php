@@ -32,6 +32,7 @@ class Kecamatan extends CI_Controller
         $state = $crud->getState();
         //========== inisiasi =============
 
+        $crud->set_field_upload('foto_kecamatan', 'assets/uploads/files');
 
         $crud->display_as('id_kecamatan', 'Kode');
         $crud->display_as('nama_kecamatan', 'Kecamatan');

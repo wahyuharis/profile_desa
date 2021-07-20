@@ -27,24 +27,42 @@ class InstalledVersions
 private static $installed = array (
   'root' => 
   array (
-    'pretty_version' => '1.0.0+no-version-set',
-    'version' => '1.0.0.0',
+    'pretty_version' => 'dev-main',
+    'version' => 'dev-main',
     'aliases' => 
     array (
     ),
-    'reference' => NULL,
+    'reference' => '4bae60d7daf805bb2268414fe12bb925b0e4324a',
     'name' => 'codeigniter/framework',
   ),
   'versions' => 
   array (
-    'codeigniter/framework' => 
+    'alchemy/binary-driver' => 
     array (
-      'pretty_version' => '1.0.0+no-version-set',
-      'version' => '1.0.0.0',
+      'pretty_version' => 'v5.2.0',
+      'version' => '5.2.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => NULL,
+      'reference' => 'e0615cdff315e6b4b05ada67906df6262a020d22',
+    ),
+    'codeigniter/framework' => 
+    array (
+      'pretty_version' => 'dev-main',
+      'version' => 'dev-main',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '4bae60d7daf805bb2268414fe12bb925b0e4324a',
+    ),
+    'doctrine/cache' => 
+    array (
+      'pretty_version' => '1.12.1',
+      'version' => '1.12.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '4cf401d14df219fa6f38b671f5493449151c9ad8',
     ),
     'doctrine/instantiator' => 
     array (
@@ -54,6 +72,15 @@ private static $installed = array (
       array (
       ),
       'reference' => 'd56bf6102915de5702778fe20f2de3b2fe570b5b',
+    ),
+    'evenement/evenement' => 
+    array (
+      'pretty_version' => 'v3.0.1',
+      'version' => '3.0.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '531bfb9d15f8aa57454f5f0285b18bec903b8fb7',
     ),
     'mikey179/vfsstream' => 
     array (
@@ -76,6 +103,24 @@ private static $installed = array (
       array (
         0 => '1.10.2',
       ),
+    ),
+    'neutron/temporary-filesystem' => 
+    array (
+      'pretty_version' => '3.0',
+      'version' => '3.0.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '60e79adfd16f42f4b888e351ad49f9dcb959e3c2',
+    ),
+    'php-ffmpeg/php-ffmpeg' => 
+    array (
+      'pretty_version' => 'v0.18.0',
+      'version' => '0.18.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'edc0a7729d8818ed883e77b3d26ceb6d49ec41de',
     ),
     'phpdocumentor/reflection-common' => 
     array (
@@ -176,6 +221,15 @@ private static $installed = array (
       ),
       'reference' => 'a23b761686d50a560cc56233b9ecf49597cc9118',
     ),
+    'psr/log' => 
+    array (
+      'pretty_version' => '1.1.4',
+      'version' => '1.1.4.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'd49695b909c3b7628b6289db5479a1c204601f11',
+    ),
     'sebastian/code-unit-reverse-lookup' => 
     array (
       'pretty_version' => '1.0.2',
@@ -266,6 +320,15 @@ private static $installed = array (
       ),
       'reference' => '99732be0ddb3361e16ad77b68ba41efc8e979019',
     ),
+    'symfony/filesystem' => 
+    array (
+      'pretty_version' => 'v5.3.3',
+      'version' => '5.3.3.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '19b71c8f313b411172dd5f470fd61f24466d79a9',
+    ),
     'symfony/polyfill-ctype' => 
     array (
       'pretty_version' => 'v1.23.0',
@@ -274,6 +337,24 @@ private static $installed = array (
       array (
       ),
       'reference' => '46cd95797e9df938fdd2b03693b5fca5e64b01ce',
+    ),
+    'symfony/polyfill-php80' => 
+    array (
+      'pretty_version' => 'v1.23.0',
+      'version' => '1.23.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'eca0bf41ed421bed1b57c4958bab16aa86b757d0',
+    ),
+    'symfony/process' => 
+    array (
+      'pretty_version' => 'v5.3.2',
+      'version' => '5.3.2.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '714b47f9196de61a196d86c4bad5f09201b307df',
     ),
     'symfony/yaml' => 
     array (

@@ -100,7 +100,7 @@ class Lagu extends CI_Controller
         }
 
         if ($field_info->field_name == 'lagu') {
-            $file_type_image = array('mp3', 'mp4', 'avi');
+            $file_type_image = array('mp3', 'mp4');
 
             $name = $files_to_upload[$field_info->encrypted_field_name]['name'];
             $name_arr = explode('.', $name);
@@ -110,7 +110,7 @@ class Lagu extends CI_Controller
             if (in_array($type, $file_type_image)) {
                 $return = true;
             } else {
-                $return = "tipe file hanya boleh mp3,mp4, dan avi";
+                $return = "tipe file hanya boleh mp3,mp4";
             }
         }
 

@@ -1,6 +1,52 @@
+<div class="row">
+    <div class="col-md-7">
+        <div id="demo" class="carousel slide mb-5" data-ride="carousel">
+            <ul class="carousel-indicators">
+                <li data-target="#demo" data-slide-to="0" class="active"></li>
+                <li data-target="#demo" data-slide-to="1"></li>
+                <li data-target="#demo" data-slide-to="2"></li>
+            </ul>
+            <!-- The slideshow -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="<?= base_url('assets/uploads/files/slide-1.jpg') ?>" alt="" width="100%" height="300">
+                    <div class="carousel-caption">
+                        <h3>Los Angeles</h3>
+                        <p>We had such a great time in LA!</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="<?= base_url('assets/uploads/files/slide-2.jpg') ?>" alt="" width="100%" height="300">
+                    <div class="carousel-caption">
+                        <h3>Los Angeles</h3>
+                        <p>We had such a great time in LA!</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="<?= base_url('assets/uploads/files/slide-3.jpg') ?>" alt="" width="100%" height="300">
+                    <div class="carousel-caption">
+                        <h3>Los Angeles</h3>
+                        <p>We had such a great time in LA!</p>
+                    </div>
+                </div>
+            </div>
 
-        <h4>Kecamatan Se-Kab Jember</h4>
+            <!-- Left and right controls -->
+            <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#demo" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+        </div>
+    </div>
+    <div class="col-md-5">
+        <h1>Website Potensi Lokal Jember</h1>
+        <p class="lead">Diciptakan Sebagai Wadah Digital Karya Warga Jember. Kota Kecil Dengan Potensi Menakjubkan Seperti Seni Musik Dan Fashion, Wisata Dan UKM Unggulan</p>
+    </div>
+</div>
 
+<h4>Kecamatan Se-Kab Jember</h4>
 
 <div class="row mt-3">
     <div class="col-md-6 col-sm-6 col-xs-6">

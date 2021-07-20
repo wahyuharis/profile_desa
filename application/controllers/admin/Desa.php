@@ -34,6 +34,9 @@ class Desa extends CI_Controller
         $crud->display_as('nama_desa', 'Desa');
         $crud->display_as('id_desa', 'Kode');
 
+        $crud->set_field_upload('foto_desa', 'assets/uploads/files');
+
+
         $crud->required_fields('id_kecamatan', 'nama_desa');
         // $crud->unique_fields(array('id_kecamatan'));
 
