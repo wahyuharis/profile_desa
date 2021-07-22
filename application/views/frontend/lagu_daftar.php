@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-md-12 text-center">
-        <h3 class="mt-3">DAFTAR LAGU DESA <?=strtoupper( $desa['nama_desa'] ) ?></h3>
+        <h3 class="mt-3">DAFTAR LAGU DESA <?= strtoupper($desa['nama_desa']) ?></h3>
         <br>
     </div>
 </div>
@@ -21,6 +21,14 @@
                             <a href="<?= base_url('lagu/putar/' . $row['id_lagu']) ?>" class="btn btn-primary btn-sm btn-block" data-toggle="tooltip" title="Play">
                                 <i class="fas fa-play"></i> Putar
                             </a>
+                            <div class="row">
+                                <div class="col-6">
+
+                                </div>
+                                <div class="col-6 text-right">
+                                    <p>Diputar : <?= $row['kali_diputar'] ?> x </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

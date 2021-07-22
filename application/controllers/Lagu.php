@@ -99,4 +99,19 @@ class Lagu extends CI_Controller
         $frontend->set_content($html);
         $frontend->render();
     }
+
+    public function log_played($id_lagu)
+    {
+        $id_lagu = intval($id_lagu);
+        $kali_diputar = 0;
+        $db = $this->db->where('id_lagu', $id_lagu)->get('desa_lagu');
+        if ($db->num_rows() > 0) {
+            $kali_diputar = $db->row_array()['kali_diputar'];
+
+            $kali_diputar2 = $kali_diputar + 1;
+            $this->db->set('kali_diputar', $kali_diputar2);
+            $this->db->where('id_lagu', $id_lagu);
+            $this->db->update('desa_lagu');
+        }
+    }
 }
