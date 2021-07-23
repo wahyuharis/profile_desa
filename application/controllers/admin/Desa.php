@@ -29,6 +29,7 @@ class Desa extends CI_Controller
         //========== inisiasi =============
 
         $crud->columns('id_desa','id_kecamatan','nama_desa');
+        $crud->fields('id_kecamatan','foto_desa','nama_desa');
         $crud->set_relation('id_kecamatan', 'kecamatan', 'nama_kecamatan');
         $crud->display_as('id_kecamatan', 'Kecamatan');
         $crud->display_as('nama_desa', 'Desa');
@@ -37,7 +38,7 @@ class Desa extends CI_Controller
         $crud->set_field_upload('foto_desa', 'assets/uploads/files');
 
 
-        $crud->required_fields('id_kecamatan', 'nama_desa');
+        $crud->required_fields('id_kecamatan', 'nama_desa','foto_desa');
         // $crud->unique_fields(array('id_kecamatan'));
 
         $crud->callback_before_delete(array($this, '_callback_before_delete'));

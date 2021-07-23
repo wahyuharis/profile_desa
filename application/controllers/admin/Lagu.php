@@ -61,6 +61,7 @@ class Lagu extends CI_Controller
         $crud->set_field_upload('lagu', 'assets/uploads/files');
         $crud->set_field_upload('foto', 'assets/uploads/files');
 
+        $crud->fields('id_desa', 'nama_lagu', 'foto', 'lagu','content');
         $crud->required_fields('id_desa', 'nama_lagu', 'foto', 'lagu');
 
         $crud->callback_before_upload(array($this, '_callback_before_upload'));

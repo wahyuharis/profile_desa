@@ -3,7 +3,7 @@
 class Frontend
 {
 
-    private $title = "J-Kraf";
+    private $title = "Jekraf";
     private $meta_img = "assets/kominfo.png";
     private $content = "";
     private $favicon = "assets/logo_admin.ico";

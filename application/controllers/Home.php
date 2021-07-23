@@ -34,4 +34,31 @@ class Home extends CI_Controller
 		$frontend->set_content($html);
 		$frontend->render();
 	}
+
+	public function search()
+	{
+		$frontend = new Frontend();
+		$html = '';
+
+		$content_data = array();
+		$this->load->model('KecamatanDesa_model');
+
+		$kecamatandesa_model = new KecamatanDesa_model();
+		$search_res = $kecamatandesa_model->search();
+
+		// print_r2($search_res);
+
+		$content_data['search_res'] = $search_res;
+
+		$html = $frontend->load_view('frontend/search', $content_data);
+
+		$breadcrump = array(
+			'Home' => '',
+			'search' => '',
+
+		);
+		$frontend->set_breadcrump($breadcrump);
+		$frontend->set_content($html);
+		$frontend->render();
+	}
 }

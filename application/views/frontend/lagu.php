@@ -11,7 +11,7 @@
     <?php foreach ($lagu_desa as $row) { ?>
         <div class="col-md-3">
             <div class="card" style="width:250px">
-                <img class="card-img-top" src="<?= base_url('assets/desa.png') ?>" alt="Card image" style="width:100%">
+                <img class="card-img-top" src="<?= base_url('assets/desa.png') ?>" alt="Card image" style="width:100%;height:250px;">
                 <div class="card-body">
                     <p class="card-text"><b><?=$row['nama_desa']?> - <?=$row['nama_kecamatan']?> </b></p>
                     <a href="<?=base_url('lagu/daftar/').$row['id_desa']?>" class="btn btn-primary btn-sm">Daftar Lagu</a>
