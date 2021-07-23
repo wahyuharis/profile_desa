@@ -2,11 +2,17 @@
 class KecamatanDesa_model  extends CI_Model
 {
 
+  private $total_row = 0;
+
   function __construct()
   {
     parent::__construct();
   }
 
+  public function get_total_row()
+  {
+    return $this->total_row;
+  }
 
   public function get_list($where = null, $start = null, $limit = null)
   {
@@ -36,7 +42,7 @@ class KecamatanDesa_model  extends CI_Model
     // echo $sql;
   }
 
-  public function search($search_txt = '', $type = '', $limit=10, $start=0)
+  public function search($search_txt = '', $type = '', $limit = 8, $start = 0)
   {
     $str = $this->db->escape_str($search_txt);
     $sql = "
@@ -72,8 +78,12 @@ class KecamatanDesa_model  extends CI_Model
     }
     $sql .= "\n";
 
+    $sql_nolimit = $sql;
+
     $sql .= " LIMIT " . intval($start) . "," . intval($limit) . " ";
 
+
+    $this->total_row = $this->db->query($sql_nolimit)->num_rows();
 
     $db = $this->db->query($sql);
     $return = $db->result_array();

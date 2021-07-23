@@ -43,12 +43,27 @@ class Home extends CI_Controller
 		$content_data = array();
 		$this->load->model('KecamatanDesa_model');
 
+		$page = $this->input->get('page');
+        $limit = 8;
+        $start = page_to_start($page, $limit);
+
 		$kecamatandesa_model = new KecamatanDesa_model();
-		$search_res = $kecamatandesa_model->search();
+		$search_txt=$this->input->get('search');
+		$type=$this->input->get('jenis');
+		$search_res = $kecamatandesa_model->search($search_txt,$type,$limit,$start);
 
 		// print_r2($search_res);
 
+		$this->load->library('pagination');
+        $config['base_url'] = base_url('home/search/');
+        $config['total_rows'] = $kecamatandesa_model->get_total_row();
+        $config['per_page'] = $limit;
+
+        $this->pagination->initialize($config);
+
+
 		$content_data['search_res'] = $search_res;
+		$content_data['pagination'] = $this->pagination->create_links();
 
 		$html = $frontend->load_view('frontend/search', $content_data);
 
