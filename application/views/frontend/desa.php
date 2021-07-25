@@ -7,11 +7,21 @@
 </div>
 <div class="row mb-3">
 
-    <div class="col-md-4"></div>
-    <div class="col-md-4">
-        <img class="img-fluid" src="<?= base_url('assets/desa.png') ?>">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <?php
+        if (empty(trim($desa['foto_desa']))) {
+        ?>
+            <img class="img-fluid" src="<?= base_url('assets/desa.png') ?>">
+        <?php
+        } else {
+        ?>
+            <img class="img-fluid" src="<?= base_url('assets/uploads/files/'.$desa['foto_desa']) ?>">
+        <?php
+        }
+        ?>
     </div>
-    <div class="col-md-4"></div>
+    <div class="col-md-3"></div>
 
 </div>
 
@@ -40,16 +50,18 @@
 <div class="row mb-3">
     <div class="col-md-3"></div>
     <div class="col-md-3">
-        <div class="card" style="height: 200px;">
+        <div class="card">
+            <img class="card-img-top" src="<?= base_url('assets/gitar.png') ?>">
             <div class="card-body text-center" style="vertical-align: middle;">
-                <h1>Lagu Desa</h1>
+                <a href="<?= base_url('lagu/daftar/' . $desa['id_desa']) ?>" class="btn btn-primary btn-block">Lagu Desa</a>
             </div>
         </div>
     </div>
     <div class="col-md-3">
-        <div class="card" style="height: 200px;">
+        <div class="card">
+            <img class="card-img-top" src="<?= base_url('assets/wisata.png') ?>">
             <div class="card-body text-center" style="vertical-align: middle;">
-                <h1>Wisata Desa</h1>
+                <a href="#" class="btn btn-primary btn-block">Wisata Desa</a>
             </div>
         </div>
     </div>
@@ -59,16 +71,18 @@
 <div class="row mb-3">
     <div class="col-md-3"></div>
     <div class="col-md-3">
-        <div class="card" style="height: 200px;">
+        <div class="card">
+            <img class="card-img-top" src="<?= base_url('assets/batik.png') ?>">
             <div class="card-body text-center" style="vertical-align: middle;">
-                <h1>Desain Batik</h1>
+                <a href="#" class="btn btn-primary btn-block">Desain Batik</a>
             </div>
         </div>
     </div>
     <div class="col-md-3">
-        <div class="card" style="height: 200px;">
+        <div class="card">
+            <img class="card-img-top" src="<?= base_url('assets/umkm.png') ?>">
             <div class="card-body text-center" style="vertical-align: middle;">
-                <h1>UMKM Unggulan</h1>
+                <a href="#" class="btn btn-primary btn-block">UMKM Unggulan</a>
             </div>
         </div>
     </div>

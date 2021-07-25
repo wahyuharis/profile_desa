@@ -64,15 +64,11 @@
                 <div id="kecamatan-<?= remove_dots($row['id_kecamatan']) ?>" class="desa-list mb-2" style="display: none;">
                     <ul class="list-group">
                         <?php foreach ($row['JSON'] as $desa_row) { ?>
-                            <li class="list-group-item"><?= $desa_row['nama_desa'] ?>
-
-                                <div class="btn-group btn-group-sm float-right" role="group" aria-label="Basic example">
-                                    <a href="<?=base_url('lagu/daftar/'.$desa_row['id_desa'])?>" class="btn btn-secondary">Lagu</a>
-                                    <button type="button" class="btn btn-secondary">Wisata</button>
-                                    <button type="button" class="btn btn-secondary">Batik</button>
-                                    <button type="button" class="btn btn-secondary">UMKM</button>
-                                </div>
-                            </li>
+                            <!-- <li class="list-group-item"> -->
+                            <a href="<?=base_url('desa/detail/'.$desa_row['id_desa'])?>" class="list-group-item list-group-item-action">
+                                <?= $desa_row['nama_desa'] ?>
+                            </a>
+                            <!-- </li> -->
                         <?php } ?>
                     </ul>
                 </div>
