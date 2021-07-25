@@ -82,8 +82,8 @@
             <a class="nav-link" href="#">UMKM UNGGULAN</a>
           </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="text" placeholder="Search">
+        <form method="get" action="<?=base_url('home/search/')?>" class="form-inline my-2 my-lg-0">
+          <input name="search" class="form-control mr-sm-2" type="text" placeholder="Search">
           <button class="btn2 my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button>
         </form>
       </div>

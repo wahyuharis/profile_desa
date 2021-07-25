@@ -74,7 +74,7 @@ class KecamatanDesa_model  extends CI_Model
 
 
     if (!empty(trim($type))) {
-      $sql .= " WHERE tb.TYPE = 'LAGU' ";
+      $sql .= " WHERE tb.TYPE = ".$this->db->escape($type)." ";
     }
     $sql .= "\n";
 

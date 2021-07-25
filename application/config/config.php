@@ -1,5 +1,5 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
 /*
 |--------------------------------------------------------------------------
@@ -23,9 +23,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$__BASE_PATH = $_SERVER['REQUEST_SCHEME'] . "://" . $_SERVER['HTTP_HOST'] . $_SERVER["SCRIPT_NAME"];
-$__BASE_PATH = str_replace("index.php", "", $__BASE_PATH);
-$config['base_url'] = $__BASE_PATH;
+
+
+if (is_cli()) {
+    $config['base_url'] = '';
+} else {
+    $__BASE_PATH = $_SERVER['REQUEST_SCHEME'] . "://" . $_SERVER['HTTP_HOST'] . $_SERVER["SCRIPT_NAME"];
+    $__BASE_PATH = str_replace("index.php", "", $__BASE_PATH);
+    $config['base_url'] = $__BASE_PATH;
+}
 
 /*
 |--------------------------------------------------------------------------
@@ -54,7 +60,7 @@ $config['index_page'] = '';
 |
 | WARNING: If you set this to 'PATH_INFO', URIs will always be URL-decoded!
 */
-$config['uri_protocol']	= 'REQUEST_URI';
+$config['uri_protocol']    = 'REQUEST_URI';
 
 /*
 |--------------------------------------------------------------------------
@@ -78,7 +84,7 @@ $config['url_suffix'] = '';
 | than english.
 |
 */
-$config['language']	= 'indonesian';
+$config['language']    = 'indonesian';
 
 /*
 |--------------------------------------------------------------------------
@@ -326,7 +332,7 @@ $config['cache_query_string'] = FALSE;
 | https://codeigniter.com/user_guide/libraries/encryption.html
 |
 */
-$config['encryption_key'] = bin2hex( 'vGG3KVJECI' );
+$config['encryption_key'] = bin2hex('vGG3KVJECI');
 
 /*
 |--------------------------------------------------------------------------
@@ -403,11 +409,11 @@ $config['sess_regenerate_destroy'] = FALSE;
 |       'cookie_httponly') will also affect sessions.
 |
 */
-$config['cookie_prefix']	= '';
-$config['cookie_domain']	= '';
-$config['cookie_path']		= '/';
-$config['cookie_secure']	= FALSE;
-$config['cookie_httponly'] 	= FALSE;
+$config['cookie_prefix']    = '';
+$config['cookie_domain']    = '';
+$config['cookie_path']        = '/';
+$config['cookie_secure']    = FALSE;
+$config['cookie_httponly']     = FALSE;
 
 /*
 |--------------------------------------------------------------------------
