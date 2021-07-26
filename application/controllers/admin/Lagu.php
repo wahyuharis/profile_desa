@@ -61,12 +61,15 @@ class Lagu extends CI_Controller
         $crud->set_field_upload('lagu', 'assets/uploads/files');
         $crud->set_field_upload('foto', 'assets/uploads/files');
 
-        $crud->fields('id_desa', 'nama_lagu', 'foto', 'lagu','content');
+        $crud->fields('id_desa', 'nama_lagu', 'foto', 'lagu', 'content', 'no_urut');
         $crud->required_fields('id_desa', 'nama_lagu', 'foto', 'lagu');
 
-        $crud->callback_before_upload(array($this, '_callback_before_upload'));
+        $crud->field_type('no_urut', 'hidden');
 
+        $crud->callback_before_upload(array($this, '_callback_before_upload'));
         $crud->callback_before_delete(array($this, '_callback_before_delete'));
+
+        $crud->callback_before_insert(array($this, '_callback_before_insert'));
 
 
         $output = $crud->render();
@@ -130,5 +133,13 @@ class Lagu extends CI_Controller
         $this->db->insert('_trash', $trash_insert);
 
         return true;
+    }
+
+    function _callback_before_insert($post_array)
+    {
+
+        $post_array['no_urut'] = get_increment('desa_lagu', 'no_urut');
+
+        return $post_array;
     }
 }

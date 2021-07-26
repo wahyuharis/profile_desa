@@ -6,8 +6,26 @@ class Lagu extends CI_Controller
     {
         parent::__construct();
         $this->load->library('Frontend');
+
+
+
     }
     public function index()
+    {
+        $frontend = new Frontend();
+        $html = '';
+
+        $breadcrump = array(
+            'Home' => '',
+            'Lagu Desa' => 'lagu',
+        );
+        $frontend->set_breadcrump($breadcrump);
+
+        $frontend->set_content($html);
+        $frontend->render();
+    }
+
+    public function daftar_perdesa()
     {
         $frontend = new Frontend();
         $html = '';
@@ -27,7 +45,7 @@ class Lagu extends CI_Controller
 
         $breadcrump = array(
             'Home' => '',
-            'Lagu Desa' => 'lagu',
+            'Lagu Desa' => 'lagu/daftar_perdesa',
         );
         $frontend->set_breadcrump($breadcrump);
 

@@ -373,3 +373,21 @@ function getFirstParagraph($paragraph)
 
     return $paragraph_arr[$first_paragraph];
 }
+
+
+function get_increment($table, $column)
+{
+    $ci = &get_instance();
+
+    $ci->db->select_max($column, 'res');
+    $db = $ci->db->get($table);
+
+    $return = '';
+    if ($db->num_rows() > 0) {
+        $return = $db->row_array()['res'];
+    }
+
+    $return = intval($return) + 1;
+
+    return $return;
+}
