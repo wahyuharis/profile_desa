@@ -9,6 +9,7 @@ class Lagu extends CI_Controller
     private $table_name = 'desa_lagu';
     private $primary_key = "id_lagu";
     private $crud = null;
+    private $primary_key_val2 = false;
 
     public function __construct()
     {
@@ -35,6 +36,7 @@ class Lagu extends CI_Controller
         $crud->set_primary_key($this->primary_key, $this->table_name);
 
         $state = $crud->getState();
+        $state_info = $crud->getStateInfo();
         $this->crud = $crud;
         //========== inisiasi =============
 
@@ -46,7 +48,6 @@ class Lagu extends CI_Controller
             $where = array();
             $where['desa_lagu.id_desa'] = $sess['id_desa'];
             $where2['id_desa'] = $sess['id_desa'];
-
             $crud->where($where);
         }
 
@@ -61,16 +62,28 @@ class Lagu extends CI_Controller
         $crud->set_field_upload('lagu', 'assets/uploads/files');
         $crud->set_field_upload('foto', 'assets/uploads/files');
 
-        $crud->fields('id_desa', 'nama_lagu', 'foto', 'lagu', 'content', 'no_urut');
+        $crud->fields('no_urut', 'id_desa', 'nama_lagu', 'foto', 'lagu', 'content');
         $crud->required_fields('id_desa', 'nama_lagu', 'foto', 'lagu');
 
-        $crud->field_type('no_urut', 'hidden');
+
+        // print_r2($state);
+        // print_r2($state_info);
+
+        if ($state == 'add') {
+            $crud->field_type('no_urut', 'hidden');
+        }
+
+        if ($state == 'update_validation' || $state == 'update' || $state=='edit' ) {
+            $this->primary_key_val2 = $state_info->primary_key;
+            $crud->set_rules('no_urut', 'No Urut', 'trim|required|callback_is_uniqe_nourut');
+        }
 
         $crud->callback_before_upload(array($this, '_callback_before_upload'));
         $crud->callback_before_delete(array($this, '_callback_before_delete'));
 
         $crud->callback_before_insert(array($this, '_callback_before_insert'));
 
+        $crud->order_by('no_urut', 'asc');
 
         $output = $crud->render();
 
@@ -80,6 +93,32 @@ class Lagu extends CI_Controller
         $template_data['css_files'] = $output->css_files;
 
         $this->load->view('admin/template', $template_data);
+    }
+
+    public function is_uniqe_nourut($str)
+    {
+
+        $no_urut = $this->input->post('no_urut');
+        $primary_key = $this->primary_key_val2;
+        $return = false;
+
+        $this->db->where('no_urut', $no_urut);
+        $this->db->where('id_lagu <>', $primary_key);
+        $db = $this->db->get('desa_lagu');
+
+        // print_r2($this->db->last_query());
+
+        if ($db->num_rows() > 0) {
+            $return = false;
+            $this->form_validation->set_message('is_uniqe_nourut', 'Maaf {field} Di isi dengan nomor urut yang sudah ada');
+        } else {
+            $return = true;
+        }
+
+        // var_dump($return);
+        // die();
+
+        return  $return;
     }
 
     function _callback_before_upload($files_to_upload, $field_info)

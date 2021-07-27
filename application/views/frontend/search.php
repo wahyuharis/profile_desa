@@ -44,7 +44,6 @@
                                 <a href="<?= base_url('lagu/putar/' . $row['KEY']) ?>" class="btn btn-primary btn-sm btn-block" data-toggle="tooltip" title="Play">
                                     <i class="fas fa-play"></i> Putar
                                 </a>
-
                             <?php  } elseif ($row['TYPE'] == 'DESA') { ?>
                                 <a href="<?= base_url('desa/detail/' . $row['KEY']) ?>" class="btn btn-primary btn-sm btn-block" data-toggle="tooltip" title="Play">
                                     <i class="fas fa-eye"></i> LIHAT
