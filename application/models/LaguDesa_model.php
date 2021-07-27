@@ -2,9 +2,16 @@
 class LaguDesa_model  extends CI_Model
 {
 
+    private $total_row = 0;
+
     function __construct()
     {
         parent::__construct();
+    }
+
+    function get_total_row()
+    {
+        return $this->total_row;
     }
 
     public function get_list_desa($where = "")
@@ -29,7 +36,7 @@ class LaguDesa_model  extends CI_Model
         return $return;
         // echo $sql;
     }
-    public function get_list($where = "")
+    public function get_list($where = "", $limit = 8, $start = 0)
     {
         $sql = "SELECT * FROM
         desa_lagu
@@ -43,6 +50,20 @@ class LaguDesa_model  extends CI_Model
         desa.nama_desa LIKE '%" . $this->db->escape_str($where) . "%'
         OR
         kecamatan.nama_kecamatan LIKE '%" . $this->db->escape_str($where) . "%' ";
+
+        $sql .= "
+        order by desa_lagu.id_lagu
+        ";
+
+
+        $sql_no_limit = $sql;
+
+        $sql .= "
+        limit " . intval($start) . "," . intval($limit) . " 
+        ";
+
+        $db2 = $this->db->query($sql_no_limit);
+        $this->total_row = $db2->num_rows();
 
         $db = $this->db->query($sql);
         $return =  $db->result_array();

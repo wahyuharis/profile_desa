@@ -6,14 +6,37 @@ class Lagu extends CI_Controller
     {
         parent::__construct();
         $this->load->library('Frontend');
-
-
-
     }
     public function index()
     {
         $frontend = new Frontend();
         $html = '';
+
+        $this->load->model('LaguDesa_model');
+        $lagu_desa_model = new LaguDesa_model();
+
+
+
+        $page = $this->input->get('page');
+        $limit = 8;
+        $start = page_to_start($page, $limit);
+
+        $lagu_desa_data = $lagu_desa_model->get_list('', $limit, $start);
+
+        $this->load->library('pagination');
+        $config['base_url'] = base_url('lagu/index');
+        $config['total_rows'] = $lagu_desa_model->get_total_row();
+        $config['per_page'] = $limit;
+        $this->pagination->initialize($config);
+
+        // print_r2($lagu_desa_data);
+
+        $content_data = array();
+		$content_data['pagination'] = $this->pagination->create_links();
+		$content_data['lagu_desa_data'] = $lagu_desa_data;
+
+
+        $html = $frontend->load_view('frontend/lagu_list', $content_data);
 
         $breadcrump = array(
             'Home' => '',

@@ -29,7 +29,7 @@ class Desa extends CI_Controller
         //========== inisiasi =============
 
         $crud->columns('id_desa','id_kecamatan','nama_desa');
-        $crud->fields('id_kecamatan','foto_desa','nama_desa');
+        $crud->fields('id_kecamatan','foto_desa','nama_desa','url_website','keterangan');
         $crud->set_relation('id_kecamatan', 'kecamatan', 'nama_kecamatan');
         $crud->display_as('id_kecamatan', 'Kecamatan');
         $crud->display_as('nama_desa', 'Desa');

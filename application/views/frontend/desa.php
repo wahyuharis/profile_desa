@@ -16,7 +16,7 @@
         <?php
         } else {
         ?>
-            <img class="img-fluid" src="<?= base_url('assets/uploads/files/'.$desa['foto_desa']) ?>">
+            <img class="img-fluid" src="<?= base_url('assets/uploads/files/' . $desa['foto_desa']) ?>">
         <?php
         }
         ?>
@@ -43,7 +43,13 @@
 
 <div class="row mb-3">
     <div class="col-md-12 text-center">
-        <a class="btn btn-primary">Link Web Desa</a>
+        <?php
+        $link_web_desa = '#';
+        if (strlen(trim($desa['url_website'])) > 0 ) {
+            $link_web_desa=$desa['url_website'];
+        }
+        ?>
+        <a href="<?= $link_web_desa ?>" class="btn btn-primary">Link Web Desa</a>
     </div>
 </div>
 
