@@ -1,3 +1,10 @@
+<?php
+$ci = &get_instance();
+
+// print_r2($slider);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 

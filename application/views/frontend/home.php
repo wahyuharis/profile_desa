@@ -8,27 +8,23 @@
             </ul>
             <!-- The slideshow -->
             <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="<?= base_url('assets/uploads/files/slide-1.jpg') ?>" alt="" width="100%" height="300">
-                    <div class="carousel-caption">
-                        <h3>Los Angeles</h3>
-                        <p>We had such a great time in LA!</p>
+                <?php $incr = 0; ?>
+                <?php foreach ($slider as $srow) : ?>
+                    <?php
+                    $active = "";
+                    if ($incr < 1) {
+                        $active = " active ";
+                    }
+                    ?>
+                    <div class="carousel-item <?= $active ?>">
+                        <img src="<?= base_url('assets/uploads/files/' .$srow['img']  ) ?>" alt="" width="100%" height="300">
+                        <div class="carousel-caption">
+                            <h3><?=$srow['title']?></h3>
+                            <p><?=$srow['sub_title']?></p>
+                        </div>
                     </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="<?= base_url('assets/uploads/files/slide-2.jpg') ?>" alt="" width="100%" height="300">
-                    <div class="carousel-caption">
-                        <h3>Los Angeles</h3>
-                        <p>We had such a great time in LA!</p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="<?= base_url('assets/uploads/files/slide-3.jpg') ?>" alt="" width="100%" height="300">
-                    <div class="carousel-caption">
-                        <h3>Los Angeles</h3>
-                        <p>We had such a great time in LA!</p>
-                    </div>
-                </div>
+                    <?php $incr++; ?>
+                <?php endforeach; ?>
             </div>
 
             <!-- Left and right controls -->
@@ -65,7 +61,7 @@
                     <ul class="list-group">
                         <?php foreach ($row['JSON'] as $desa_row) { ?>
                             <!-- <li class="list-group-item"> -->
-                            <a href="<?=base_url('desa/detail/'.$desa_row['id_desa'])?>" class="list-group-item list-group-item-action">
+                            <a href="<?= base_url('desa/detail/' . $desa_row['id_desa']) ?>" class="list-group-item list-group-item-action">
                                 <?= $desa_row['nama_desa'] ?>
                             </a>
                             <!-- </li> -->

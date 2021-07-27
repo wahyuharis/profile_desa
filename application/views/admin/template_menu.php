@@ -55,6 +55,20 @@
 </li>
 
 
+<li class="treeview">
+    <a href="#">
+        <i class="fa fa-desktop"></i> <span>Template</span>
+        <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right"></i>
+        </span>
+    </a>
+    <ul class="treeview-menu">
+        <li class="<?= is_active(2, 'slider') ?>"><a href="<?= base_url('admin/slider') ?>"><i class="fa fa-delicious"></i> Slider</a></li>
+        <li class="<?= is_active(2, 'sprites') ?>"><a href="<?= base_url('admin/sprites') ?>"><i class="fa fa-pagelines"></i> Logo</a></li>
+    </ul>
+</li>
+
+
 
 <?php
 function is_active($segment_number, $segment_varchar)

@@ -30,10 +30,15 @@ class Home extends CI_Controller
 			array_push($kecamatan_desa2, $buff);
 		}
 
+
+		$slider = array();
+		$slider = $this->db->get('slider')->result_array();
+
 		// print_r2($kecamatan_desa2);
 
 		$content_data = array();
 		$content_data['kecamatan_desa'] = $kecamatan_desa2;
+		$content_data['slider'] = $slider;
 		$html = $frontend->load_view('frontend/home', $content_data);
 		$frontend->set_content($html);
 		$frontend->render();
@@ -48,22 +53,22 @@ class Home extends CI_Controller
 		$this->load->model('KecamatanDesa_model');
 
 		$page = $this->input->get('page');
-        $limit = 8;
-        $start = page_to_start($page, $limit);
+		$limit = 8;
+		$start = page_to_start($page, $limit);
 
 		$kecamatandesa_model = new KecamatanDesa_model();
-		$search_txt=$this->input->get('search');
-		$type=$this->input->get('jenis');
-		$search_res = $kecamatandesa_model->search($search_txt,$type,$limit,$start);
+		$search_txt = $this->input->get('search');
+		$type = $this->input->get('jenis');
+		$search_res = $kecamatandesa_model->search($search_txt, $type, $limit, $start);
 
 		// print_r2($search_res);
 
 		$this->load->library('pagination');
-        $config['base_url'] = base_url('home/search/');
-        $config['total_rows'] = $kecamatandesa_model->get_total_row();
-        $config['per_page'] = $limit;
+		$config['base_url'] = base_url('home/search/');
+		$config['total_rows'] = $kecamatandesa_model->get_total_row();
+		$config['per_page'] = $limit;
 
-        $this->pagination->initialize($config);
+		$this->pagination->initialize($config);
 
 
 		$content_data['search_res'] = $search_res;
