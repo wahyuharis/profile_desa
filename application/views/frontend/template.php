@@ -82,7 +82,7 @@
             <a class="nav-link" href="#">UMKM UNGGULAN</a>
           </li>
         </ul>
-        <form method="get" action="<?=base_url('home/search/')?>" class="form-inline my-2 my-lg-0">
+        <form method="get" action="<?= base_url('home/search/') ?>" class="form-inline my-2 my-lg-0">
           <input name="search" class="form-control mr-sm-2" type="text" placeholder="Search">
           <button class="btn2 my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button>
         </form>
@@ -132,36 +132,37 @@
     <div class="container">
 
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-5">
           <p>Developed by :</p>
 
           <div class="row mb-3">
-            <div class="col-3">
-              <img width="100%" src="<?= base_url('assets/kominfo.png') ?>">
+            <div class="col-12">
+              <img width="100%" src="<?= base_url('assets/logofooter.png') ?>">
             </div>
-            <div class="col-9">
+            <!-- <div class="col-9">
               DINAS KOMUNIKASI DAN INFORMATIKA KABUPATEN JEMBER
-            </div>
+            </div> -->
           </div>
-          <p>Jl. Dewi Sartika No.54, Kepatihan, Kec. Kaliwates,
-            Kabupaten Jember, Jawa Timur 68131<br>
-            diskominfo@jemberkab.go.id
-            <br>
-            (0331) 5102507
+          <p><strong>Alamat</strong> : Jl. Dewi Sartika No.54, Kepatihan, Kec. Kaliwates,
+            Kabupaten Jember, Jawa Timur (68131)<br><br>
+            <strong> Email</strong> : diskominfo@jemberkab.go.id
+            <br><br>
+            <strong> No. Telephone </strong> : (0331) 5102507
           </p>
         </div>
 
-        <div class="col-md-4">
+        <div class="col-md-5">
           <p>Visit Us :</p>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.305799930494!2d113.69954891384033!3d-8.171915594118198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd6943ace876f09%3A0x3badfa144578a391!2sDinas%20Komunikasi%20Dan%20Informatika%20(Kominfo)%20Kabupaten%20Jember!5e0!3m2!1sid!2sid!4v1621121345922!5m2!1sid!2sid" width="330" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.305799930494!2d113.69954891384033!3d-8.171915594118198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd6943ace876f09%3A0x3badfa144578a391!2sDinas%20Komunikasi%20Dan%20Informatika%20(Kominfo)%20Kabupaten%20Jember!5e0!3m2!1sid!2sid!4v1621121345922!5m2!1sid!2sid" width="440px" height="280px" style="border:0;" loading="lazy"></iframe>
+          <br><br>
         </div>
 
-        <div class="col-md-4 ">
-          <p>Follow Us :</p>
+        <div class="col-md-2">
+          <p class="bawah">Follow Us :</p>
           <div class="social-footer">
-            <a class="twitter-social" href="https://twitter.com/kominfojember" target="_blank"><i class="fab fa-twitter"></i></a>
-            <a class="facebook-social" href="https://www.facebook.com/Dinas-Komunikasi-Informatika-Kabupaten-Jember-1911954692385233/" target="_blank"><i class="fab fa-facebook" target="_blank"></i></a>
-            <a class="instagram-social" href="https://www.instagram.com/kominfojember/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a class="twitter-social" href="https://twitter.com/kominfojember" target="_blank"><i class="fab fa-twitter" style="width: 30px;height:50px"></i></a>
+            <a class="facebook-social" href="https://www.facebook.com/Dinas-Komunikasi-Informatika-Kabupaten-Jember-1911954692385233/" target="_blank"><i class="fab fa-facebook" style="width: 30px;height:50px"></i></a>
+            <a class="instagram-social" href="https://www.instagram.com/kominfojember/" target="_blank"><i class="fab fa-instagram" style="width: 30px;height:50px"></i></a>
           </div>
         </div>
 
