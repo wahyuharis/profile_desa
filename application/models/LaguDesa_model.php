@@ -52,7 +52,7 @@ class LaguDesa_model  extends CI_Model
         kecamatan.nama_kecamatan LIKE '%" . $this->db->escape_str($where) . "%' ";
 
         $sql .= "
-        order by desa_lagu.id_lagu
+        order by desa_lagu.no_urut
         ";
 
 

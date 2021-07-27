@@ -6,6 +6,10 @@ class Home extends CI_Controller
 	{
 		parent::__construct();
 		$this->load->library('Frontend');
+
+		// print_r2($this->uri->segment(1));
+
+		// die();
 	}
 	public function index()
 	{

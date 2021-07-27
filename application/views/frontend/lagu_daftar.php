@@ -9,8 +9,8 @@
     <!-- <div class="col-md-12"> -->
 
     <?php foreach ($lagu_desa as $row) { ?>
-        <div class="col-md-3">
-            <div class="card" style="width:250px">
+        <div class="col-md-3 mb-3">
+            <div class="card" >
                 <img class="card-img-top" width="100%" height="240" src="<?= base_url('assets/uploads/files/' . $row['foto']) ?>" alt="Card image" style="width:100%">
                 <div class="card-body" style="height: 100px;">
                     <div class="row">

@@ -64,12 +64,27 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarColor01">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="<?= base_url() ?>">Home
-              <span class="sr-only">(current)</span>
+          <?php
+          $segment0 = $this->uri->segment(1);
+          $segment0 = strtolower($segment0);
+
+          $nav_active = "";
+          if ($segment0 == '' || $segment0 == 'home') {
+            $nav_active = 'active';
+          }
+          ?>
+          <li class="nav-item <?= $nav_active ?>">
+            <a class="nav-link" href="<?= base_url() ?>">
+              Home
             </a>
           </li>
-          <li class="nav-item">
+          <?php
+          $nav_active = "";
+          if ($segment0 == 'lagu') {
+            $nav_active = 'active';
+          }
+          ?>
+          <li class="nav-item <?= $nav_active ?>">
             <a class="nav-link" href="<?= base_url('lagu/') ?>">Lagu Desa</a>
           </li>
           <li class="nav-item">
