@@ -43,6 +43,9 @@ class Lagu extends CI_Controller
         $crud->set_subject($this->title);
 
 
+        $crud->fields('no_urut', 'id_desa', 'nama_lagu', 'foto', 'lagu', 'content');
+        $crud->required_fields('id_desa', 'nama_lagu', 'foto', 'lagu');
+
         $where2 = null;
         if (intval($sess['id_role']) == 2) {
             $where = array();
@@ -62,15 +65,14 @@ class Lagu extends CI_Controller
         $crud->set_field_upload('lagu', 'assets/uploads/files');
         $crud->set_field_upload('foto', 'assets/uploads/files');
 
-        $crud->fields('no_urut', 'id_desa', 'nama_lagu', 'foto', 'lagu', 'content');
-        $crud->required_fields('id_desa', 'nama_lagu', 'foto', 'lagu');
-
-
-        // print_r2($state);
-        // print_r2($state_info);
 
         if ($state == 'add') {
             $crud->field_type('no_urut', 'hidden');
+        }
+
+        if (intval($sess['id_role']) == 2) {
+            $crud->field_type('no_urut', 'hidden');
+
         }
 
         if ($state == 'update_validation' || $state == 'update' || $state=='edit' ) {
@@ -106,7 +108,6 @@ class Lagu extends CI_Controller
         $this->db->where('id_lagu <>', $primary_key);
         $db = $this->db->get('desa_lagu');
 
-        // print_r2($this->db->last_query());
 
         if ($db->num_rows() > 0) {
             $return = false;
@@ -114,9 +115,6 @@ class Lagu extends CI_Controller
         } else {
             $return = true;
         }
-
-        // var_dump($return);
-        // die();
 
         return  $return;
     }
