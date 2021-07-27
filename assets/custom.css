@@ -118,3 +118,12 @@ body {
 .social-footer a{
     color: #fff;
 }
+
+.footer-bottom-black p{
+    font-size: 15.7px;
+    text-align: justify;
+}
+
+.footer-bottom-black .bawah{
+    margin-bottom: 0px;
+}
