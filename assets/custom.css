@@ -37,11 +37,8 @@ body {
     /* background-color: #000; */
 }
 
-.banner-before-slider::after {
-    content: "";
-    background-size: cover;
-    background-position-y: -153px;
-    background-image: url('../assets/uploads/files/batik.jpg');
+
+.banner-before-slider-img{
     opacity: 0.5;
     top: 0;
     left: 0;
@@ -49,6 +46,8 @@ body {
     right: 0;
     position: absolute;
     z-index: -1;
+    width: 100%;
+    height: 100%;
 }
 
 .img-banner {

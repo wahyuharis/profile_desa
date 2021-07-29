@@ -1,7 +1,13 @@
 <?php
 $ci = &get_instance();
-
+$sprites_res = $ci->db->get('sprites')->result_array();
 // print_r2($slider);
+$sprites = array();
+foreach ($sprites_res as $row) {
+  $sprites[$row['name']] = $row;
+}
+
+// print_r2($sprites);
 
 ?>
 
@@ -33,9 +39,9 @@ $ci = &get_instance();
     <div class="container">
       <div class="row">
         <div class="col-6">
-          <img src="<?= base_url('assets/uploads/files/logo-header.png') ?>" style="width:20px;height: 20px;">
+          <img src="<?= base_url('assets/uploads/files/' .$sprites['top_header']['img']  ) ?>" style="width:20px;height: 20px;">
           &nbsp;
-          PEMERINTAH KABUPATEN JEMBER
+          <?=$sprites['top_header']['caption']?>
         </div>
         <div class="col-6 text-right" style="font-size: 17px;">
           <a class="sosmed-header sosmed-header-instagram" href="#"><i class="fab fa-instagram"></i></a>
@@ -51,14 +57,14 @@ $ci = &get_instance();
     <div class="container">
       <div class="row">
         <div class="col-4 pt-4 pb-4">
-          <img src="<?= base_url('assets/uploads/files/e8867-600px-lambang-kabupaten-jember.png') ?>" width="100px" height="100px" class="float-right">
+          <img src="<?= base_url('assets/uploads/files/'.$sprites['mid_header']['img']) ?>" width="100px" height="100px" class="float-right">
         </div>
         <div class="col-8 pt-4 text-dark banner-text">
-          <h1>Jember Ekonomi Kreatif</h1>
-          <h5>Bersama Pemuda Jember Membangun Ekonomi Kreatif</h5>
+          <?=$sprites['mid_header']['caption']?>
         </div>
       </div>
     </div>
+    <img class="banner-before-slider-img" src="<?= base_url('assets/uploads/files/'.$sprites['banner']['img']) ?>">
   </div>
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-3">
@@ -159,11 +165,8 @@ $ci = &get_instance();
 
           <div class="row mb-3">
             <div class="col-12">
-              <img width="100%" src="<?= base_url('assets/logofooter.png') ?>">
+              <img width="100%" src="<?= base_url('assets/uploads/files/'.$sprites['footer']['img']) ?>">
             </div>
-            <!-- <div class="col-9">
-              DINAS KOMUNIKASI DAN INFORMATIKA KABUPATEN JEMBER
-            </div> -->
           </div>
           <p><strong>Alamat</strong> : Jl. Dewi Sartika No.54, Kepatihan, Kec. Kaliwates,
             Kabupaten Jember, Jawa Timur (68131)<br><br>
