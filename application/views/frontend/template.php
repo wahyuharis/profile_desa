@@ -100,15 +100,22 @@ foreach ($sprites_res as $row) {
           <li class="nav-item <?= $nav_active ?>">
             <a class="nav-link" href="<?= base_url('lagu/') ?>">Lagu Desa</a>
           </li>
+          <?php
+          $nav_active = "";
+          if ($segment0 == 'wisata') {
+            $nav_active = 'active';
+          }
+          ?>
+          <li class="nav-item <?= $nav_active ?>">
+            <a class="nav-link" href="<?= base_url('wisata/') ?>">Wisata Desa</a>
+          </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Wisata Desa</a>
+            <a class="nav-link" href="#">UMKM Unggulan</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Desain Batik</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">UMKM UNGGULAN</a>
-          </li>
+          
         </ul>
         <form method="get" action="<?= base_url('home/search/') ?>" class="form-inline my-2 my-lg-0">
           <input name="search" class="form-control mr-sm-2" type="text" placeholder="Search">
