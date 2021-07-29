@@ -1,0 +1,44 @@
+<?php
+class WisataDesa_model  extends CI_Model
+{
+
+    private $total_row = 0;
+
+    function __construct()
+    {
+        parent::__construct();
+    }
+
+    function get_total_row()
+    {
+        return $this->total_row;
+    }
+
+    function get_list($where = "", $limit, $start)
+    {
+        $sql = "SELECT * FROM desa_wisata
+
+        left JOIN desa 
+        ON desa.id_desa=desa_wisata.id_desa
+        
+        LEFT JOIN kecamatan
+        ON kecamatan.id_kecamatan=desa.id_kecamatan
+        
+        ORDER BY desa_wisata.no_urut asc
+        ";
+
+        $db2 = $this->db->query($sql);
+
+        $sql .= "
+        limit " . intval($start) . "," . intval($limit) . "
+        ";
+
+        $this->total_row = $db2->num_rows();
+
+        $db = $this->db->query($sql);
+
+        $return = $db->result_array();
+
+        return $return;
+    }
+}
