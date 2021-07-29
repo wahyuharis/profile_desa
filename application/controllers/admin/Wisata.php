@@ -25,7 +25,6 @@ class Wisata extends CI_Controller
     {
         $sess = $this->session->userdata();
 
-
         $crud = new grocery_CRUD();
         $crud->unset_bootstrap();
         $crud->unset_jquery();
@@ -39,8 +38,7 @@ class Wisata extends CI_Controller
 
         $crud->set_subject($this->title);
 
-        $crud->display_as('id_desa', 'Desa');
-        $crud->display_as('content', 'Keterangan');
+
 
 
         $where2 = null;
@@ -54,12 +52,18 @@ class Wisata extends CI_Controller
         $crud->set_relation('id_desa', 'desa_kecamatan', '{nama_desa} - Kec. {nama_kecamatan}', $where2);
 
         $crud->columns('no_urut','id_desa','nama_wisata','foto');
-        $crud->fields('no_urut','id_desa','nama_wisata','foto1','foto2','foto3','content');
+        $crud->fields('no_urut','id_desa','nama_wisata','foto1','foto2','foto3','content','maps');
         $crud->required_fields('id_desa','nama_wisata','foto1');
+
+        $crud->display_as('id_desa', 'Desa');
+        $crud->display_as('content', 'Keterangan');
+        $crud->display_as('maps', 'Sematkan Peta');
 
         $crud->set_field_upload('foto1', 'assets/uploads/files');
         $crud->set_field_upload('foto2', 'assets/uploads/files');
         $crud->set_field_upload('foto3', 'assets/uploads/files');
+
+        $crud->unset_texteditor('maps');
 
         if ($state == 'add') {
             $crud->field_type('no_urut', 'hidden');

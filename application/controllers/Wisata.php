@@ -48,8 +48,35 @@ class Wisata extends CI_Controller
         $frontend->render();
     }
 
-    public function wisata($id_wisata)
+    public function lihat($id_wisata)
     {
-        
+        $frontend = new Frontend();
+        $html = '';
+
+        $this->load->model('WisataDesa_model');
+        $wisata_desa_model = new WisataDesa_model();
+
+
+
+        $wisata_desa_detail = $wisata_desa_model->detail($id_wisata);
+
+        // print_r2($wisata_desa_detail);
+
+        $nama_lagu = $wisata_desa_detail['nama_wisata'] . " - " . $wisata_desa_detail['nama_desa'] . " - " . $wisata_desa_detail['nama_kecamatan'];
+
+
+        $content_data = array();
+        $content_data['wisata_desa_detail'] = $wisata_desa_detail;
+        $html = $frontend->load_view('frontend/wisata_detail', $content_data);
+
+        $breadcrump = array(
+            'Home' => '',
+            "Wisata Desa" => 'wisata',
+            $nama_lagu => "",
+        );
+
+        $frontend->set_breadcrump($breadcrump);
+        $frontend->set_content($html);
+        $frontend->render();
     }
 }
