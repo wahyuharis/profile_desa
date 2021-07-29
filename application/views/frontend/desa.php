@@ -67,7 +67,7 @@
         <div class="card">
             <img class="card-img-top" src="<?= base_url('assets/wisata.png') ?>">
             <div class="card-body text-center" style="vertical-align: middle;">
-                <a href="#" class="btn btn-primary btn-block">Wisata Desa</a>
+                <a href="<?= base_url('wisata/by_desa/' . $desa['id_desa']) ?>" class="btn btn-primary btn-block">Wisata Desa</a>
             </div>
         </div>
     </div>

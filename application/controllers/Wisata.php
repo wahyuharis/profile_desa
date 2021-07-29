@@ -62,7 +62,7 @@ class Wisata extends CI_Controller
 
         // print_r2($wisata_desa_detail);
 
-        $nama_lagu = $wisata_desa_detail['nama_wisata'] . " - " . $wisata_desa_detail['nama_desa'] . " - " . $wisata_desa_detail['nama_kecamatan'];
+        $nama_wisata = $wisata_desa_detail['nama_wisata'] . " - " . $wisata_desa_detail['nama_desa'] . " - " . $wisata_desa_detail['nama_kecamatan'];
 
 
         $content_data = array();
@@ -72,7 +72,39 @@ class Wisata extends CI_Controller
         $breadcrump = array(
             'Home' => '',
             "Wisata Desa" => 'wisata',
-            $nama_lagu => "",
+            "Desa " . $wisata_desa_detail['nama_desa'] => 'wisata/by_desa/' . $wisata_desa_detail['id_desa'],
+            $nama_wisata => "",
+        );
+
+        $frontend->set_breadcrump($breadcrump);
+        $frontend->set_content($html);
+        $frontend->render();
+    }
+
+    public function by_desa($id_desa)
+    {
+        $frontend = new Frontend();
+        $html = '';
+
+        $this->load->model('WisataDesa_model');
+        $wisata_desa_model = new WisataDesa_model();
+
+
+
+        $wisata_desa_data = $wisata_desa_model->detail_byDesa($id_desa);
+
+        $desa = $this->db->where('id_desa', $id_desa)->get('desa')->row_array();
+
+        $content_data = array();
+        $content_data['wisata_desa_data'] = $wisata_desa_data;
+        $content_data['desa'] = $desa;
+        $html = $frontend->load_view('frontend/wisata_daftar', $content_data);
+
+        $breadcrump = array(
+            'Home' => '',
+            'Wisata Desa' => "wisata",
+            "Desa " . $desa['nama_desa'] => 'desa/detail/' . $desa['id_desa'],
+
         );
 
         $frontend->set_breadcrump($breadcrump);

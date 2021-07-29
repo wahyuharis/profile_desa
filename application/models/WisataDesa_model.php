@@ -65,4 +65,24 @@ class WisataDesa_model  extends CI_Model
 
         return $return;
     }
+
+
+    function detail_byDesa($id_desa)
+    {
+        $sql = "SELECT * FROM desa
+
+        left JOIN desa_wisata 
+        ON desa.id_desa=desa_wisata.id_desa
+        
+        LEFT JOIN kecamatan
+        ON kecamatan.id_kecamatan=desa.id_kecamatan
+        
+        WHERE desa.id_desa=" . $this->db->escape($id_desa) . " ";
+
+        $db = $this->db->query($sql);
+
+        $return = $db->result_array();
+
+        return $return;
+    }
 }
