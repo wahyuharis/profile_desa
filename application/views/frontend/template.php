@@ -23,6 +23,9 @@ foreach ($sprites_res as $row) {
   <meta name="image" content="<?= base_url($meta_img) ?>" />
   <meta property="og:image" content="<?= base_url($meta_img)  ?>">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
   <link rel="icon" href="<?= base_url() ?>assets/logo_admin.ico">
   <link rel="stylesheet" href="<?= base_url() ?>node_modules/bootstrap/dist/css/bootstrap-materia.min.css">
   <link rel="stylesheet" href="<?= base_url() ?>fontawesome/css/all.min.css">
@@ -35,13 +38,14 @@ foreach ($sprites_res as $row) {
 </head>
 
 <body>
-  <header class="bg-dark d-none d-md-block d-lg-block pt-2 pb-1 text-white" style="height: 40px;">
+  <header class="header-top-dark d-none d-md-block d-lg-block pt-2 pb-1" style="height: 40px;">
+  <!-- <header class="bg-dark  pt-2 pb-1 text-white" style="height: 40px;"> -->
     <div class="container">
       <div class="row">
         <div class="col-6">
-          <img src="<?= base_url('assets/uploads/files/' .$sprites['top_header']['img']  ) ?>" style="width:20px;height: 20px;">
+          <img src="<?= base_url('assets/uploads/files/' . $sprites['top_header']['img']) ?>" style="width:20px;height: 20px;margin-top: -2px;">
           &nbsp;
-          <?=$sprites['top_header']['caption']?>
+          <?= $sprites['top_header']['caption'] ?>
         </div>
         <div class="col-6 text-right" style="font-size: 17px;">
           <a class="sosmed-header sosmed-header-instagram" href="#"><i class="fab fa-instagram"></i></a>
@@ -54,17 +58,18 @@ foreach ($sprites_res as $row) {
     </div>
   </header>
   <div role="banner" class="d-none d-md-block d-lg-block banner-before-slider">
+  <!-- <div role="banner" class="banner-before-slider"> -->
     <div class="container">
       <div class="row">
         <div class="col-4 pt-4 pb-4">
-          <img src="<?= base_url('assets/uploads/files/'.$sprites['mid_header']['img']) ?>" width="100px" height="100px" class="float-right">
+          <img src="<?= base_url('assets/uploads/files/' . $sprites['mid_header']['img']) ?>" width="100px" height="100px" class="float-right">
         </div>
         <div class="col-8 pt-4 text-dark banner-text">
-          <?=$sprites['mid_header']['caption']?>
+          <?= $sprites['mid_header']['caption'] ?>
         </div>
       </div>
     </div>
-    <img class="banner-before-slider-img" src="<?= base_url('assets/uploads/files/'.$sprites['banner']['img']) ?>">
+    <img class="banner-before-slider-img" src="<?= base_url('assets/uploads/files/' . $sprites['banner']['img']) ?>">
   </div>
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-3">
@@ -115,7 +120,7 @@ foreach ($sprites_res as $row) {
           <li class="nav-item">
             <a class="nav-link" href="#">Desain Batik</a>
           </li>
-          
+
         </ul>
         <form method="get" action="<?= base_url('home/search/') ?>" class="form-inline my-2 my-lg-0">
           <input name="search" class="form-control mr-sm-2" type="text" placeholder="Search">
@@ -167,33 +172,31 @@ foreach ($sprites_res as $row) {
     <div class="container">
 
       <div class="row">
-        <div class="col-md-5">
+        <div class="col-md-5 pr-5">
           <p>Developed by :</p>
-
           <div class="row mb-3">
             <div class="col-12">
-              <img width="100%" src="<?= base_url('assets/uploads/files/'.$sprites['footer']['img']) ?>">
+              <img width="100%" src="<?= base_url('assets/uploads/files/' . $sprites['footer']['img']) ?>">
             </div>
           </div>
-          <p><strong>Alamat</strong> : Jl. Dewi Sartika No.54, Kepatihan, Kec. Kaliwates,
-            Kabupaten Jember, Jawa Timur (68131)<br><br>
-            <strong> Email</strong> : diskominfo@jemberkab.go.id
-            <br><br>
-            <strong> No. Telephone </strong> : (0331) 5102507
-          </p>
+          <p>Jl. Dewi Sartika No.54, Kepatihan, Kec. Kaliwates,</p>
+          <p> Kabupaten Jember, Jawa Timur (68131)</p>
+          <p> <i class="fas fa-envelope"></i> diskominfo@jemberkab.go.id</p>
+          <p> <i class="fas fa-phone-square-alt"></i> (0331) 5102507</p>
+          
         </div>
 
         <div class="col-md-5">
           <p>Visit Us :</p>
-          <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.305799930494!2d113.69954891384033!3d-8.171915594118198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd6943ace876f09%3A0x3badfa144578a391!2sDinas%20Komunikasi%20Dan%20Informatika%20(Kominfo)%20Kabupaten%20Jember!5e0!3m2!1sid!2sid!4v1621121345922!5m2!1sid!2sid" width="330" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe> -->
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.305799930494!2d113.69954891384033!3d-8.171915594118198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd6943ace876f09%3A0x3badfa144578a391!2sDinas%20Komunikasi%20Dan%20Informatika%20(Kominfo)%20Kabupaten%20Jember!5e0!3m2!1sid!2sid!4v1621121345922!5m2!1sid!2sid" width="330" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
 
         <div class="col-md-2">
           <p class="bawah">Follow Us :</p>
           <div class="social-footer">
-            <a class="twitter-social" href="https://twitter.com/kominfojember" target="_blank"><i class="fab fa-twitter" style="width: 30px;height:50px"></i></a>
-            <a class="facebook-social" href="https://www.facebook.com/Dinas-Komunikasi-Informatika-Kabupaten-Jember-1911954692385233/" target="_blank"><i class="fab fa-facebook" style="width: 30px;height:50px"></i></a>
-            <a class="instagram-social" href="https://www.instagram.com/kominfojember/" target="_blank"><i class="fab fa-instagram" style="width: 30px;height:50px"></i></a>
+            <a class="twitter-social sosmed-transition sosmed-transition-twitter" href="https://twitter.com/kominfojember" target="_blank"><i class="fab fa-twitter" style="width: 30px;height:50px"></i></a>
+            <a class="facebook-social sosmed-transition sosmed-transition-twitter" href="https://www.facebook.com/Dinas-Komunikasi-Informatika-Kabupaten-Jember-1911954692385233/" target="_blank"><i class="fab fa-facebook" style="width: 30px;height:50px"></i></a>
+            <a class="instagram-social sosmed-transition sosmed-transition-instagram" href="https://www.instagram.com/kominfojember/" target="_blank"><i class="fab fa-instagram" style="width: 30px;height:50px"></i></a>
           </div>
         </div>
 

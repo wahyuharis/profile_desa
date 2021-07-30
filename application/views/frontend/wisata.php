@@ -13,7 +13,7 @@
                 <div class="card-body">
                     <p class="card-text"><b><?=$row['nama_wisata']?></b></p>
                     <p>Ds.<?=$row['nama_desa']?> - Kec.<?=$row['nama_kecamatan']?></p>
-                    <a href="<?=base_url('wisata/lihat/').$row['id_wisata']?>" class="btn btn-primary btn-sm">Lihat</a>
+                    <a href="<?=base_url('wisata/lihat/').$row['id_wisata']?>" class="btn btn-primary btn-sm btn-block">Lihat</a>
                 </div>
             </div>
         </div>

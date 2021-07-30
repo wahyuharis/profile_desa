@@ -1,9 +1,15 @@
 body {
-    background-color: #fff;
+    text-shadow: 0px 0px 1px;
+    font-family: 'Roboto', sans-serif;
 }
 
 .banner-text {
     /* font-family: 'Pacifico', cursive; */
+}
+
+.navbar {
+    padding: 10px 10px;
+    font-size: 15px;
 }
 
 .carousel-inner .carousel-item img {
@@ -28,6 +34,11 @@ body {
     text-decoration: none;
 }
 
+.header-top-dark {
+    background-color: #34495e;
+    color:rgba(255, 255, 255, 0.623);
+}
+
 .banner-before-slider {
     width: 100%;
     position: relative;
@@ -37,8 +48,7 @@ body {
     /* background-color: #000; */
 }
 
-
-.banner-before-slider-img{
+.banner-before-slider-img {
     opacity: 0.5;
     top: 0;
     left: 0;
@@ -87,42 +97,61 @@ body {
 #scrolltop {
     display: none;
     position: fixed;
-    /* Fixed/sticky position */
     bottom: 20px;
-    /* Place the button at the bottom of the page */
     right: 30px;
-    /* Place the button 30px from the right */
     z-index: 99;
-    /* Make sure it does not overlap */
     border: none;
-    /* Remove borders */
     outline: none;
-    /* Remove outline */
 }
 
-.footer-bottom-black{
-    width:100%;
+.footer-bottom-black {
+    width: 100%;
     background-color: #34495e;
     margin-top: 200px;
     min-height: 300px;
-    color:#fff;
+    color: rgb(255 255 255 / 60%);
     font-size: 18px;
     /* letter-spacing: 10px; */
 }
-.social-footer{
+
+.social-footer {
     font-size: 50px;
     letter-spacing: 15px;
 }
 
-.social-footer a{
+.sosmed-transition {
+    color: #ecf0f1;
+    transition: color .4s, background-color .4s, border-color .4s, box-shadow .4s;
+}
+
+.sosmed-transition-instagram:hover {
+    color: #9b59b6;
+    text-shadow: 0px 0px 5px;
+}
+
+.sosmed-transition-youtube:hover {
+    color: #e74c3c;
+    text-shadow: 0px 0px 5px;
+}
+
+.sosmed-transition-twitter:hover {
+    color: #2980b9;
+    text-shadow: 0px 0px 5px;
+}
+
+.social-footer a {
     color: #fff;
 }
 
-.footer-bottom-black p{
+.footer-bottom-black p {
     font-size: 15.7px;
     text-align: justify;
 }
 
-.footer-bottom-black .bawah{
+.footer-bottom-black .bawah {
     margin-bottom: 0px;
+}
+
+main[role=main] {
+    color: rgb(0 0 0 / 48%);
 }
