@@ -195,7 +195,7 @@ foreach ($sprites_res as $row) {
           <p class="judul">Media sosial :</p>
           <div class="social-footer">
             <a class="twitter-social sosmed-transition sosmed-transition-twitter" href="https://twitter.com/kominfojember" target="_blank"><i class="fab fa-twitter" style="width: 30px;height:50px"></i></a>
-            <a class="facebook-social sosmed-transition sosmed-transition-twitter" href="https://www.facebook.com/Dinas-Komunikasi-Informatika-Kabupaten-Jember-1911954692385233/" target="_blank"><i class="fab fa-facebook" style="width: 30px;height:50px"></i></a>
+            <a class="facebook-social sosmed-transition sosmed-transition-facebook" href="https://www.facebook.com/Dinas-Komunikasi-Informatika-Kabupaten-Jember-1911954692385233/" target="_blank"><i class="fab fa-facebook" style="width: 30px;height:50px"></i></a>
             <a class="instagram-social sosmed-transition sosmed-transition-instagram" href="https://www.instagram.com/kominfojember/" target="_blank"><i class="fab fa-instagram" style="width: 30px;height:50px"></i></a>
           </div>
         </div>

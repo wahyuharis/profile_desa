@@ -105,7 +105,7 @@ body {
 }
 
 .sosmed-header-twitter:hover {
-    color: #2980b9;
+    color: #1DA1F2;
 }
 
 .btn-primary {
@@ -151,13 +151,13 @@ body {
     text-shadow: 0px 0px 5px;
 }
 
-.sosmed-transition-youtube:hover {
-    color: #e74c3c;
+.sosmed-transition-facebook:hover {
+    color: #447be7;
     text-shadow: 0px 0px 5px;
 }
 
 .sosmed-transition-twitter:hover {
-    color: #2980b9;
+    color: #1DA1F2;
     text-shadow: 0px 0px 5px;
 }
 
