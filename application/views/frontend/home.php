@@ -17,10 +17,10 @@
                     }
                     ?>
                     <div class="carousel-item <?= $active ?>">
-                        <img src="<?= base_url('assets/uploads/files/' .$srow['img']  ) ?>" alt="" width="100%" height="300">
+                        <img src="<?= base_url('assets/uploads/files/' . $srow['img']) ?>" alt="" width="100%" height="300">
                         <div class="carousel-caption">
-                            <h3><?=$srow['title']?></h3>
-                            <p><?=$srow['sub_title']?></p>
+                            <h3><?= $srow['title'] ?></h3>
+                            <p><?= $srow['sub_title'] ?></p>
                         </div>
                     </div>
                     <?php $incr++; ?>
@@ -38,14 +38,13 @@
     </div>
     <div class="col-md-5">
         <h1>Website Potensi Lokal Jember</h1>
-        <p class="lead">Diciptakan Sebagai Wadah Digital Karya Warga Jember. Kota Kecil Dengan Potensi Menakjubkan Seperti Seni Musik Dan Fashion, Wisata Dan UKM Unggulan</p>
+        <p class="lead">Diciptakan sebagai wadah digital karya warga Jember. Kota kecil dengan potensi menakjubkan seperti seni musik, fashion, wisata dan UKM Unggulan.</p>
     </div>
 </div>
 
-<h4>Kecamatan Se-Kab Jember</h4>
-
 <div class="row mt-3">
     <div class="col-md-6 col-sm-6 col-xs-6">
+        <h4>Kecamatan Se-Kabupaten Jember</h4>
         <ul class="list-group kecamatan-list">
             <?php foreach ($kecamatan_desa as $row) { ?>
                 <a href="#kecamatan-<?= remove_dots($row['id_kecamatan']) ?>" class="list-group-item list-group-item-action list-kecamatan-handler">
@@ -53,8 +52,10 @@
                 </a>
             <?php }  ?>
         </ul>
+        <br>
     </div>
     <div class="col-md-6 col-sm-6 col-xs-6">
+        <h4>Daftar Kelurahan</h4>
         <div class="sticky-top">
             <?php foreach ($kecamatan_desa as $row) { ?>
                 <div id="kecamatan-<?= remove_dots($row['id_kecamatan']) ?>" class="desa-list mb-2" style="display: none;">
