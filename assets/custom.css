@@ -212,10 +212,22 @@ body {
     text-align: justify;
 }
 
+.footer-bottom-black .fkiri{
+    padding-right: 50px;
+}
+
 @media only screen and (min-width: 360px) and (max-width: 370px) {
     .footer-bottom-black iframe {
     width: 330px;
     height: 250px;
+    }
+
+    .footer-bottom-black .col-md-2 {
+        margin-top: 10px;
+    }
+
+    .footer-bottom-black .fkiri{
+        padding-right: 18px;
     }
 
     .footer-bottom-black .col-md-2 .judul {

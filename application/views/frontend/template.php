@@ -172,7 +172,7 @@ foreach ($sprites_res as $row) {
     <div class="container">
 
       <div class="row">
-        <div class="col-md-5 pr-5">
+        <div class="col-md-5 fkiri">
           <p class="judul">Dikembangkan oleh :</p>
           <div class="row mb-3">
             <div class="col-12">
