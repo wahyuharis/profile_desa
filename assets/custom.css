@@ -24,6 +24,11 @@ body {
     /* font-family: 'Pacifico', cursive; */
 }
 
+.form-search-nav{
+    border:none;
+    height: 36px;
+}
+
 .navbar {
     padding: 10px 10px;
     font-size: 15px;
@@ -50,6 +55,7 @@ body {
     background: transparent;
     padding: 10px 20px 10px 20px;
     text-decoration: none;
+    /* height: 36px; */
 }
 
 .btn2:hover {
@@ -187,6 +193,11 @@ body {
 .navbar-nav .nav-link {
 	padding-top: 1rem;
     padding-bottom: 1rem;
+}
+
+.navbar-nav .nav-item .nav-link  {
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .btn-outline-success {

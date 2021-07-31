@@ -124,8 +124,8 @@ foreach ($sprites_res as $row) {
 
         </ul>
         <form method="get" action="<?= base_url('home/search/') ?>" class="form-inline my-2 my-lg-0">
-          <input name="search" class="form-control mr-sm-2" type="text" placeholder="Masukkan Nama Desa ...">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Cari</button>
+        <input name="search" class="form-control form-search-nav mr-sm-2" type="text" placeholder="Search">
+          <button class="btn2 my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button>
         </form>
       </div>
     </div>
@@ -189,7 +189,7 @@ foreach ($sprites_res as $row) {
 
         <div class="col-md-5">
           <p class="judul">Lokasi :</p>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.305799930494!2d113.69954891384033!3d-8.171915594118198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd6943ace876f09%3A0x3badfa144578a391!2sDinas%20Komunikasi%20Dan%20Informatika%20(Kominfo)%20Kabupaten%20Jember!5e0!3m2!1sid!2sid!4v1621121345922!5m2!1sid!2sid" width="400px" height="220px" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.305799930494!2d113.69954891384033!3d-8.171915594118198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd6943ace876f09%3A0x3badfa144578a391!2sDinas%20Komunikasi%20Dan%20Informatika%20(Kominfo)%20Kabupaten%20Jember!5e0!3m2!1sid!2sid!4v1621121345922!5m2!1sid!2sid" width="100%" height="220px" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
 
         <div class="col-md-2">
