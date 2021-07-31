@@ -7,25 +7,25 @@ body {
     background-color: #258bdf !important
 }
 
-.navbar-dark .navbar-nav .active>.nav-link,
-.navbar-dark .navbar-nav .nav-link.active,
-.navbar-dark .navbar-nav .nav-link.show,
-.navbar-dark .navbar-nav .show>.nav-link {
-	background-color: rgb(23, 100, 163, 1);
+.navbar-dark .navbar-nav .active>.nav-link, .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .show>.nav-link {
+    background-color: rgb(23, 100, 163, 1);
 }
 
-.navbar-dark .navbar-nav .nav-link:focus,
-.navbar-dark .navbar-nav .nav-link:hover {
-	background: rgba(255, 255, 255, 0.9);
-    color: rgb(18, 120, 214);
+.navbar-dark .navbar-nav .nav-link {
+    transition: color .4s, background-color .4s, border-color .4s, box-shadow .4s;
+}
+
+.navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover {
+    background: rgb(23, 100, 163, 1);
+    color: #fff;
 }
 
 .banner-text {
     /* font-family: 'Pacifico', cursive; */
 }
 
-.form-search-nav{
-    border:none;
+.form-search-nav {
+    border: none;
     height: 36px;
 }
 
@@ -45,7 +45,6 @@ body {
 .carousel {
     border-radius: 10px 10px 10px 10px;
     overflow: hidden;
-    
 }
 
 .btn2 {
@@ -65,7 +64,7 @@ body {
 
 .header-top-dark {
     background-color: #34495e;
-    color:rgba(255, 255, 255, 0.7);
+    color: rgba(255, 255, 255, 0.7);
 }
 
 .banner-before-slider {
@@ -171,7 +170,7 @@ body {
     color: #fff;
 }
 
-.footer-bottom-black p{
+.footer-bottom-black p {
     font-size: 15.7px;
     text-align: justify;
 }
@@ -191,28 +190,28 @@ body {
 }
 
 .navbar-nav .nav-link {
-	padding-top: 1rem;
+    padding-top: 1rem;
     padding-bottom: 1rem;
 }
 
-.navbar-nav .nav-item .nav-link  {
+.navbar-nav .nav-item .nav-link {
     padding-left: 20px;
     padding-right: 20px;
 }
 
 .btn-outline-success {
-	color: #000000;
+    color: #000000;
     padding: .5rem 1rem;
-	background-color: #ffffff;
-	background-image: none;
-	border-color: #000000
+    background-color: #ffffff;
+    background-image: none;
+    border-color: #000000
 }
 
 .btn-outline-success:hover {
-	color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
     /* background-color: rgb(92, 151, 228); */
-	background-color: rgb(19, 177, 111);
-	border-color: #ffffff
+    background-color: rgb(19, 177, 111);
+    border-color: #ffffff
 }
 
 .btn {
@@ -223,47 +222,36 @@ body {
     text-align: justify;
 }
 
-.footer-bottom-black .fkiri{
+.footer-bottom-black .fkiri {
     padding-right: 50px;
 }
 
 @media only screen and (min-width: 360px) and (max-width: 370px) {
     .footer-bottom-black iframe {
-    width: 330px;
-    height: 250px;
+        width: 330px;
+        height: 250px;
     }
-
     .footer-bottom-black .col-md-2 {
         margin-top: 10px;
     }
-
-    .footer-bottom-black .fkiri{
+    .footer-bottom-black .fkiri {
         padding-right: 18px;
     }
-
     .footer-bottom-black .col-md-2 .judul {
         margin-bottom: 0px;
     }
-
-    .navbar-dark .navbar-nav .active>.nav-link,
-    .navbar-dark .navbar-nav .nav-link.active,
-    .navbar-dark .navbar-nav .nav-link.show,
-    .navbar-dark .navbar-nav .show>.nav-link {
+    .navbar-dark .navbar-nav .active>.nav-link, .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .show>.nav-link {
         background-color: transparent;
     }
-
     .carousel-inner .carousel-item img {
         height: 200px;
     }
-
     .carousel-inner .carousel-item .carousel-caption h3 {
         font-size: 16px;
     }
-
     .carousel-inner .carousel-item .carousel-caption p {
         font-size: 11px;
     }
-
     .col-md-5 h1 {
         font-size: 24px;
     }
