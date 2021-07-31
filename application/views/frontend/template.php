@@ -124,7 +124,7 @@ foreach ($sprites_res as $row) {
 
         </ul>
         <form method="get" action="<?= base_url('home/search/') ?>" class="form-inline my-2 my-lg-0">
-        <input name="search" class="form-control form-search-nav mr-sm-2" type="text" placeholder="Search">
+          <input name="search" class="form-control form-search-nav mr-sm-2" type="text" placeholder="Search">
           <button class="btn2 my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button>
         </form>
       </div>
@@ -180,11 +180,8 @@ foreach ($sprites_res as $row) {
               <img width="100%" src="<?= base_url('assets/uploads/files/' . $sprites['footer']['img']) ?>">
             </div>
           </div>
-          <p>Jl. Dewi Sartika No.54, Kepatihan, Kecamatan Kaliwates,
-            Kabupaten Jember, Jawa Timur (68131)<br></p>
-          <p> <i class="fas fa-envelope"></i> diskominfo@jemberkab.go.id</p>
-          <p> <i class="fas fa-phone-square-alt"></i> (0331) - 5102507</p>
 
+          <?= $sprites['footer']['caption'] ?>
         </div>
 
         <div class="col-md-5">

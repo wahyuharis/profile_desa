@@ -10,7 +10,7 @@ $config['next_link']        = 'Next';
 $config['prev_link']        = 'Prev';
 $config['first_link']       = 'First';
 $config['last_link']        = 'Last';
-$config['full_tag_open']    = '<ul class="pagination justify-content-center">';
+$config['full_tag_open']    = '<ul class="pagination pagination-lg justify-content-center">';
 $config['full_tag_close']   = '</ul>';
 $config['attributes']       = ['class' => 'page-link'];
 $config['first_tag_open']   = '<li class="page-item">';
