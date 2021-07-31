@@ -76,6 +76,10 @@ body {
     /* background-color: #000; */
 }
 
+div[role=banner]{
+    
+}
+
 .banner-before-slider-img {
     opacity: 0.5;
     top: 0;
