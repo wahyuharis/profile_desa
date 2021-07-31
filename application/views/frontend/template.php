@@ -39,7 +39,7 @@ foreach ($sprites_res as $row) {
 
 <body>
   <header class="header-top-dark d-none d-md-block d-lg-block pt-2 pb-1" style="height: 40px;">
-  <!-- <header class="bg-dark  pt-2 pb-1 text-white" style="height: 40px;"> -->
+    <!-- <header class="bg-dark  pt-2 pb-1 text-white" style="height: 40px;"> -->
     <div class="container">
       <div class="row">
         <div class="col-6">
@@ -58,7 +58,7 @@ foreach ($sprites_res as $row) {
     </div>
   </header>
   <div role="banner" class="d-none d-md-block d-lg-block banner-before-slider">
-  <!-- <div role="banner" class="banner-before-slider"> -->
+    <!-- <div role="banner" class="banner-before-slider"> -->
     <div class="container">
       <div class="row">
         <div class="col-4 pt-4 pb-4">
@@ -72,7 +72,7 @@ foreach ($sprites_res as $row) {
     <img class="banner-before-slider-img" src="<?= base_url('assets/uploads/files/' . $sprites['banner']['img']) ?>">
   </div>
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-3">
+  <nav id="navbar_top" class="navbar navbar-expand-lg navbar-dark bg-primary mb-3">
     <div class="container">
       <a class="navbar-brand d-block d-md-none" href="#">
         <img style="height: 30px;width: 30px;" src="<?= base_url('assets/kominfo.png') ?>">
@@ -124,8 +124,8 @@ foreach ($sprites_res as $row) {
 
         </ul>
         <form method="get" action="<?= base_url('home/search/') ?>" class="form-inline my-2 my-lg-0">
-          <input name="search" class="form-control mr-sm-2" type="text" placeholder="Search">
-          <button class="btn2 my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button>
+          <input name="search" class="form-control mr-sm-2" type="text" placeholder="Masukkan Nama Desa ...">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Cari</button>
         </form>
       </div>
     </div>
@@ -173,30 +173,30 @@ foreach ($sprites_res as $row) {
     <div class="container">
 
       <div class="row">
-        <div class="col-md-5 pr-5">
-          <p>Developed by :</p>
+        <div class="col-md-5 fkiri">
+          <p class="judul">Dikembangkan oleh :</p>
           <div class="row mb-3">
             <div class="col-12">
               <img width="100%" src="<?= base_url('assets/uploads/files/' . $sprites['footer']['img']) ?>">
             </div>
           </div>
-          <p>Jl. Dewi Sartika No.54, Kepatihan, Kec. Kaliwates,</p>
-          <p> Kabupaten Jember, Jawa Timur (68131)</p>
+          <p>Jl. Dewi Sartika No.54, Kepatihan, Kecamatan Kaliwates,
+            Kabupaten Jember, Jawa Timur (68131)<br></p>
           <p> <i class="fas fa-envelope"></i> diskominfo@jemberkab.go.id</p>
-          <p> <i class="fas fa-phone-square-alt"></i> (0331) 5102507</p>
-          
+          <p> <i class="fas fa-phone-square-alt"></i> (0331) - 5102507</p>
+
         </div>
 
         <div class="col-md-5">
-          <p>Visit Us :</p>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.305799930494!2d113.69954891384033!3d-8.171915594118198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd6943ace876f09%3A0x3badfa144578a391!2sDinas%20Komunikasi%20Dan%20Informatika%20(Kominfo)%20Kabupaten%20Jember!5e0!3m2!1sid!2sid!4v1621121345922!5m2!1sid!2sid" width="330" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          <p class="judul">Lokasi :</p>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.305799930494!2d113.69954891384033!3d-8.171915594118198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd6943ace876f09%3A0x3badfa144578a391!2sDinas%20Komunikasi%20Dan%20Informatika%20(Kominfo)%20Kabupaten%20Jember!5e0!3m2!1sid!2sid!4v1621121345922!5m2!1sid!2sid" width="400px" height="220px" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
 
         <div class="col-md-2">
-          <p class="bawah">Follow Us :</p>
+          <p class="judul">Media sosial :</p>
           <div class="social-footer">
             <a class="twitter-social sosmed-transition sosmed-transition-twitter" href="https://twitter.com/kominfojember" target="_blank"><i class="fab fa-twitter" style="width: 30px;height:50px"></i></a>
-            <a class="facebook-social sosmed-transition sosmed-transition-twitter" href="https://www.facebook.com/Dinas-Komunikasi-Informatika-Kabupaten-Jember-1911954692385233/" target="_blank"><i class="fab fa-facebook" style="width: 30px;height:50px"></i></a>
+            <a class="facebook-social sosmed-transition sosmed-transition-facebook" href="https://www.facebook.com/Dinas-Komunikasi-Informatika-Kabupaten-Jember-1911954692385233/" target="_blank"><i class="fab fa-facebook" style="width: 30px;height:50px"></i></a>
             <a class="instagram-social sosmed-transition sosmed-transition-instagram" href="https://www.instagram.com/kominfojember/" target="_blank"><i class="fab fa-instagram" style="width: 30px;height:50px"></i></a>
           </div>
         </div>
@@ -205,7 +205,7 @@ foreach ($sprites_res as $row) {
     </div>
   </footer>
 
-  <footer role="footer" style="width:100%;background-color: #4b6584;margin-top: 0px;">
+  <footer role="footer" style="width:100%;background-color: #394c63;margin-top: 0px;">
     <div class="container">
       <div class="row">
         <div class="col-md-12 text-white pt-3 pb-1" style="font-size: 12px;">
@@ -249,6 +249,21 @@ foreach ($sprites_res as $row) {
     }
     $(document).ready(function() {
       $('[data-toggle="tooltip"]').tooltip();
+    });
+
+    document.addEventListener("DOMContentLoaded", function() {
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 50) {
+          document.getElementById('navbar_top').classList.add('fixed-top');
+          // add padding top to show content behind navbar
+          navbar_height = document.querySelector('.navbar').offsetHeight;
+          document.body.style.paddingTop = navbar_height + 'px';
+        } else {
+          document.getElementById('navbar_top').classList.remove('fixed-top');
+          // remove padding top from body
+          document.body.style.paddingTop = '0';
+        }
+      });
     });
   </script>
 </body>

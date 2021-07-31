@@ -17,10 +17,10 @@
                     }
                     ?>
                     <div class="carousel-item <?= $active ?>">
-                        <img src="<?= base_url('assets/uploads/files/' .$srow['img']  ) ?>" alt="" width="100%" height="300">
+                        <img src="<?= base_url('assets/uploads/files/' . $srow['img']) ?>" alt="" width="100%" height="300">
                         <div class="carousel-caption">
-                            <h3><?=$srow['title']?></h3>
-                            <p><?=$srow['sub_title']?></p>
+                            <h3><?= $srow['title'] ?></h3>
+                            <p><?= $srow['sub_title'] ?></p>
                         </div>
                     </div>
                     <?php $incr++; ?>
@@ -38,11 +38,9 @@
     </div>
     <div class="col-md-5">
         <h1>Website Potensi Lokal Jember</h1>
-        <p class="lead">Diciptakan Sebagai Wadah Digital Karya Warga Jember. Kota Kecil Dengan Potensi Menakjubkan Seperti Seni Musik Dan Fashion, Wisata Dan UKM Unggulan</p>
+        <p class="lead">Diciptakan sebagai wadah digital karya warga Jember. Kota kecil dengan potensi menakjubkan seperti seni musik, fashion, wisata dan UKM Unggulan.</p>
     </div>
 </div>
-
-<h4>Kecamatan Se-Kab Jember</h4>
 
 <div class="row mt-3">
     <div class="col-6">
@@ -53,6 +51,7 @@
                 </a>
             <?php }  ?>
         </ul>
+        <br>
     </div>
     <div class="col-6">
         <div class="sticky-top">
