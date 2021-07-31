@@ -75,7 +75,8 @@ foreach ($sprites_res as $row) {
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-3">
     <div class="container">
       <a class="navbar-brand d-block d-md-none" href="#">
-        <img style="height: 30px;width: 30px;" src="<?= base_url('lte/dist/img/kosong.png') ?>">
+        <img style="height: 30px;width: 30px;" src="<?= base_url('assets/kominfo.png') ?>">
+        <b>Jekraf</b>
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>

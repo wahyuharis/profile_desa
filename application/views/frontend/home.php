@@ -45,7 +45,7 @@
 <h4>Kecamatan Se-Kab Jember</h4>
 
 <div class="row mt-3">
-    <div class="col-md-6 col-sm-6 col-xs-6">
+    <div class="col-6">
         <ul class="list-group kecamatan-list">
             <?php foreach ($kecamatan_desa as $row) { ?>
                 <a href="#kecamatan-<?= remove_dots($row['id_kecamatan']) ?>" class="list-group-item list-group-item-action list-kecamatan-handler">
@@ -54,7 +54,7 @@
             <?php }  ?>
         </ul>
     </div>
-    <div class="col-md-6 col-sm-6 col-xs-6">
+    <div class="col-6">
         <div class="sticky-top">
             <?php foreach ($kecamatan_desa as $row) { ?>
                 <div id="kecamatan-<?= remove_dots($row['id_kecamatan']) ?>" class="desa-list mb-2" style="display: none;">
