@@ -61,6 +61,7 @@ class Lagu extends CI_Controller
         $crud->display_as('id_desa', 'Desa');
         $crud->display_as('nama_lagu', 'Judul lagu');
         $crud->display_as('content', 'Keterangan');
+        $crud->display_as('lagu', 'Lagu* <br><small class="text-muted">Max 80MB</small>');
 
         $crud->set_field_upload('lagu', 'assets/uploads/files');
         $crud->set_field_upload('foto', 'assets/uploads/files');
@@ -72,7 +73,6 @@ class Lagu extends CI_Controller
 
         if (intval($sess['id_role']) == 2) {
             $crud->field_type('no_urut', 'hidden');
-
         }
 
         if ($state == 'update_validation' || $state == 'update' || $state=='edit' ) {
