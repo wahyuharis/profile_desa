@@ -51,7 +51,18 @@ class Umkm extends CI_Controller
         }
 
         $crud->columns('no_urut','id_desa','nama_umkm','foto1');
-        $crud->fields('no_urut','id_desa','nama_umkm','foto1','foto2','foto3','content');
+        $crud->fields(
+            'no_urut',
+            'id_desa',
+            'nama_umkm',
+            'url_website',
+            'phone',
+            'foto1',
+            'foto2',
+            'foto3',
+            'content',
+            'maps'
+        );
 
 
         $crud->set_primary_key('id_desa', 'desa_kecamatan');
@@ -62,6 +73,11 @@ class Umkm extends CI_Controller
         $crud->display_as('id_desa', 'Desa');
         $crud->display_as('nama_umkm', 'Nama UMKM (Usaha)');
         $crud->display_as('content', 'Keterangan');
+        $crud->display_as('maps', 'Sematan Peta');
+        $crud->display_as('url_website', 'Website Usaha');
+        $crud->display_as('phone', 'Telphone / WA');
+
+        $crud->unset_texteditor('maps');
 
         $crud->set_field_upload('foto1', 'assets/uploads/files');
         $crud->set_field_upload('foto2', 'assets/uploads/files');

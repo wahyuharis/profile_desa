@@ -97,6 +97,7 @@ foreach ($sprites_res as $row) {
               Home
             </a>
           </li>
+
           <?php
           $nav_active = "";
           if ($segment0 == 'lagu') {
@@ -106,6 +107,7 @@ foreach ($sprites_res as $row) {
           <li class="nav-item <?= $nav_active ?>">
             <a class="nav-link" href="<?= base_url('lagu/') ?>">Lagu Desa</a>
           </li>
+
           <?php
           $nav_active = "";
           if ($segment0 == 'wisata') {
@@ -115,9 +117,18 @@ foreach ($sprites_res as $row) {
           <li class="nav-item <?= $nav_active ?>">
             <a class="nav-link" href="<?= base_url('wisata/') ?>">Wisata Desa</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">UMKM Unggulan</a>
+
+          <?php
+          $nav_active = "";
+          if ($segment0 == 'umkm') {
+            $nav_active = 'active';
+          }
+          ?>
+          <li class="nav-item <?= $nav_active ?>">
+            <a class="nav-link" href="<?= base_url('umkm/') ?>">UMKM Unggulan</a>
           </li>
+
+
           <li class="nav-item">
             <a class="nav-link" href="#">Desain Batik</a>
           </li>
@@ -133,8 +144,6 @@ foreach ($sprites_res as $row) {
   </nav>
 
   <main role="main" class="container" style="">
-
-
 
     <div class="row mt-3">
       <div class="col-md-12">

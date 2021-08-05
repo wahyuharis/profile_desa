@@ -80,9 +80,6 @@
 
         $('#content_detail').find('span').removeAttr('style')
 
-
-
-
         $('#content_detail').find('table').addClass('table');
         $('#content_detail').find('table').addClass('table-bordered');
         $('#content_detail').find('table').removeAttr('border');

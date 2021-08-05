@@ -49,11 +49,49 @@
 </div>
 
 <div class="row mt-4">
-    <div class="col-md-12">
+    <div class="col-md-12" id="content_detail">
         <?= $umkm_desa_detail['content'] ?>
     </div>
 </div>
 
+<div class="row mb-3" style="font-size: 20px;">
+    <div class="col-md-4 text-center">
+        <a class="btn btn-primary btn-lg">
+            <i class="fab fa-whatsapp-square"></i> &nbsp; +6285330067932
+        </a>
+    </div>
+    <div class="col-md-4 text-center">
+        <a class="btn btn-primary btn-lg">
+            <i class="fab fa-chrome"></i> &nbsp; Website
+        </a>
+    </div>
+    <div class="col-md-4 text-center">
+        <i class="fas fa-envelope"></i>
+    </div>
+</div>
 
+<div id="maps_embed" class="row mt-4">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <?= $umkm_desa_detail['maps'] ?>
+    </div>
+    <div class="col-md-3"></div>
+</div>
 
+<script>
+    $(document).ready(function() {
+        var maps = $('#maps_embed').find('iframe');
+        maps.css('width', '100%');
 
+        $('#content_detail').find('p').css('font-family', '"Roboto", sans-serif');
+        $('#content_detail').find('ul').css('font-family', '"Roboto", sans-serif');
+        $('#content_detail').find('li').css('font-family', '"Roboto", sans-serif');
+
+        $('#content_detail').find('span').removeAttr('style')
+
+        $('#content_detail').find('table').addClass('table');
+        $('#content_detail').find('table').addClass('table-bordered');
+        $('#content_detail').find('table').removeAttr('border');
+
+    });
+</script>
