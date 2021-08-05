@@ -24,7 +24,7 @@ class Desa extends CI_Controller
         $crud = new grocery_CRUD();
         $crud->unset_bootstrap();
         $crud->unset_jquery();
-        $crud->set_theme('bootstrap');
+        // $crud->set_theme('bootstrap');
         $state = $crud->getState();
         //========== inisiasi =============
 

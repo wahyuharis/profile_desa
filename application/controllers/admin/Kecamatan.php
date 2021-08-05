@@ -25,7 +25,7 @@ class Kecamatan extends CI_Controller
         $crud = new grocery_CRUD();
         $crud->unset_bootstrap();
         $crud->unset_jquery();
-        $crud->set_theme('bootstrap');
+        // $crud->set_theme('bootstrap');
         $crud->set_table($this->table_name);
         $crud->set_subject($this->title);
         $crud->set_primary_key($this->primary_key);

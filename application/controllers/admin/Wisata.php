@@ -28,7 +28,10 @@ class Wisata extends CI_Controller
         $crud = new grocery_CRUD();
         $crud->unset_bootstrap();
         $crud->unset_jquery();
-        $crud->set_theme('bootstrap');
+        // $crud->set_theme('bootstrap');
+
+
+
         $crud->set_table($this->table_name);
         $crud->set_primary_key($this->primary_key, $this->table_name);
 
@@ -38,13 +41,10 @@ class Wisata extends CI_Controller
 
         $crud->set_subject($this->title);
 
-
-
-
         $where2 = null;
         if (intval($sess['id_role']) == 2) {
             $where = array();
-            $where['desa_lagu.id_desa'] = $sess['id_desa'];
+            $where['desa_wisata.id_desa'] = $sess['id_desa'];
             $where2['id_desa'] = $sess['id_desa'];
             $crud->where($where);
         }

@@ -31,7 +31,10 @@ class Lagu extends CI_Controller
         $crud = new grocery_CRUD();
         $crud->unset_bootstrap();
         $crud->unset_jquery();
-        $crud->set_theme('bootstrap');
+
+
+
+
         $crud->set_table($this->table_name);
         $crud->set_primary_key($this->primary_key, $this->table_name);
 
@@ -75,7 +78,7 @@ class Lagu extends CI_Controller
             $crud->field_type('no_urut', 'hidden');
         }
 
-        if ($state == 'update_validation' || $state == 'update' || $state=='edit' ) {
+        if ($state == 'update_validation' || $state == 'update' || $state == 'edit') {
             $this->primary_key_val2 = $state_info->primary_key;
             $crud->set_rules('no_urut', 'No Urut', 'trim|required|callback_is_uniqe_nourut');
         }

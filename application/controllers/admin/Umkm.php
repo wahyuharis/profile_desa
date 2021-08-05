@@ -18,7 +18,7 @@ class Umkm extends CI_Controller
 
         $this->load->library('Auth');
         $auth = new Auth();
-        $auth->is_logged_in()->is_admin();
+        $auth->is_logged_in();
     }
 
     public function index()
@@ -29,7 +29,8 @@ class Umkm extends CI_Controller
         $crud = new grocery_CRUD();
         $crud->unset_bootstrap();
         $crud->unset_jquery();
-        $crud->set_theme('bootstrap');
+
+
         $crud->set_table($this->table_name);
         $crud->set_primary_key($this->primary_key, $this->table_name);
 
