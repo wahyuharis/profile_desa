@@ -50,7 +50,7 @@
 </div>
 
 <div class="row mt-4">
-    <div class="col-md-12">
+    <div class="col-md-12" id="content_detail">
         <?= $wisata_desa_detail['content'] ?>
     </div>
 </div>
@@ -72,6 +72,20 @@
 <script>
     $(document).ready(function() {
         var maps = $('#maps_embed').find('iframe');
-        maps.css('width','100%');
+        maps.css('width', '100%');
+
+        $('#content_detail').find('p').css('font-family', '"Roboto", sans-serif');
+        $('#content_detail').find('ul').css('font-family', '"Roboto", sans-serif');
+        $('#content_detail').find('li').css('font-family', '"Roboto", sans-serif');
+
+        $('#content_detail').find('span').removeAttr('style')
+
+
+
+
+        $('#content_detail').find('table').addClass('table');
+        $('#content_detail').find('table').addClass('table-bordered');
+        $('#content_detail').find('table').removeAttr('border');
+
     });
 </script>

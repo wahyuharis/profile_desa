@@ -14,13 +14,16 @@ class UmkmDesa_model  extends CI_Model
         return $this->total_row;
     }
 
-    function get_list($where = "", $limit, $start)
+    function get_list($where = "", $limit = 8, $start = 0)
     {
         $sql = "SELECT * FROM desa_umkm
         LEFT JOIN desa
         ON desa.id_desa=desa_umkm.id_desa
         
-        WHERE desa_umkm.nama_umkm LIKE '%".$this->db->escape_str($where)."%'
+        LEFT JOIN kecamatan
+        ON kecamatan.id_kecamatan=desa.id_kecamatan
+        
+        WHERE desa_umkm.nama_umkm LIKE '%" . $this->db->escape_str($where) . "%'
         
         ORDER BY desa_umkm.no_urut asc
         ";
@@ -40,4 +43,24 @@ class UmkmDesa_model  extends CI_Model
         return $return;
     }
 
+
+    function detail($id_umkm)
+    {
+        $sql = "SELECT * FROM desa_umkm
+        LEFT JOIN desa
+        ON desa.id_desa=desa_umkm.id_desa
+        
+        LEFT JOIN kecamatan
+        ON kecamatan.id_kecamatan=desa.id_kecamatan
+        
+        WHERE desa_umkm.id_umkm=" . $id_umkm . " ";
+
+        $db = $this->db->query($sql);
+
+        $return = false;
+
+        $return = $db->row_array();
+
+        return $return;
+    }
 }
