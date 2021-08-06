@@ -54,28 +54,59 @@
     </div>
 </div>
 
-<div class="row mb-3" style="font-size: 20px;">
-    <div class="col-md-4 text-center">
-        <a class="btn btn-primary btn-lg">
-            <i class="fab fa-whatsapp-square"></i> &nbsp; +6285330067932
-        </a>
-    </div>
-    <div class="col-md-4 text-center">
-        <a class="btn btn-primary btn-lg">
-            <i class="fab fa-chrome"></i> &nbsp; Website
-        </a>
-    </div>
-    <div class="col-md-4 text-center">
-        <i class="fas fa-envelope"></i>
-    </div>
-</div>
+
 
 <div id="maps_embed" class="row mt-4">
-    <div class="col-md-3"></div>
     <div class="col-md-6">
         <?= $umkm_desa_detail['maps'] ?>
     </div>
-    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <div class="row">
+            <?php if (!empty(trim($umkm_desa_detail['url_website_umkm']))) { ?>
+                <div class="col-2 text-right">
+                    <p class="h1">
+                        <i class="fab fa-chrome"></i>
+                    </p>
+                </div>
+                <div class="col-10">
+                    <p class="h4">
+                        <?= $umkm_desa_detail['url_website_umkm'] ?>
+                    </p>
+                </div>
+        </div>
+    <?php } ?>
+
+    <?php if (!empty(trim($umkm_desa_detail['phone']))) { ?>
+        <div class="row">
+            <div class="col-2 text-right">
+                <p class="h1">
+                    <i class="fab fa-whatsapp-square"></i>
+                </p>
+            </div>
+            <div class="col-10">
+                <p class="h4">
+                    <?= $umkm_desa_detail['phone'] ?>
+                </p>
+            </div>
+        </div>
+    <?php } ?>
+
+
+    <?php if (!empty(trim($umkm_desa_detail['email']))) { ?>
+        <div class="row">
+            <div class="col-2 text-right">
+                <p class="h1">
+                    <i class="fas fa-envelope"></i>
+                </p>
+            </div>
+            <div class="col-10">
+                <p class="h4">
+                    <?= $umkm_desa_detail['email'] ?>
+                </p>
+            </div>
+        </div>
+    <?php } ?>
+    </div>
 </div>
 
 <script>

@@ -56,7 +56,7 @@ class Umkm extends CI_Controller
             'no_urut',
             'id_desa',
             'nama_umkm',
-            'url_website',
+            'url_website_umkm',
             'phone',
             'foto1',
             'foto2',
@@ -75,7 +75,7 @@ class Umkm extends CI_Controller
         $crud->display_as('nama_umkm', 'Nama UMKM (Usaha)');
         $crud->display_as('content', 'Keterangan');
         $crud->display_as('maps', 'Sematan Peta');
-        $crud->display_as('url_website', 'Website Usaha');
+        $crud->display_as('url_website_umkm', 'Website Usaha');
         $crud->display_as('phone', 'Telphone / WA');
 
         $crud->unset_texteditor('maps');

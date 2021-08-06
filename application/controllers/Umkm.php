@@ -41,8 +41,6 @@ class Umkm extends CI_Controller
         $this->load->model('UmkmDesa_model');
         $umkm_desa_model = new UmkmDesa_model();
 
-
-
         $umkm_desa_detail = $umkm_desa_model->detail($id_wisata);
 
         // print_r2($umkm_desa_detail);
