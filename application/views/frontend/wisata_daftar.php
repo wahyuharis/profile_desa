@@ -19,12 +19,10 @@
                             <a href="<?= base_url('wisata/lihat/' . $row['id_wisata']) ?>" class="btn btn-primary btn-sm btn-block" >
                                  Lihat
                             </a>
-                            
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
     <?php } ?>
 </div>

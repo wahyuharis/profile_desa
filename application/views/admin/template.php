@@ -27,14 +27,13 @@
     <link rel="stylesheet" href="<?= base_url() ?>lte/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
     <link rel="stylesheet" href="<?= base_url() ?>node_modules/toastr/build/toastr.min.css">
 
-
-    <link rel="stylesheet" href="<?= base_url() ?>lte/lte-custom.css">
-
     <?php if (isset($css_files)) : ?>
         <?php foreach ($css_files as $file) : ?>
             <link type="text/css" rel="stylesheet" href="<?php echo $file; ?>" />
         <?php endforeach; ?>
     <?php endif; ?>
+
+    <link rel="stylesheet" href="<?= base_url() ?>lte/lte-custom.css">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 
@@ -139,9 +138,9 @@
                 <!-- search form -->
                 <form action="#" class="sidebar-form">
                     <div class="input-group">
-                        <input type="text" id="side_filter" class="form-control" placeholder="Search...">
+                        <input type="text" id="side_filter" class="form-control" placeholder="Search..." >
                         <span class="input-group-btn">
-                            <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
+                            <button type="submit" name="search" id="search-btn" class="btn btn-flat" style="background-image:none" ><i class="fa fa-search"></i>
                             </button>
                         </span>
                     </div>

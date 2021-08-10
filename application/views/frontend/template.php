@@ -128,8 +128,13 @@ foreach ($sprites_res as $row) {
             <a class="nav-link" href="<?= base_url('umkm/') ?>">UMKM Unggulan</a>
           </li>
 
-
-          <li class="nav-item">
+          <?php
+          $nav_active = "";
+          if ($segment0 == 'batik') {
+            $nav_active = 'active';
+          }
+          ?>
+          <li class="nav-item <?= $nav_active ?>">
             <a class="nav-link" href="#">Desain Batik</a>
           </li>
 

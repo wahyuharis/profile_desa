@@ -1,0 +1,3 @@
+.flexigrid div.form-div input[type=text], .flexigrid div.form-div input[type=password]{
+    height: inherit;
+}
