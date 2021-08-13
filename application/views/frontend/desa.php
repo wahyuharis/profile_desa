@@ -1,7 +1,12 @@
 <div class="row">
     <div class="col-md-12 text-center">
         <br>
-        <h2>Desa <?= $desa['nama_desa'] ?></h2>
+        <?php if ($desa['id_kecamatan'] == '35.9.19' || $desa['id_kecamatan'] == '35.9.20' || $desa['id_kecamatan'] == '35.9.21') { ?>
+
+            <h2>Kelurahan <?= $desa['nama_desa'] ?></h2>
+        <?php } else { ?>
+            <h2>Desa <?= $desa['nama_desa'] ?></h2>
+        <?php } ?>
         <br>
     </div>
 </div>
@@ -45,8 +50,8 @@
     <div class="col-md-12 text-center">
         <?php
         $link_web_desa = '#';
-        if (strlen(trim($desa['url_website'])) > 0 ) {
-            $link_web_desa=$desa['url_website'];
+        if (strlen(trim($desa['url_website'])) > 0) {
+            $link_web_desa = $desa['url_website'];
         }
         ?>
         <a href="<?= $link_web_desa ?>" class="btn btn-primary">Link Web Desa</a>
