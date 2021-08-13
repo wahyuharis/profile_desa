@@ -62,7 +62,7 @@ class Lagu extends CI_Controller
         $crud->display_as('id_desa', 'Desa');
         $crud->display_as('nama_lagu', 'Judul lagu');
         $crud->display_as('content', 'Keterangan');
-        $crud->display_as('lagu', 'Lagu* <br><small class="text-muted">Max 80MB</small>');
+        $crud->display_as('lagu', 'Lagu* <br><small class="text-muted">(Tipe File : MP3 & MP4 <br> Max Size : 80MB)</small>');
 
         $crud->set_field_upload('lagu', 'assets/uploads/files');
         $crud->set_field_upload('foto', 'assets/uploads/files');
@@ -152,7 +152,7 @@ class Lagu extends CI_Controller
             if (in_array($type, $file_type_image)) {
                 $return = true;
             } else {
-                $return = "tipe file hanya boleh mp3,mp4";
+                $return = "Tipe file hanya boleh MP3 dan MP4";
             }
         }
 

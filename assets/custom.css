@@ -37,7 +37,7 @@ body {
 }
 
 .carousel-inner .carousel-item img {
-    opacity: 0.5;
+    opacity: 0.8;
 }
 
 .carousel-inner {
@@ -83,7 +83,7 @@ div[role=banner]{
 }
 
 .banner-before-slider-img {
-    opacity: 0.5;
+    opacity: 0.9;
     top: 0;
     left: 0;
     bottom: 0;
