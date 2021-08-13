@@ -26,8 +26,11 @@ foreach ($sprites_res as $row) {
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+  
+  
   <link rel="icon" href="<?= base_url() ?>assets/logo_admin.ico">
   <link rel="stylesheet" href="<?= base_url() ?>node_modules/bootstrap/dist/css/bootstrap-materia.min.css">
+ 
   <link rel="stylesheet" href="<?= base_url() ?>fontawesome/css/all.min.css">
   <link rel="stylesheet" href="<?= base_url() ?>assets/custom.css">
 

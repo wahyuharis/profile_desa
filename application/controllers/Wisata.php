@@ -89,9 +89,9 @@ class Wisata extends CI_Controller
         $this->load->model('WisataDesa_model');
         $wisata_desa_model = new WisataDesa_model();
 
-
-
         $wisata_desa_data = $wisata_desa_model->detail_byDesa($id_desa);
+
+
 
         $desa = $this->db->where('id_desa', $id_desa)->get('desa')->row_array();
 

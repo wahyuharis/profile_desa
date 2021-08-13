@@ -63,4 +63,24 @@ class UmkmDesa_model  extends CI_Model
 
         return $return;
     }
+
+    function by_desa($id_desa = null)
+    {
+        $sql = "SELECT * FROM desa_umkm
+
+        LEFT JOIN desa
+        ON desa.id_desa=desa_umkm.id_desa
+        
+        LEFT JOIN kecamatan
+        ON kecamatan.id_kecamatan=desa.id_kecamatan
+        WHERE
+        desa_umkm.id_desa=".$this->db->escape($id_desa)." ";
+
+
+        $db = $this->db->query($sql);
+
+        $return = $db->result_array();
+
+        return $return;
+    }
 }
