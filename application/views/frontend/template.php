@@ -138,7 +138,7 @@ foreach ($sprites_res as $row) {
           }
           ?>
           <li class="nav-item <?= $nav_active ?>">
-            <a class="nav-link" href="#">Desain Batik</a>
+            <a class="nav-link" href="<?= base_url('batik/') ?>">Desain Batik</a>
           </li>
 
         </ul>

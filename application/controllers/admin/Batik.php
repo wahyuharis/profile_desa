@@ -106,7 +106,7 @@ class Batik extends CI_Controller
         $return = false;
 
         $this->db->where('no_urut', $no_urut);
-        $this->db->where('id_lagu <>', $primary_key);
+        $this->db->where('id_batik <>', $primary_key);
         $db = $this->db->get('desa_batik');
 
 

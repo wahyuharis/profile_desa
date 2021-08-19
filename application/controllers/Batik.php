@@ -66,4 +66,41 @@ class Batik extends CI_Controller
         $frontend->render();
     }
 
+	function by_desa($id_desa = null)
+	{
+
+		if (empty(trim($id_desa))) {
+			show_404();
+		}
+
+		$frontend = new Frontend();
+		$html = '';
+
+		$this->load->model('BatikDesa_model');
+
+        $desa = $this->db->where('id_desa', $id_desa)->get('desa')->row_array();
+
+
+		$batik_desa_model = new BatikDesa_model();
+		$batik_desa_list = $batik_desa_model->detail_byDesa($id_desa);
+
+		// print_r2($batik_desa_list);
+
+		$content_data = array();
+		$content_data['batik_desa_list'] = $batik_desa_list;
+		$content_data['desa'] = $desa;
+		$html = $frontend->load_view('frontend/batik_daftar', $content_data);
+
+		$breadcrump = array(
+			'Home' => '',
+			'Desain Batik' => "batik",
+			"Desa " . $desa['nama_desa'] => 'desa/detail/' . $desa['id_desa'],
+		);
+
+
+		$frontend->set_breadcrump($breadcrump);
+		$frontend->set_content($html);
+		$frontend->render();
+	}
+
 }

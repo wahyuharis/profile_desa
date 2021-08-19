@@ -67,13 +67,12 @@ class BatikDesa_model  extends CI_Model
 
     function detail_byDesa($id_desa)
     {
-        $sql = "SELECT * FROM desa_wisata
-
-        LEFT JOIN desa
-        ON desa.id_desa=desa_wisata.id_desa
+        $sql = "SELECT * FROM desa_batik
+        left JOIN desa 
+        ON desa.id_desa=desa_batik.id_desa
         
-        LEFT JOIN desa_kecamatan
-        ON desa_kecamatan.id_kecamatan=desa.id_kecamatan
+        LEFT JOIN kecamatan
+        ON kecamatan.id_kecamatan=desa.id_kecamatan
         
         WHERE desa.id_desa=" . $this->db->escape($id_desa) . " ";
 
