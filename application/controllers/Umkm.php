@@ -80,10 +80,12 @@ class Umkm extends CI_Controller
 
 
 		$umkm_desa_model = new UmkmDesa_model();
-		$umkm_desa_data = $umkm_desa_model->by_desa($id_desa);
+		$umkm_desa_list = $umkm_desa_model->by_desa($id_desa);
+
+		// print_r2($umkm_desa_data);
 
 		$content_data = array();
-		$content_data['umkm_desa_data'] = $umkm_desa_data;
+		$content_data['umkm_desa_list'] = $umkm_desa_list;
 		$content_data['desa'] = $desa;
 		$html = $frontend->load_view('frontend/umkm_daftar', $content_data);
 

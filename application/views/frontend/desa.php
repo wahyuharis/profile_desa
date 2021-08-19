@@ -85,7 +85,7 @@
         <div class="card">
             <img class="card-img-top" src="<?= base_url('assets/batik.png') ?>">
             <div class="card-body text-center" style="vertical-align: middle;">
-                <a href="#" class="btn btn-primary btn-block">Desain Batik</a>
+                <a href="<?= base_url('batik/by_desa/' . $desa['id_desa']) ?>" class="btn btn-primary btn-block">Desain Batik</a>
             </div>
         </div>
     </div>
@@ -93,7 +93,7 @@
         <div class="card">
             <img class="card-img-top" src="<?= base_url('assets/umkm.png') ?>">
             <div class="card-body text-center" style="vertical-align: middle;">
-                <a href="#" class="btn btn-primary btn-block">UMKM Unggulan</a>
+                <a href="<?= base_url('umkm/by_desa/' . $desa['id_desa']) ?>" class="btn btn-primary btn-block">UMKM Unggulan</a>
             </div>
         </div>
     </div>
