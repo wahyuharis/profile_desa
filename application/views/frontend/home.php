@@ -42,8 +42,8 @@
     </div>
 </div>
 
-<div class="row mt-3">
-    <div class="col-6">
+<div class="row mt-3" >
+    <div class="col-6" style="height: 400px;overflow-y: scroll;" >
         <ul class="list-group kecamatan-list">
             <?php foreach ($kecamatan_desa as $row) { ?>
                 <a href="#kecamatan-<?= remove_dots($row['id_kecamatan']) ?>" class="list-group-item list-group-item-action list-kecamatan-handler">
@@ -53,7 +53,7 @@
         </ul>
         <br>
     </div>
-    <div class="col-6">
+    <div class="col-6" style="height: 400px;overflow-y: scroll;" >
         <div class="sticky-top">
             <?php foreach ($kecamatan_desa as $row) { ?>
                 <div id="kecamatan-<?= remove_dots($row['id_kecamatan']) ?>" class="desa-list mb-2" style="display: none;">
