@@ -15,8 +15,6 @@ class Lagu extends CI_Controller
         $this->load->model('LaguDesa_model');
         $lagu_desa_model = new LaguDesa_model();
 
-
-
         $page = $this->input->get('page');
         $limit = 8;
         $start = page_to_start($page, $limit);
