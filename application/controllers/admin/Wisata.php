@@ -51,9 +51,9 @@ class Wisata extends CI_Controller
         $crud->set_primary_key('id_desa', 'desa_kecamatan');
         $crud->set_relation('id_desa', 'desa_kecamatan', '{nama_desa} - Kec. {nama_kecamatan}', $where2);
 
-        $crud->columns('no_urut','id_desa','nama_wisata','foto');
-        $crud->fields('no_urut','id_desa','nama_wisata','foto1','foto2','foto3','content','maps');
-        $crud->required_fields('id_desa','nama_wisata','foto1');
+        $crud->columns('no_urut', 'id_desa', 'nama_wisata', 'foto');
+        $crud->fields('no_urut', 'id_desa', 'nama_wisata', 'foto1', 'foto2', 'foto3', 'content', 'maps');
+        $crud->required_fields('id_desa', 'nama_wisata', 'foto1');
 
         $crud->display_as('id_desa', 'Desa');
         $crud->display_as('content', 'Keterangan');
@@ -73,13 +73,13 @@ class Wisata extends CI_Controller
             $crud->field_type('no_urut', 'hidden');
         }
 
-        if ($state == 'update_validation' || $state == 'update' || $state=='edit' ) {
+        if ($state == 'update_validation' || $state == 'update' || $state == 'edit') {
             $this->primary_key_val2 = $state_info->primary_key;
-            $crud->set_rules('no_urut', 'No Urut', 'trim|required|callback_is_uniqe_nourut');
+            // $crud->set_rules('no_urut', 'No Urut', 'trim|required|callback_is_uniqe_nourut');
         }
 
         $crud->callback_before_insert(array($this, '_callback_before_insert'));
-
+        $crud->callback_before_update(array($this, '_callback_before_update'));
 
         $output = $crud->render();
 
@@ -89,7 +89,6 @@ class Wisata extends CI_Controller
         $template_data['css_files'] = $output->css_files;
 
         $this->load->view('admin/template', $template_data);
-
     }
 
     public function is_uniqe_nourut($str)
@@ -100,7 +99,7 @@ class Wisata extends CI_Controller
         $return = false;
 
         $this->db->where('no_urut', $no_urut);
-        $this->db->where( $this->primary_key.' <>', $primary_key);
+        $this->db->where($this->primary_key . ' <>', $primary_key);
         $db = $this->db->get($this->table_name);
 
 
@@ -116,9 +115,16 @@ class Wisata extends CI_Controller
 
     function _callback_before_insert($post_array)
     {
-
-        $post_array['no_urut'] = get_increment($this->table_name, 'no_urut');
-
+        if (empty(trim($post_array['no_urut']))) {
+            $post_array['no_urut'] = 1000;
+        }
+        return $post_array;
+    }
+    function _callback_before_update($post_array)
+    {
+        if (empty(trim($post_array['no_urut']))) {
+            $post_array['no_urut'] = 1000;
+        }
         return $post_array;
     }
 }

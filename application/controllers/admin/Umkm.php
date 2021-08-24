@@ -98,13 +98,14 @@ class Umkm extends CI_Controller
 
         if ($state == 'update_validation' || $state == 'update' || $state=='edit' ) {
             $this->primary_key_val2 = $state_info->primary_key;
-            $crud->set_rules('no_urut', 'No Urut', 'trim|required|callback_is_uniqe_nourut');
+            // $crud->set_rules('no_urut', 'No Urut', 'trim|required|callback_is_uniqe_nourut');
         }
 
         $crud->callback_before_upload(array($this, '_callback_before_upload'));
         $crud->callback_before_delete(array($this, '_callback_before_delete'));
 
         $crud->callback_before_insert(array($this, '_callback_before_insert'));
+        $crud->callback_before_update(array($this, '_callback_before_update'));
 
         $crud->order_by('no_urut', 'asc');
 
@@ -198,9 +199,16 @@ class Umkm extends CI_Controller
 
     function _callback_before_insert($post_array)
     {
-
-        $post_array['no_urut'] = get_increment('desa_umkm', 'no_urut');
-
+        if (empty(trim($post_array['no_urut']))) {
+            $post_array['no_urut'] = 1000;
+        }
+        return $post_array;
+    }
+    function _callback_before_update($post_array)
+    {
+        if (empty(trim($post_array['no_urut']))) {
+            $post_array['no_urut'] = 1000;
+        }
         return $post_array;
     }
 }
