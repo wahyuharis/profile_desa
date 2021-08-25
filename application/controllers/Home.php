@@ -30,11 +30,36 @@ class Home extends CI_Controller
 		$slider = array();
 		$slider = $this->db->get('slider')->result_array();
 
-		// print_r2($kecamatan_desa2);
+		# ===================== #
+		$this->load->model('LaguDesa_model');
+		$lagu_desa_model = new LaguDesa_model();
+		$lagu_desa = $lagu_desa_model->get_list('', 8, 0);
+
+
+		$this->load->model('WisataDesa_model');
+		$wisata_desa_model = new WisataDesa_model();
+		$wisata_desa = $wisata_desa_model->get_list('', 8, 0);
+
+		$this->load->model('UmkmDesa_model');
+		$umkm_desa_model = new UmkmDesa_model();
+		$umkm_desa = $umkm_desa_model->get_list('', 8, 0);
+
+		$this->load->model('BatikDesa_model');
+		$batik_desa_model = new BatikDesa_model();
+		$batik_desa = $batik_desa_model->get_list('', 8, 0);
+		# ===================== #
+
+
 
 		$content_data = array();
 		$content_data['kecamatan_desa'] = $kecamatan_desa2;
 		$content_data['slider'] = $slider;
+		
+		$content_data['lagu_desa'] = $lagu_desa;
+		$content_data['wisata_desa'] = $wisata_desa;
+		$content_data['umkm_desa'] = $umkm_desa;
+		$content_data['batik_desa'] = $batik_desa;
+
 		$html = $frontend->load_view('frontend/home', $content_data);
 		$frontend->set_content($html);
 		$frontend->render();
