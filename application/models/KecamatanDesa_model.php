@@ -33,10 +33,16 @@ class KecamatanDesa_model  extends CI_Model
         FROM kecamatan
         LEFT JOIN desa
         ON desa.id_kecamatan = kecamatan.id_kecamatan
-        GROUP BY kecamatan.id_kecamatan";
+        GROUP BY kecamatan.id_kecamatan
+        ORDER BY kecamatan.nama_kecamatan asc,desa.nama_desa asc
+        ";
 
     $db = $this->db->query($sql);
     $return =  $db->result_array();
+
+    // header_text();
+    // echo $sql;
+    // die();
 
     return $return;
     // echo $sql;

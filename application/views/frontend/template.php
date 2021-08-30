@@ -112,7 +112,7 @@ foreach ($sprites_res as $row) {
           }
           ?>
           <li class="nav-item <?= $nav_active ?>">
-            <a class="nav-link" href="<?= base_url('lagu/') ?>">Lagu Desa</a>
+            <a class="nav-link" href="<?= base_url('lagu/') ?>">Lagu Khas Desa</a>
           </li>
 
           <?php
@@ -122,7 +122,7 @@ foreach ($sprites_res as $row) {
           }
           ?>
           <li class="nav-item <?= $nav_active ?>">
-            <a class="nav-link" href="<?= base_url('wisata/') ?>">Wisata Desa</a>
+            <a class="nav-link" href="<?= base_url('wisata/') ?>">Wisata Khas Desa</a>
           </li>
 
           <?php
@@ -132,7 +132,7 @@ foreach ($sprites_res as $row) {
           }
           ?>
           <li class="nav-item <?= $nav_active ?>">
-            <a class="nav-link" href="<?= base_url('umkm/') ?>">UMKM Unggulan</a>
+            <a class="nav-link" href="<?= base_url('umkm/') ?>">UMKM Unggulan Desa</a>
           </li>
 
           <?php
@@ -142,7 +142,7 @@ foreach ($sprites_res as $row) {
           }
           ?>
           <li class="nav-item <?= $nav_active ?>">
-            <a class="nav-link" href="<?= base_url('batik/') ?>">Desain Batik</a>
+            <a class="nav-link" href="<?= base_url('batik/') ?>">Desain Batik Desa</a>
           </li>
 
         </ul>
