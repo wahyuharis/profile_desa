@@ -95,14 +95,14 @@ class WisataDesa_model  extends CI_Model
         FROM desa
         LEFT JOIN desa_wisata ON desa_wisata.id_desa=desa.id_desa
         
-        WHERE desa.id_desa=1
+        WHERE desa.id_desa=".$this->db->escape($id_desa)."
         
         GROUP BY desa.id_desa
         ORDER BY desa.nama_desa asc";
 
         $db = $this->db->query($sql);
 
-        $return = $db->row_array()['jml_lagu'];
+        $return = $db->row_array()['jml_wisata'];
 
         return $return;
     }

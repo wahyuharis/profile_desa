@@ -78,6 +78,10 @@ class Wisata extends CI_Controller
             // $crud->set_rules('no_urut', 'No Urut', 'trim|required|callback_is_uniqe_nourut');
         }
 
+        if ($state == 'insert_validation' || $state == 'insert' || $state == 'add') {
+            $crud->set_rules('foto1', 'Wisata', 'trim|required|callback_validasi_wisata_desa');
+        }
+
         $crud->callback_before_insert(array($this, '_callback_before_insert'));
         $crud->callback_before_update(array($this, '_callback_before_update'));
 
