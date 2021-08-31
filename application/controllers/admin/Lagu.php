@@ -72,7 +72,7 @@ class Lagu extends CI_Controller
         if ($state == 'add') {
             $crud->field_type('no_urut', 'hidden');
         }
-
+ 
         if (intval($sess['id_role']) == 2) {
             $crud->field_type('no_urut', 'hidden');
         }

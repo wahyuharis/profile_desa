@@ -91,6 +91,27 @@ class Wisata extends CI_Controller
         $this->load->view('admin/template', $template_data);
     }
 
+
+    function validasi_wisata_desa($str)
+    {
+
+        $return = false;
+
+        $post = $this->input->post();
+
+        $this->load->model('WisataDesa_model');
+        $wisata_desa_model = new WisataDesa_model();
+        $jml_wisata = $wisata_desa_model->jml_wisata($post['id_desa']);
+        if ($jml_wisata > 0) {
+            $return = false;
+            $this->form_validation->set_message('validasi_wisata_desa', 'Maaf Wisata desa Hanya diperbolehkan satu Wisata');
+        } else {
+            $return = true;
+        }
+
+        return  $return;
+    }
+
     public function is_uniqe_nourut($str)
     {
 
@@ -109,7 +130,7 @@ class Wisata extends CI_Controller
         } else {
             $return = true;
         }
-
+ 
         return  $return;
     }
 

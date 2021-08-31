@@ -85,4 +85,25 @@ class WisataDesa_model  extends CI_Model
 
         return $return;
     }
+
+    function jml_wisata($id_desa)
+    {
+        $sql = "SELECT 
+        desa.id_desa,
+        desa.nama_desa,
+        COUNT(desa_wisata.id_wisata) AS jml_wisata
+        FROM desa
+        LEFT JOIN desa_wisata ON desa_wisata.id_desa=desa.id_desa
+        
+        WHERE desa.id_desa=1
+        
+        GROUP BY desa.id_desa
+        ORDER BY desa.nama_desa asc";
+
+        $db = $this->db->query($sql);
+
+        $return = $db->row_array()['jml_lagu'];
+
+        return $return;
+    }
 }
