@@ -12,8 +12,8 @@
 </div>
 <div class="row mb-3">
 
-    <div class="col-md-3"></div>
-    <div class="col-md-6">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
         <?php
         if (empty(trim($desa['foto_desa']))) {
         ?>
@@ -26,7 +26,7 @@
         }
         ?>
     </div>
-    <div class="col-md-3"></div>
+    <div class="col-md-4"></div>
 
 </div>
 
@@ -54,48 +54,71 @@
             $link_web_desa = $desa['url_website'];
         }
         ?>
-        <a href="<?= $link_web_desa ?>" class="btn btn-primary">Link Web Desa</a>
+        <a href="<?= $link_web_desa ?>" class="btn btn-sm btn-primary">Link Web Desa</a>
     </div>
 </div>
 
 <div class="row mb-3">
-    <div class="col-md-3"></div>
-    <div class="col-md-3">
-        <div class="card">
-            <img class="card-img-top" src="<?= base_url('assets/gitar.png') ?>">
-            <div class="card-body text-center" style="vertical-align: middle;">
-                <a href="<?= base_url('lagu/daftar/' . $desa['id_desa']) ?>" class="btn btn-primary btn-block">Lagu Desa</a>
-            </div>
+    <div class="col-md-4">
+
+    </div>
+    <div class="col-md-8">
+        <div class="row">
+
         </div>
     </div>
-    <div class="col-md-3">
+
+</div>
+
+<div class="row mb-3">
+    <div class="col-md-4"></div>
+
+    <div class="col-md-2">
         <div class="card">
             <img class="card-img-top" src="<?= base_url('assets/wisata.png') ?>">
             <div class="card-body text-center" style="vertical-align: middle;">
-                <a href="<?= base_url('wisata/by_desa/' . $desa['id_desa']) ?>" class="btn btn-primary btn-block">Wisata Desa</a>
+                <a href="<?= base_url('wisata/by_desa/' . $desa['id_desa']) ?>" class="btn btn-primary  btn-sm  btn-block">Wisata Khas Desa</a>
             </div>
         </div>
     </div>
-    <div class="col-md-3"></div>
-</div>
 
-<div class="row mb-3">
-    <div class="col-md-3"></div>
-    <div class="col-md-3">
+    <div class="col-md-2">
         <div class="card">
             <img class="card-img-top" src="<?= base_url('assets/batik.png') ?>">
             <div class="card-body text-center" style="vertical-align: middle;">
-                <a href="<?= base_url('batik/by_desa/' . $desa['id_desa']) ?>" class="btn btn-primary btn-block">Desain Batik</a>
+                <a href="<?= base_url('batik/by_desa/' . $desa['id_desa']) ?>" class="btn btn-primary  btn-sm  btn-block">Desain Batik Desa</a>
             </div>
         </div>
     </div>
-    <div class="col-md-3">
+
+
+    <div class="col-md-4"></div>
+</div>
+
+<div class="row mb-3">
+    <div class="col-md-5"></div>
+
+    <div class="col-md-2">
         <div class="card">
             <img class="card-img-top" src="<?= base_url('assets/umkm.png') ?>">
             <div class="card-body text-center" style="vertical-align: middle;">
-                <a href="<?= base_url('umkm/by_desa/' . $desa['id_desa']) ?>" class="btn btn-primary btn-block">UMKM Unggulan</a>
+                <a href="<?= base_url('umkm/by_desa/' . $desa['id_desa']) ?>" class="btn btn-primary  btn-sm  btn-block">UMKM Unggulan Desa</a>
             </div>
         </div>
     </div>
-    <div class="col-md-3"></div>
+    <div class="col-md-5"></div>
+
 </div>
+
+<!-- <div class="row mb-3">
+    <div class="col-md-4"></div>
+    <div class="col-md-2">
+        <div class="card">
+            <img class="card-img-top" src="<?= base_url('assets/gitar.png') ?>">
+            <div class="card-body text-center" style="vertical-align: middle;">
+                <a href="<?= base_url('lagu/daftar/' . $desa['id_desa']) ?>" class="btn btn-primary btn-sm btn-block">Lagu Khas Desa</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4"></div>
+</div> -->

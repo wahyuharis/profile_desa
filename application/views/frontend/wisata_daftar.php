@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-md-12 text-center">
-        <h3 class="mt-3">DAFTAR WISATA DESA <?= strtoupper($desa['nama_desa']) ?></h3>
+        <h3 class="mt-3">DAFTAR WISATA KHAS DESA <?= strtoupper($desa['nama_desa']) ?></h3>
         <br>
     </div>
 </div>

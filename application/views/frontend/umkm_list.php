@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-md-12 text-center">
-        <h3 class="mt-3">UMKM Unggulan</h3>
+        <h3 class="mt-3">UMKM Unggulan Desa</h3>
         <br>
     </div>
 </div>

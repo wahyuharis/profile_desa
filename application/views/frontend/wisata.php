@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-md-12 text-center">
-        <h3 class="mt-3">Wisata Desa</h3>
+        <h3 class="mt-3">Wisata Khas Desa</h3>
         <br>
     </div>
 </div>

@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-md-12 text-center">
-        <h3 class="mt-3">DAFTAR LAGU DESA <?= strtoupper($desa['nama_desa']) ?></h3>
+        <h3 class="mt-3">DAFTAR LAGU KHAS DESA <?= strtoupper($desa['nama_desa']) ?></h3>
         <br>
     </div>
 </div>
@@ -26,7 +26,7 @@
 
                                 </div>
                                 <div class="col-6 text-right">
-                                    <p>Diputar : <?= $row['kali_diputar'] ?> x </p>
+                                    <span>Diputar : <?= $row['kali_diputar'] ?> kali </span>
                                 </div>
                             </div>
                         </div>
