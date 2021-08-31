@@ -59,19 +59,26 @@
 </div>
 
 <div class="row mb-3">
-    <div class="col-md-4">
+    <div class="col-md-3">
 
     </div>
-    <div class="col-md-8">
-        <div class="row">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-body text-center" style="vertical-align: middle;">
+            <img style="max-height: 200px;max-width: 200px;" src="<?= base_url('assets/gitar.png') ?>">
 
+                <a href="<?= base_url('lagu/daftar/' . $desa['id_desa']) ?>" class="btn btn-primary btn-sm btn-block">Lagu Khas Desa</a>
+            </div>
         </div>
+    </div>
+    <div class="col-md-3">
+
     </div>
 
 </div>
 
 <div class="row mb-3">
-    <div class="col-md-4"></div>
+    <div class="col-md-3"></div>
 
     <div class="col-md-2">
         <div class="card">
@@ -92,12 +99,6 @@
     </div>
 
 
-    <div class="col-md-4"></div>
-</div>
-
-<div class="row mb-3">
-    <div class="col-md-5"></div>
-
     <div class="col-md-2">
         <div class="card">
             <img class="card-img-top" src="<?= base_url('assets/umkm.png') ?>">
@@ -106,9 +107,11 @@
             </div>
         </div>
     </div>
-    <div class="col-md-5"></div>
 
+
+    <div class="col-md-3"></div>
 </div>
+
 
 <!-- <div class="row mb-3">
     <div class="col-md-4"></div>

@@ -81,4 +81,43 @@ class LaguDesa_model  extends CI_Model
 
         return $return;
     }
+
+    function jml_lagu($id_desa)
+    {
+        $sql = "SELECT 
+        desa.id_desa,
+        desa.nama_desa,
+        COUNT(desa_lagu.id_lagu) AS jml_lagu
+        FROM desa
+        LEFT JOIN desa_lagu ON desa_lagu.id_desa=desa.id_desa
+        
+        WHERE desa.id_desa=" . $this->db->escape($id_desa) . "
+        
+        GROUP BY desa.id_desa
+        ORDER BY desa.nama_desa asc";
+
+        $db = $this->db->query($sql);
+
+        $return = $db->row_array()['jml_lagu'];
+
+        return $return;
+    }
+
+    function desa_belum_ada_lagu()
+    {
+        $sql = "SELECT desa.id_desa FROM desa
+        WHERE desa.id_desa NOT IN (SELECT desa_lagu.id_desa FROM desa_lagu )";
+
+        $db = $this->db->query($sql);
+
+        $result = $db->result_array();
+
+        $return = array();
+
+        foreach ($result as $row) {
+            array_push($return, $row['id_desa']);
+        }
+
+        return $return;
+    }
 }

@@ -82,6 +82,11 @@ class Lagu extends CI_Controller
             // $crud->set_rules('no_urut', 'No Urut', 'trim|required|callback_is_uniqe_nourut');
         }
 
+        if ($state == 'insert_validation' || $state == 'insert' || $state == 'add') {
+            $crud->set_rules('lagu', 'Lagu', 'trim|required|callback_validasi_lagu_desa');
+        }
+
+
         $crud->callback_before_upload(array($this, '_callback_before_upload'));
         $crud->callback_before_delete(array($this, '_callback_before_delete'));
 
@@ -98,6 +103,26 @@ class Lagu extends CI_Controller
         $template_data['css_files'] = $output->css_files;
 
         $this->load->view('admin/template', $template_data);
+    }
+
+    function validasi_lagu_desa($str)
+    {
+
+        $return = false;
+
+        $post = $this->input->post();
+
+        $this->load->model('LaguDesa_model');
+        $lagu_desa_model = new LaguDesa_model();
+        $jml_lagu = $lagu_desa_model->jml_lagu($post['id_desa']);
+        if ($jml_lagu > 0) {
+            $return = false;
+            $this->form_validation->set_message('validasi_lagu_desa', 'Maaf Lagu desa Hanya diperbolehkan satu lagu');
+        } else {
+            $return = true;
+        }
+
+        return  $return;
     }
 
     public function is_uniqe_nourut($str)
@@ -181,6 +206,8 @@ class Lagu extends CI_Controller
             $post_array['no_urut'] = 1000;
         }
         return $post_array;
+
+        // return "LAgu lebih rasi satu";
     }
     function _callback_before_update($post_array)
     {
