@@ -55,6 +55,11 @@
         }
         ?>
         <a href="<?= $link_web_desa ?>" class="btn btn-sm btn-primary">Link Web Desa</a>
+
+        <br>
+
+
+        <br>
     </div>
 </div>
 
@@ -64,37 +69,44 @@
     </div>
     <div class="col-md-6">
         <div class="card">
-        <center>
-            <h3><?= ucwords($lagu['nama_lagu']) ?></h3>
+            <center>
+                <h3><?= ucwords($lagu['nama_lagu']) ?></h3>
 
-            <?php if ($ext == 'mp3') { ?>
-                <img width="300px" src="<?= base_url('assets/uploads/files/' . $lagu['foto']) ?>">
-                <br>
-                <audio id="player_element" onplay="player_putar()" width="100%" controls autoplay>
-                    <source src="<?= base_url('assets/uploads/files/' . $lagu['lagu']) ?>" type="audio/mpeg">
-                    Your browser does not support the audio element.
-                </audio>
-                <br>
-                <p>Diputar : <?= $lagu['kali_diputar'] ?> x </p>
-            <?php } ?>
+                <?php if ($ext == 'mp3') { ?>
+                    <img width="300px" src="<?= base_url('assets/uploads/files/' . $lagu['foto']) ?>">
+                    <br>
+                    <audio id="player_element" onplay="player_putar()" width="100%" controls autoplay>
+                        <source src="<?= base_url('assets/uploads/files/' . $lagu['lagu']) ?>" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                    <br>
+                    <p>Diputar : <?= $lagu['kali_diputar'] ?> x </p>
 
-            <?php if ($ext == 'mp4') { ?>
+                <?php } ?>
 
-                <video id="player_element" onplay="player_putar()" width="300" controls autoplay>
-                    <source src="<?= base_url('assets/uploads/files/' . $lagu['lagu']) ?>" type="video/mp4">
-                </video>
-                <p>Diputar : <?= $lagu['kali_diputar'] ?> x </p>
-            <?php } ?>
+                <?php if ($ext == 'mp4') { ?>
 
-           
-        </center>
+                    <video id="player_element" onplay="player_putar()" width="300" controls autoplay>
+                        <source src="<?= base_url('assets/uploads/files/' . $lagu['lagu']) ?>" type="video/mp4">
+                    </video>
+                    <p>Diputar : <?= $lagu['kali_diputar'] ?> x </p>
+
+                <?php } ?>
+
+                <p>
+                    <?php if (!empty(trim($lagu['link_youtube']))) { ?>
+                        <a target="_blank" href="<?= $lagu['link_youtube'] ?>" class="btn btn-primary btn-sm">Link Youtube</a>
+                    <?php } ?>
+                </p>
+            </center>
+
         </div>
     </div>
     <div class="col-md-3">
 
     </div>
-
 </div>
+
 
 <div class="row mb-3">
     <div class="col-md-3"></div>
@@ -132,18 +144,7 @@
 </div>
 
 
-<!-- <div class="row mb-3">
-    <div class="col-md-4"></div>
-    <div class="col-md-2">
-        <div class="card">
-            <img class="card-img-top" src="<?= base_url('assets/gitar.png') ?>">
-            <div class="card-body text-center" style="vertical-align: middle;">
-                <a href="<?= base_url('lagu/daftar/' . $desa['id_desa']) ?>" class="btn btn-primary btn-sm btn-block">Lagu Khas Desa</a>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-4"></div>
-</div> -->
+
 
 <script>
     // document.getElementById("audio_player").addEventListener("play", player_putar);

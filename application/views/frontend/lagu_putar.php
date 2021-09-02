@@ -31,9 +31,18 @@
                 <p>Diputar : <?= $lagu['kali_diputar'] ?> x </p>
             <?php } ?>
 
-           
+
         </center>
     </div>
+</div>
+<div class="row">
+    <div class="col-sm-4"></div>
+    <div class="col-sm-4">
+        <?php if (!empty(trim($lagu['link_youtube']))) { ?>
+            <a target="_blank" href="<?= $lagu['link_youtube'] ?>" class="btn btn-primary btn-block">Link Youtube</a>
+        <?php } ?>
+    </div>
+    <div class="col-sm-4"></div>
 </div>
 
 <script>

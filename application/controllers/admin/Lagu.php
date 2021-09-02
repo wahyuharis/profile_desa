@@ -45,8 +45,11 @@ class Lagu extends CI_Controller
 
 
         $crud->columns('no_urut', 'id_desa', 'nama_lagu', 'foto');
-        $crud->fields('no_urut', 'id_desa', 'nama_lagu', 'foto', 'lagu', 'content');
+        $crud->fields('no_urut', 'id_desa', 'nama_lagu', 'foto', 'lagu', 'link_youtube','content');
         $crud->required_fields('id_desa', 'nama_lagu', 'foto', 'lagu');
+
+        $crud->unset_texteditor('link_youtube','full_text');
+
 
         $where2 = null;
         if (intval($sess['id_role']) == 2) {
@@ -55,7 +58,6 @@ class Lagu extends CI_Controller
             $where2['id_desa'] = $sess['id_desa'];
             $crud->where($where);
         }
-
 
         $crud->set_primary_key('id_desa', 'desa_kecamatan');
         $crud->set_relation('id_desa', 'desa_kecamatan', '{nama_desa} - Kec. {nama_kecamatan}', $where2);
