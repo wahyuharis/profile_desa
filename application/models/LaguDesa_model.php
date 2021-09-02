@@ -52,7 +52,7 @@ class LaguDesa_model  extends CI_Model
         kecamatan.nama_kecamatan LIKE '%" . $this->db->escape_str($where) . "%' ";
 
         $sql .= "
-        order by desa_lagu.no_urut  asc
+        order BY kecamatan.nama_kecamatan, desa.nama_desa  asc
         ";
 
 
@@ -61,6 +61,8 @@ class LaguDesa_model  extends CI_Model
         $sql .= "
         limit " . intval($start) . "," . intval($limit) . " 
         ";
+
+        // print_r2($sql);
 
         $db2 = $this->db->query($sql_no_limit);
         $this->total_row = $db2->num_rows();

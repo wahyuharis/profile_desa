@@ -16,7 +16,7 @@ class Lagu extends CI_Controller
         $lagu_desa_model = new LaguDesa_model();
 
         $page = $this->input->get('page');
-        $limit = 8;
+        $limit = 10;
         $start = page_to_start($page, $limit);
 
         $lagu_desa_data = $lagu_desa_model->get_list('', $limit, $start);
@@ -32,6 +32,8 @@ class Lagu extends CI_Controller
         $content_data = array();
 		$content_data['pagination'] = $this->pagination->create_links();
 		$content_data['lagu_desa_data'] = $lagu_desa_data;
+        $content_data['limit']=$limit;
+        $content_data['start']=$start;
 
 
         $html = $frontend->load_view('frontend/lagu_list', $content_data);
