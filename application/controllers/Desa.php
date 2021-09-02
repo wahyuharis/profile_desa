@@ -13,7 +13,6 @@ class Desa extends CI_Controller
 		$html = '';
 
 		$content_data = array();
-		// $html = $frontend->load_view('frontend/desa', $content_data);
 		$frontend->set_content($html);
 		$frontend->render();
 	}
@@ -30,20 +29,30 @@ class Desa extends CI_Controller
 		$this->db->where('id_desa', $id_desa);
 		$db = $this->db->get('desa');
 
-		$desa = $db->row_array();
+		$this->db->where('id_desa', $id_desa);
+		$this->db->order_by('id_lagu', 'desc');
+		$db2 = $this->db->get('desa_lagu');
 
-		// print_r2($desa);
+		$desa = $db->row_array();
+		$lagu = $db2->row_array();
+
+		$ext = pathinfo('./assets/uploads/files/' . $lagu['lagu'], PATHINFO_EXTENSION);
+
+
+		// print_r2($lagu);
 
 		$content_data = array();
 		$content_data['desa'] = $desa;
+		$content_data['lagu'] = $lagu;
+		$content_data['ext'] = $ext;
 		$html = $frontend->load_view('frontend/desa', $content_data);
 
 
 		$breadcrump = array(
 			'Home' => '',
-			"Desa ". ucwords( $desa['nama_desa']) => '',
-
+			"Desa " . ucwords($desa['nama_desa']) => '',
 		);
+
 		$frontend->set_breadcrump($breadcrump);
 
 		$frontend->set_content($html);
