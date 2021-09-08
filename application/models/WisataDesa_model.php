@@ -74,8 +74,8 @@ class WisataDesa_model  extends CI_Model
         LEFT JOIN desa
         ON desa.id_desa=desa_wisata.id_desa
         
-        LEFT JOIN desa_kecamatan
-        ON desa_kecamatan.id_kecamatan=desa.id_kecamatan
+        LEFT JOIN kecamatan
+        ON kecamatan.id_kecamatan=desa.id_kecamatan
         
         WHERE desa.id_desa=" . $this->db->escape($id_desa) . " ";
 

@@ -34,9 +34,28 @@ class Desa extends CI_Controller
 		$db2 = $this->db->get('desa_lagu');
 
 		$desa = $db->row_array();
+
+
+
 		$lagu = $db2->row_array();
 
-		$ext = pathinfo('./assets/uploads/files/' . $lagu['lagu'], PATHINFO_EXTENSION);
+		$ext='mp3';
+		
+		if ($db2->num_rows() > 0) {
+			$ext = pathinfo('./assets/uploads/files/' . $lagu['lagu'], PATHINFO_EXTENSION);
+		}else{
+			$lagu=array(
+				'id_lagu'=>'',
+				'no_urut'=>'',
+				'id_desa'=>'',
+				'foto'=>'',
+				'nama_lagu'=>'',
+				'lagu'=>'',
+				'link_youtube'=>'',
+				'content'=>'',
+				'kali_diputar'=>'',
+			);
+		}
 
 
 		// print_r2($lagu);
