@@ -15,18 +15,31 @@ class Desa extends CI_Controller
 
         $this->load->library('Auth');
         $auth = new Auth();
-        $auth->is_logged_in()->is_admin();
+        $auth->is_logged_in();
     }
 
     public function index()
     {
         //========== inisiasi =============
+        $sess = $this->session->userdata();
+
         $crud = new grocery_CRUD();
         $crud->unset_bootstrap();
         $crud->unset_jquery();
         // $crud->set_theme('bootstrap');
         $state = $crud->getState();
         //========== inisiasi =============
+
+
+        $where2 = null;
+        if (intval($sess['id_role']) == 2) {
+            $where = array();
+            $where['desa.id_desa'] = $sess['id_desa'];
+            $where2['id_desa'] = $sess['id_desa'];
+            $crud->where($where);
+            $crud->unset_add();
+            $crud->unset_delete();
+        }
 
         $crud->columns('id_desa','id_kecamatan','nama_desa');
         $crud->fields('id_kecamatan','foto_desa','nama_desa','url_website','keterangan');
