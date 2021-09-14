@@ -16,33 +16,26 @@ class KecamatanDesa_model  extends CI_Model
 
   public function get_list($where = null, $start = null, $limit = null)
   {
-    $sql = "SELECT kecamatan.*,
 
-        CONCAT(
-          '[',
-          GROUP_CONCAT(
-            JSON_OBJECT(
-              'id_desa', desa.id_desa,
-              'nama_desa', desa.nama_desa
-            )
-          ),
-          ']'
-        )
-        
-        AS `JSON`
-        FROM kecamatan
-        LEFT JOIN desa
-        ON desa.id_kecamatan = kecamatan.id_kecamatan
-        GROUP BY kecamatan.id_kecamatan
-        ORDER BY kecamatan.nama_kecamatan asc,desa.nama_desa asc
-        ";
+    $return = array();
 
-    $db = $this->db->query($sql);
-    $return =  $db->result_array();
+    $kecamatan = $this->db->order_by('kecamatan.nama_kecamatan', 'asc')->get('kecamatan')->result_array();
 
-    // header_text();
-    // echo $sql;
-    // die();
+
+
+    foreach ($kecamatan as $row) {
+      $buff = array();
+
+      $buff = $row;
+
+      $desa = $this->db->order_by('desa.nama_desa', 'asc')->where('desa.id_kecamatan', $row['id_kecamatan'])
+        ->get('desa')
+        ->result_array();
+
+      $buff['JSON'] = json_encode( $desa );
+
+      array_push($return, $buff);
+    }
 
     return $return;
     // echo $sql;
@@ -80,7 +73,7 @@ class KecamatanDesa_model  extends CI_Model
 
 
     if (!empty(trim($type))) {
-      $sql .= " WHERE tb.TYPE = ".$this->db->escape($type)." ";
+      $sql .= " WHERE tb.TYPE = " . $this->db->escape($type) . " ";
     }
     $sql .= "\n";
 

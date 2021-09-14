@@ -16,6 +16,9 @@ class Home extends CI_Controller
 		$kecamatandesa_model = new KecamatanDesa_model();
 		$kecamatan_desa = $kecamatandesa_model->get_list();
 
+		// print_r2($kecamatan_desa);
+
+
 		$kecamatan_desa2 = array();
 
 		foreach ($kecamatan_desa as $row) {
@@ -26,6 +29,7 @@ class Home extends CI_Controller
 			array_push($kecamatan_desa2, $buff);
 		}
 
+		// print_r2($kecamatan_desa2);
 
 		$slider = array();
 		$slider = $this->db->get('slider')->result_array();

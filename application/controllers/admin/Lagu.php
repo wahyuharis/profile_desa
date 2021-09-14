@@ -45,7 +45,7 @@ class Lagu extends CI_Controller
 
 
         $crud->columns('no_urut', 'id_desa', 'nama_lagu', 'foto');
-        $crud->fields('no_urut', 'id_desa', 'nama_lagu', 'foto', 'lagu', 'link_youtube','content');
+        $crud->fields('no_urut', 'id_desa', 'nama_lagu', 'foto', 'lagu', 'link_youtube');
         $crud->required_fields('id_desa', 'nama_lagu', 'foto', 'lagu');
 
         $crud->unset_texteditor('link_youtube','full_text');
@@ -65,7 +65,7 @@ class Lagu extends CI_Controller
         $crud->display_as('id_desa', 'Desa');
         $crud->display_as('nama_lagu', 'Judul lagu');
         $crud->display_as('content', 'Keterangan');
-        $crud->display_as('lagu', 'Lagu* <br><small class="text-muted">(Tipe File : MP3 & MP4 <br> Max Size : 80MB)</small>');
+        $crud->display_as('lagu', 'Lagu* <br><small class="text-muted">(Tipe File : MP3 <br> Max Size : 20MB)</small>');
 
         $crud->set_field_upload('lagu', 'assets/uploads/files');
         $crud->set_field_upload('foto', 'assets/uploads/files');
@@ -171,7 +171,7 @@ class Lagu extends CI_Controller
         }
 
         if ($field_info->field_name == 'lagu') {
-            $file_type_image = array('mp3', 'mp4');
+            $file_type_image = array('mp3');
 
             $name = $files_to_upload[$field_info->encrypted_field_name]['name'];
             $name_arr = explode('.', $name);
@@ -181,7 +181,7 @@ class Lagu extends CI_Controller
             if (in_array($type, $file_type_image)) {
                 $return = true;
             } else {
-                $return = "Tipe file hanya boleh MP3 dan MP4";
+                $return = "Tipe file hanya boleh MP3 ";
             }
         }
 
