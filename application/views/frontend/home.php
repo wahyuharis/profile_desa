@@ -38,7 +38,7 @@
     </div>
     <div class="col-md-5">
         <h1>Website Potensi Lokal Jember</h1>
-        <p class="lead">Diciptakan sebagai wadah digital karya warga Jember. Kota kecil dengan potensi menakjubkan seperti seni musik, fashion, wisata dan UKM Unggulan.</p>
+        <p class="lead">Diciptakan sebagai wadah digital karya pemerintah dan warga Jember. Kabupaten Jember mempunyai potensi menakjubkan seperti seni musik, fashion, wisata, batik dan UKM Unggulan.</p>
     </div>
 </div>
 
