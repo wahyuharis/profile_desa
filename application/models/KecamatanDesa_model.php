@@ -21,8 +21,6 @@ class KecamatanDesa_model  extends CI_Model
 
     $kecamatan = $this->db->order_by('kecamatan.nama_kecamatan', 'asc')->get('kecamatan')->result_array();
 
-
-
     foreach ($kecamatan as $row) {
       $buff = array();
 
@@ -32,7 +30,7 @@ class KecamatanDesa_model  extends CI_Model
         ->get('desa')
         ->result_array();
 
-      $buff['JSON'] = json_encode( $desa );
+      $buff['JSON'] = json_encode($desa);
 
       array_push($return, $buff);
     }
@@ -67,6 +65,39 @@ class KecamatanDesa_model  extends CI_Model
       FROM desa_lagu
       WHERE
       desa_lagu.nama_lagu LIKE '%" . $str . "%'
+
+      UNION ALL
+      
+      SELECT 
+      desa_wisata.nama_wisata AS `TEXT`,
+      desa_wisata.id_wisata AS `KEY`,
+      desa_wisata.foto1 AS `IMG`,
+      'WISATA' AS `TYPE`
+      FROM desa_wisata
+      WHERE
+      desa_wisata.nama_wisata LIKE '%" . $str . "%'
+
+      UNION ALL
+
+      SELECT 
+      desa_umkm.nama_umkm AS `TEXT`,
+      desa_umkm.id_umkm AS `KEY`,
+      desa_umkm.foto1 AS `IMG`,
+      'UMKM' AS `TYPE`
+      FROM desa_umkm
+      WHERE
+      desa_umkm.nama_umkm LIKE '%" . $str . "%'
+
+      UNION ALL
+
+      SELECT 
+      desa_batik.nama_batik AS `TEXT`,
+      desa_batik.id_batik AS `KEY`,
+      desa_batik.foto1 AS `IMG`,
+      'BATIK' AS `TYPE`
+      FROM desa_batik
+      WHERE
+      desa_batik.nama_batik LIKE '%" . $str . "%'
       ) AS tb ";
 
     $sql .= "\n";
@@ -81,6 +112,10 @@ class KecamatanDesa_model  extends CI_Model
 
     $sql .= " LIMIT " . intval($start) . "," . intval($limit) . " ";
 
+
+    // echo "<pre>";
+    // echo $sql;
+    // die();
 
     $this->total_row = $this->db->query($sql_nolimit)->num_rows();
 
